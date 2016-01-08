@@ -1,0 +1,38 @@
+//
+//  LOLShowGirlsViewContorller.m
+//  LOL
+//
+//  Created by feibai on 16/1/7.
+//  Copyright © 2016年 feibai. All rights reserved.
+//
+
+#import "LOLShowGirlsViewContorller.h"
+
+@interface LOLShowGirlsViewContorller ()
+
+@end
+
+@implementation LOLShowGirlsViewContorller
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"ShowGirls";
+    self.backButton.hidden = YES;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

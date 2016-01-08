@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  LOL
+//
+//  Created by feibai on 16/1/6.
+//  Copyright © 2016年 feibai. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "LOLBaseViewController.h"
+#import "AppDelegate.h"
+
+#define MNavBarHeight 44
+#define TabbarHeight 49
+#define KAPPIMAGE [[UIImage imageNamed:@"tabbarBg"] stretchableImageWithLeftCapWidth:5 topCapHeight:5]
+// 屏幕高度
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+// 屏幕宽度
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define IMAGENAMED(NAME)       [UIImage imageNamed:NAME]
+#define KNavBarColor [UIColor colorWithHex:@"#0193e8"]
+
+#define IsIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)
+#define SharedDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
+#import "UIView+Frame.h"
+#import "UIButton+YW.h"
+#import "UIColor+YW.h"
+#import "UIImage+YW.h"
+#endif /* PrefixHeader_pch */
+

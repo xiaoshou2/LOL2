@@ -1,0 +1,886 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11CF186700B95A34D652A282 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E18B4A4FD283CB66A08D27D /* libPods.a */; };
+		352325971C3CF20A007A3E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325941C3CF20A007A3E1D /* AppDelegate.m */; };
+		352325A51C3CFD05007A3E1D /* LOLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325A41C3CFD05007A3E1D /* LOLBaseViewController.m */; };
+		352325A81C3D0131007A3E1D /* LOLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325A71C3D0131007A3E1D /* LOLHomeViewController.m */; };
+		35865D461C3AE82E0058546B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35865D451C3AE82E0058546B /* main.m */; };
+		35865D4F1C3AE82E0058546B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35865D4D1C3AE82E0058546B /* Main.storyboard */; };
+		35865D511C3AE82E0058546B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35865D501C3AE82E0058546B /* Assets.xcassets */; };
+		35865D541C3AE82E0058546B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35865D521C3AE82E0058546B /* LaunchScreen.storyboard */; };
+		35865D5F1C3AE82E0058546B /* LOLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35865D5E1C3AE82E0058546B /* LOLTests.m */; };
+		35865D6A1C3AE82E0058546B /* LOLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35865D691C3AE82E0058546B /* LOLUITests.m */; };
+		35A6A1E51C3E1AD500B6FDAB /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1E01C3E1AD500B6FDAB /* RDVTabBar.m */; };
+		35A6A1E61C3E1AD500B6FDAB /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1E21C3E1AD500B6FDAB /* RDVTabBarController.m */; };
+		35A6A1E71C3E1AD500B6FDAB /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1E41C3E1AD500B6FDAB /* RDVTabBarItem.m */; };
+		35A6A1EB1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1EA1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m */; };
+		35A6A1EF1C3E1DFE00B6FDAB /* LOLAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1EE1C3E1DFE00B6FDAB /* LOLAccountViewController.m */; };
+		35C6278E1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C6278C1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png */; };
+		35C6278F1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C6278D1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png */; };
+		35C627921C3E319D00D4A6FE /* yw_home_selected_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C627901C3E319D00D4A6FE /* yw_home_selected_new@2x.png */; };
+		35C627931C3E319D00D4A6FE /* yw_home_selected_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C627911C3E319D00D4A6FE /* yw_home_selected_new@3x.png */; };
+		35C627971C3E340F00D4A6FE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C627961C3E340F00D4A6FE /* UIView+Frame.m */; };
+		35C6279B1C3E35AD00D4A6FE /* UIButton+YW.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C6279A1C3E35AD00D4A6FE /* UIButton+YW.m */; };
+		35C6279F1C3E379600D4A6FE /* UIColor+YW.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C6279E1C3E379600D4A6FE /* UIColor+YW.m */; };
+		35C627A21C3E465A00D4A6FE /* dddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C627A11C3E465A00D4A6FE /* dddViewController.m */; };
+		35C627AA1C3E487300D4A6FE /* NSDictionary+YW.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C627A71C3E487300D4A6FE /* NSDictionary+YW.m */; };
+		35C627AB1C3E487300D4A6FE /* NSMutableDictionary+YW.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C627A91C3E487300D4A6FE /* NSMutableDictionary+YW.m */; };
+		35C627ED1C3E562700D4A6FE /* LOLRootManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C627EC1C3E562700D4A6FE /* LOLRootManger.m */; };
+		35C627F01C3E61C900D4A6FE /* CCCCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C627EF1C3E61C900D4A6FE /* CCCCViewController.m */; };
+		35C627F41C3E6AC800D4A6FE /* UIImage+YW.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C627F31C3E6AC800D4A6FE /* UIImage+YW.m */; };
+		35C627F61C3E6C1800D4A6FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C627F51C3E6C1800D4A6FE /* CoreGraphics.framework */; };
+		35C627F81C3E6C3900D4A6FE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C627F71C3E6C3900D4A6FE /* Security.framework */; };
+		35C627FA1C3E6C5500D4A6FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C627F91C3E6C5500D4A6FE /* QuartzCore.framework */; };
+		35C627FE1C3EE8BD00D4A6FE /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C627FD1C3EE8BD00D4A6FE /* UINavigationController+FDFullscreenPopGesture.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35865D5B1C3AE82E0058546B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35865D391C3AE82E0058546B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35865D401C3AE82E0058546B;
+			remoteInfo = LOL;
+		};
+		35865D661C3AE82E0058546B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35865D391C3AE82E0058546B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35865D401C3AE82E0058546B;
+			remoteInfo = LOL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		352325931C3CF20A007A3E1D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		352325941C3CF20A007A3E1D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		352325A21C3CFBCF007A3E1D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		352325A31C3CFD05007A3E1D /* LOLBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLBaseViewController.h; sourceTree = "<group>"; };
+		352325A41C3CFD05007A3E1D /* LOLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLBaseViewController.m; sourceTree = "<group>"; };
+		352325A61C3D0131007A3E1D /* LOLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLHomeViewController.h; sourceTree = "<group>"; };
+		352325A71C3D0131007A3E1D /* LOLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLHomeViewController.m; sourceTree = "<group>"; };
+		35865D411C3AE82E0058546B /* LOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35865D451C3AE82E0058546B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35865D4E1C3AE82E0058546B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35865D501C3AE82E0058546B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35865D531C3AE82E0058546B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		35865D551C3AE82E0058546B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35865D5A1C3AE82E0058546B /* LOLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LOLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35865D5E1C3AE82E0058546B /* LOLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLTests.m; sourceTree = "<group>"; };
+		35865D601C3AE82E0058546B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35865D651C3AE82E0058546B /* LOLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LOLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35865D691C3AE82E0058546B /* LOLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLUITests.m; sourceTree = "<group>"; };
+		35865D6B1C3AE82E0058546B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A6A1DF1C3E1AD500B6FDAB /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
+		35A6A1E01C3E1AD500B6FDAB /* RDVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBar.m; sourceTree = "<group>"; };
+		35A6A1E11C3E1AD500B6FDAB /* RDVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarController.h; sourceTree = "<group>"; };
+		35A6A1E21C3E1AD500B6FDAB /* RDVTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarController.m; sourceTree = "<group>"; };
+		35A6A1E31C3E1AD500B6FDAB /* RDVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarItem.h; sourceTree = "<group>"; };
+		35A6A1E41C3E1AD500B6FDAB /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
+		35A6A1E91C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLShowGirlsViewContorller.h; sourceTree = "<group>"; };
+		35A6A1EA1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLShowGirlsViewContorller.m; sourceTree = "<group>"; };
+		35A6A1ED1C3E1DFE00B6FDAB /* LOLAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLAccountViewController.h; sourceTree = "<group>"; };
+		35A6A1EE1C3E1DFE00B6FDAB /* LOLAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLAccountViewController.m; sourceTree = "<group>"; };
+		35C6278C1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_normal_new@2x.png"; sourceTree = "<group>"; };
+		35C6278D1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_normal_new@3x.png"; sourceTree = "<group>"; };
+		35C627901C3E319D00D4A6FE /* yw_home_selected_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_selected_new@2x.png"; sourceTree = "<group>"; };
+		35C627911C3E319D00D4A6FE /* yw_home_selected_new@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_selected_new@3x.png"; sourceTree = "<group>"; };
+		35C627951C3E340F00D4A6FE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		35C627961C3E340F00D4A6FE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		35C627991C3E35AD00D4A6FE /* UIButton+YW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YW.h"; sourceTree = "<group>"; };
+		35C6279A1C3E35AD00D4A6FE /* UIButton+YW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YW.m"; sourceTree = "<group>"; };
+		35C6279D1C3E379600D4A6FE /* UIColor+YW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YW.h"; sourceTree = "<group>"; };
+		35C6279E1C3E379600D4A6FE /* UIColor+YW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YW.m"; sourceTree = "<group>"; };
+		35C627A01C3E465A00D4A6FE /* dddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dddViewController.h; sourceTree = "<group>"; };
+		35C627A11C3E465A00D4A6FE /* dddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dddViewController.m; sourceTree = "<group>"; };
+		35C627A61C3E487300D4A6FE /* NSDictionary+YW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YW.h"; sourceTree = "<group>"; };
+		35C627A71C3E487300D4A6FE /* NSDictionary+YW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YW.m"; sourceTree = "<group>"; };
+		35C627A81C3E487300D4A6FE /* NSMutableDictionary+YW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+YW.h"; sourceTree = "<group>"; };
+		35C627A91C3E487300D4A6FE /* NSMutableDictionary+YW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+YW.m"; sourceTree = "<group>"; };
+		35C627EB1C3E562700D4A6FE /* LOLRootManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLRootManger.h; sourceTree = "<group>"; };
+		35C627EC1C3E562700D4A6FE /* LOLRootManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLRootManger.m; sourceTree = "<group>"; };
+		35C627EE1C3E61C900D4A6FE /* CCCCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCCViewController.h; sourceTree = "<group>"; };
+		35C627EF1C3E61C900D4A6FE /* CCCCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCCViewController.m; sourceTree = "<group>"; };
+		35C627F21C3E6AC800D4A6FE /* UIImage+YW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YW.h"; sourceTree = "<group>"; };
+		35C627F31C3E6AC800D4A6FE /* UIImage+YW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YW.m"; sourceTree = "<group>"; };
+		35C627F51C3E6C1800D4A6FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		35C627F71C3E6C3900D4A6FE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		35C627F91C3E6C5500D4A6FE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		35C627FC1C3EE8BD00D4A6FE /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		35C627FD1C3EE8BD00D4A6FE /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		42DB32303C224370D5158818 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8E18B4A4FD283CB66A08D27D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDBE0005C3CE1120126C3590 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35865D3E1C3AE82E0058546B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35C627FA1C3E6C5500D4A6FE /* QuartzCore.framework in Frameworks */,
+				35C627F81C3E6C3900D4A6FE /* Security.framework in Frameworks */,
+				35C627F61C3E6C1800D4A6FE /* CoreGraphics.framework in Frameworks */,
+				11CF186700B95A34D652A282 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35865D571C3AE82E0058546B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35865D621C3AE82E0058546B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		352325921C3CF20A007A3E1D /* LOLMain */ = {
+			isa = PBXGroup;
+			children = (
+				352325931C3CF20A007A3E1D /* AppDelegate.h */,
+				352325941C3CF20A007A3E1D /* AppDelegate.m */,
+				352325A31C3CFD05007A3E1D /* LOLBaseViewController.h */,
+				352325A41C3CFD05007A3E1D /* LOLBaseViewController.m */,
+				35C627A01C3E465A00D4A6FE /* dddViewController.h */,
+				35C627A11C3E465A00D4A6FE /* dddViewController.m */,
+				35C627EB1C3E562700D4A6FE /* LOLRootManger.h */,
+				35C627EC1C3E562700D4A6FE /* LOLRootManger.m */,
+				35C627EE1C3E61C900D4A6FE /* CCCCViewController.h */,
+				35C627EF1C3E61C900D4A6FE /* CCCCViewController.m */,
+			);
+			path = LOLMain;
+			sourceTree = "<group>";
+		};
+		352325991C3CF2B2007A3E1D /* LOLClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3523259C1C3CF464007A3E1D /* LOLItems(界面) */,
+				352325A01C3CF6D9007A3E1D /* LOLCategories(自定义分类) */,
+				3523259F1C3CF6B3007A3E1D /* LOLTools(自定义工具模块) */,
+				3523259E1C3CF5AF007A3E1D /* LOLLib(第三方库) */,
+			);
+			name = LOLClasses;
+			sourceTree = "<group>";
+		};
+		3523259A1C3CF35F007A3E1D /* LOLResources */ = {
+			isa = PBXGroup;
+			children = (
+				3523259B1C3CF423007A3E1D /* LOLImages */,
+			);
+			name = LOLResources;
+			sourceTree = "<group>";
+		};
+		3523259B1C3CF423007A3E1D /* LOLImages */ = {
+			isa = PBXGroup;
+			children = (
+				35C627901C3E319D00D4A6FE /* yw_home_selected_new@2x.png */,
+				35C627911C3E319D00D4A6FE /* yw_home_selected_new@3x.png */,
+				35C6278C1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png */,
+				35C6278D1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png */,
+			);
+			name = LOLImages;
+			path = LOL/LOLImages;
+			sourceTree = "<group>";
+		};
+		3523259C1C3CF464007A3E1D /* LOLItems(界面) */ = {
+			isa = PBXGroup;
+			children = (
+				352325921C3CF20A007A3E1D /* LOLMain */,
+				352325A11C3CF8ED007A3E1D /* ItemHome(首页) */,
+				35A6A1E81C3E1CFF00B6FDAB /* ItmShowGirls(妹子秀) */,
+				35A6A1EC1C3E1DC000B6FDAB /* ItemAccount(个人中心) */,
+				3523259D1C3CF53B007A3E1D /* LOLCells */,
+			);
+			name = "LOLItems(界面)";
+			sourceTree = "<group>";
+		};
+		3523259D1C3CF53B007A3E1D /* LOLCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LOLCells;
+			sourceTree = "<group>";
+		};
+		3523259E1C3CF5AF007A3E1D /* LOLLib(第三方库) */ = {
+			isa = PBXGroup;
+			children = (
+				35C627FB1C3EE8BD00D4A6FE /* FDFullscreenPopGesture */,
+				35A6A1DE1C3E1AD500B6FDAB /* RDVTabBarController */,
+			);
+			name = "LOLLib(第三方库)";
+			sourceTree = "<group>";
+		};
+		3523259F1C3CF6B3007A3E1D /* LOLTools(自定义工具模块) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "LOLTools(自定义工具模块)";
+			sourceTree = "<group>";
+		};
+		352325A01C3CF6D9007A3E1D /* LOLCategories(自定义分类) */ = {
+			isa = PBXGroup;
+			children = (
+				35C627F11C3E6AC800D4A6FE /* LOLUiimage */,
+				35C627A51C3E484300D4A6FE /* LOLMutableDictory */,
+				35C6279C1C3E373800D4A6FE /* LOLColor */,
+				35C627981C3E359A00D4A6FE /* LOLButton */,
+				35C627941C3E33F500D4A6FE /* ViewSize */,
+			);
+			name = "LOLCategories(自定义分类)";
+			sourceTree = "<group>";
+		};
+		352325A11C3CF8ED007A3E1D /* ItemHome(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				352325A61C3D0131007A3E1D /* LOLHomeViewController.h */,
+				352325A71C3D0131007A3E1D /* LOLHomeViewController.m */,
+			);
+			name = "ItemHome(首页)";
+			path = ItemHome;
+			sourceTree = "<group>";
+		};
+		35865D381C3AE82E0058546B = {
+			isa = PBXGroup;
+			children = (
+				35865D431C3AE82E0058546B /* LOL */,
+				3523259A1C3CF35F007A3E1D /* LOLResources */,
+				35865D441C3AE82E0058546B /* Supporting Files */,
+				35865D5D1C3AE82E0058546B /* LOLTests */,
+				35865D681C3AE82E0058546B /* LOLUITests */,
+				35865D421C3AE82E0058546B /* Products */,
+				CFD15EC3EF65D847B85E82BB /* Pods */,
+				CAE74F614D6A54184F3DD08D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		35865D421C3AE82E0058546B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35865D411C3AE82E0058546B /* LOL.app */,
+				35865D5A1C3AE82E0058546B /* LOLTests.xctest */,
+				35865D651C3AE82E0058546B /* LOLUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35865D431C3AE82E0058546B /* LOL */ = {
+			isa = PBXGroup;
+			children = (
+				352325991C3CF2B2007A3E1D /* LOLClasses */,
+			);
+			path = LOL;
+			sourceTree = "<group>";
+		};
+		35865D441C3AE82E0058546B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35865D4D1C3AE82E0058546B /* Main.storyboard */,
+				35865D501C3AE82E0058546B /* Assets.xcassets */,
+				35865D521C3AE82E0058546B /* LaunchScreen.storyboard */,
+				35865D551C3AE82E0058546B /* Info.plist */,
+				35865D451C3AE82E0058546B /* main.m */,
+				352325A21C3CFBCF007A3E1D /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			path = LOL;
+			sourceTree = "<group>";
+		};
+		35865D5D1C3AE82E0058546B /* LOLTests */ = {
+			isa = PBXGroup;
+			children = (
+				35865D5E1C3AE82E0058546B /* LOLTests.m */,
+				35865D601C3AE82E0058546B /* Info.plist */,
+			);
+			path = LOLTests;
+			sourceTree = "<group>";
+		};
+		35865D681C3AE82E0058546B /* LOLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				35865D691C3AE82E0058546B /* LOLUITests.m */,
+				35865D6B1C3AE82E0058546B /* Info.plist */,
+			);
+			path = LOLUITests;
+			sourceTree = "<group>";
+		};
+		35A6A1DE1C3E1AD500B6FDAB /* RDVTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				35A6A1DF1C3E1AD500B6FDAB /* RDVTabBar.h */,
+				35A6A1E01C3E1AD500B6FDAB /* RDVTabBar.m */,
+				35A6A1E11C3E1AD500B6FDAB /* RDVTabBarController.h */,
+				35A6A1E21C3E1AD500B6FDAB /* RDVTabBarController.m */,
+				35A6A1E31C3E1AD500B6FDAB /* RDVTabBarItem.h */,
+				35A6A1E41C3E1AD500B6FDAB /* RDVTabBarItem.m */,
+			);
+			path = RDVTabBarController;
+			sourceTree = "<group>";
+		};
+		35A6A1E81C3E1CFF00B6FDAB /* ItmShowGirls(妹子秀) */ = {
+			isa = PBXGroup;
+			children = (
+				35A6A1E91C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.h */,
+				35A6A1EA1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m */,
+			);
+			name = "ItmShowGirls(妹子秀)";
+			path = ItmShowGirls;
+			sourceTree = "<group>";
+		};
+		35A6A1EC1C3E1DC000B6FDAB /* ItemAccount(个人中心) */ = {
+			isa = PBXGroup;
+			children = (
+				35A6A1ED1C3E1DFE00B6FDAB /* LOLAccountViewController.h */,
+				35A6A1EE1C3E1DFE00B6FDAB /* LOLAccountViewController.m */,
+			);
+			name = "ItemAccount(个人中心)";
+			path = ItmShowGirls/ItemAccount;
+			sourceTree = "<group>";
+		};
+		35C627941C3E33F500D4A6FE /* ViewSize */ = {
+			isa = PBXGroup;
+			children = (
+				35C627951C3E340F00D4A6FE /* UIView+Frame.h */,
+				35C627961C3E340F00D4A6FE /* UIView+Frame.m */,
+			);
+			path = ViewSize;
+			sourceTree = "<group>";
+		};
+		35C627981C3E359A00D4A6FE /* LOLButton */ = {
+			isa = PBXGroup;
+			children = (
+				35C627991C3E35AD00D4A6FE /* UIButton+YW.h */,
+				35C6279A1C3E35AD00D4A6FE /* UIButton+YW.m */,
+			);
+			path = LOLButton;
+			sourceTree = "<group>";
+		};
+		35C6279C1C3E373800D4A6FE /* LOLColor */ = {
+			isa = PBXGroup;
+			children = (
+				35C6279D1C3E379600D4A6FE /* UIColor+YW.h */,
+				35C6279E1C3E379600D4A6FE /* UIColor+YW.m */,
+			);
+			path = LOLColor;
+			sourceTree = "<group>";
+		};
+		35C627A51C3E484300D4A6FE /* LOLMutableDictory */ = {
+			isa = PBXGroup;
+			children = (
+				35C627A61C3E487300D4A6FE /* NSDictionary+YW.h */,
+				35C627A71C3E487300D4A6FE /* NSDictionary+YW.m */,
+				35C627A81C3E487300D4A6FE /* NSMutableDictionary+YW.h */,
+				35C627A91C3E487300D4A6FE /* NSMutableDictionary+YW.m */,
+			);
+			path = LOLMutableDictory;
+			sourceTree = "<group>";
+		};
+		35C627F11C3E6AC800D4A6FE /* LOLUiimage */ = {
+			isa = PBXGroup;
+			children = (
+				35C627F21C3E6AC800D4A6FE /* UIImage+YW.h */,
+				35C627F31C3E6AC800D4A6FE /* UIImage+YW.m */,
+			);
+			path = LOLUiimage;
+			sourceTree = "<group>";
+		};
+		35C627FB1C3EE8BD00D4A6FE /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				35C627FC1C3EE8BD00D4A6FE /* UINavigationController+FDFullscreenPopGesture.h */,
+				35C627FD1C3EE8BD00D4A6FE /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		CAE74F614D6A54184F3DD08D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35C627F91C3E6C5500D4A6FE /* QuartzCore.framework */,
+				35C627F71C3E6C3900D4A6FE /* Security.framework */,
+				35C627F51C3E6C1800D4A6FE /* CoreGraphics.framework */,
+				8E18B4A4FD283CB66A08D27D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFD15EC3EF65D847B85E82BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDBE0005C3CE1120126C3590 /* Pods.debug.xcconfig */,
+				42DB32303C224370D5158818 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35865D401C3AE82E0058546B /* LOL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35865D6E1C3AE82E0058546B /* Build configuration list for PBXNativeTarget "LOL" */;
+			buildPhases = (
+				FBA51F9637E2B7C1C7CFD818 /* Check Pods Manifest.lock */,
+				35865D3D1C3AE82E0058546B /* Sources */,
+				35865D3E1C3AE82E0058546B /* Frameworks */,
+				35865D3F1C3AE82E0058546B /* Resources */,
+				4A8D16478BE066DB06128FB5 /* Embed Pods Frameworks */,
+				22F795FA3856B8D0D64EE746 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LOL;
+			productName = LOL;
+			productReference = 35865D411C3AE82E0058546B /* LOL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35865D591C3AE82E0058546B /* LOLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35865D711C3AE82E0058546B /* Build configuration list for PBXNativeTarget "LOLTests" */;
+			buildPhases = (
+				35865D561C3AE82E0058546B /* Sources */,
+				35865D571C3AE82E0058546B /* Frameworks */,
+				35865D581C3AE82E0058546B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35865D5C1C3AE82E0058546B /* PBXTargetDependency */,
+			);
+			name = LOLTests;
+			productName = LOLTests;
+			productReference = 35865D5A1C3AE82E0058546B /* LOLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		35865D641C3AE82E0058546B /* LOLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35865D741C3AE82E0058546B /* Build configuration list for PBXNativeTarget "LOLUITests" */;
+			buildPhases = (
+				35865D611C3AE82E0058546B /* Sources */,
+				35865D621C3AE82E0058546B /* Frameworks */,
+				35865D631C3AE82E0058546B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35865D671C3AE82E0058546B /* PBXTargetDependency */,
+			);
+			name = LOLUITests;
+			productName = LOLUITests;
+			productReference = 35865D651C3AE82E0058546B /* LOLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35865D391C3AE82E0058546B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = feibai;
+				TargetAttributes = {
+					35865D401C3AE82E0058546B = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					35865D591C3AE82E0058546B = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 35865D401C3AE82E0058546B;
+					};
+					35865D641C3AE82E0058546B = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 35865D401C3AE82E0058546B;
+					};
+				};
+			};
+			buildConfigurationList = 35865D3C1C3AE82E0058546B /* Build configuration list for PBXProject "LOL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35865D381C3AE82E0058546B;
+			productRefGroup = 35865D421C3AE82E0058546B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35865D401C3AE82E0058546B /* LOL */,
+				35865D591C3AE82E0058546B /* LOLTests */,
+				35865D641C3AE82E0058546B /* LOLUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35865D3F1C3AE82E0058546B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35865D541C3AE82E0058546B /* LaunchScreen.storyboard in Resources */,
+				35C627931C3E319D00D4A6FE /* yw_home_selected_new@3x.png in Resources */,
+				35865D511C3AE82E0058546B /* Assets.xcassets in Resources */,
+				35865D4F1C3AE82E0058546B /* Main.storyboard in Resources */,
+				35C627921C3E319D00D4A6FE /* yw_home_selected_new@2x.png in Resources */,
+				35C6278F1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png in Resources */,
+				35C6278E1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35865D581C3AE82E0058546B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35865D631C3AE82E0058546B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22F795FA3856B8D0D64EE746 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A8D16478BE066DB06128FB5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBA51F9637E2B7C1C7CFD818 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35865D3D1C3AE82E0058546B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35C627A21C3E465A00D4A6FE /* dddViewController.m in Sources */,
+				35C627FE1C3EE8BD00D4A6FE /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				35C627ED1C3E562700D4A6FE /* LOLRootManger.m in Sources */,
+				35C627AB1C3E487300D4A6FE /* NSMutableDictionary+YW.m in Sources */,
+				35C6279B1C3E35AD00D4A6FE /* UIButton+YW.m in Sources */,
+				35C627971C3E340F00D4A6FE /* UIView+Frame.m in Sources */,
+				35A6A1E71C3E1AD500B6FDAB /* RDVTabBarItem.m in Sources */,
+				35A6A1EF1C3E1DFE00B6FDAB /* LOLAccountViewController.m in Sources */,
+				352325971C3CF20A007A3E1D /* AppDelegate.m in Sources */,
+				35A6A1E61C3E1AD500B6FDAB /* RDVTabBarController.m in Sources */,
+				35C627F41C3E6AC800D4A6FE /* UIImage+YW.m in Sources */,
+				35A6A1E51C3E1AD500B6FDAB /* RDVTabBar.m in Sources */,
+				35A6A1EB1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m in Sources */,
+				35865D461C3AE82E0058546B /* main.m in Sources */,
+				35C6279F1C3E379600D4A6FE /* UIColor+YW.m in Sources */,
+				35C627F01C3E61C900D4A6FE /* CCCCViewController.m in Sources */,
+				352325A51C3CFD05007A3E1D /* LOLBaseViewController.m in Sources */,
+				35C627AA1C3E487300D4A6FE /* NSDictionary+YW.m in Sources */,
+				352325A81C3D0131007A3E1D /* LOLHomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35865D561C3AE82E0058546B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35865D5F1C3AE82E0058546B /* LOLTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35865D611C3AE82E0058546B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35865D6A1C3AE82E0058546B /* LOLUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35865D5C1C3AE82E0058546B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35865D401C3AE82E0058546B /* LOL */;
+			targetProxy = 35865D5B1C3AE82E0058546B /* PBXContainerItemProxy */;
+		};
+		35865D671C3AE82E0058546B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35865D401C3AE82E0058546B /* LOL */;
+			targetProxy = 35865D661C3AE82E0058546B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35865D4D1C3AE82E0058546B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35865D4E1C3AE82E0058546B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		35865D521C3AE82E0058546B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35865D531C3AE82E0058546B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35865D6C1C3AE82E0058546B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35865D6D1C3AE82E0058546B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35865D6F1C3AE82E0058546B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDBE0005C3CE1120126C3590 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LOL/PrefixHeader.pch";
+				INFOPLIST_FILE = LOL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feibai.LOL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		35865D701C3AE82E0058546B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42DB32303C224370D5158818 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LOL/PrefixHeader.pch";
+				INFOPLIST_FILE = LOL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feibai.LOL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		35865D721C3AE82E0058546B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LOLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feibai.LOLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOL.app/LOL";
+			};
+			name = Debug;
+		};
+		35865D731C3AE82E0058546B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LOLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feibai.LOLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOL.app/LOL";
+			};
+			name = Release;
+		};
+		35865D751C3AE82E0058546B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LOLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feibai.LOLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LOL;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		35865D761C3AE82E0058546B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LOLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feibai.LOLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LOL;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35865D3C1C3AE82E0058546B /* Build configuration list for PBXProject "LOL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35865D6C1C3AE82E0058546B /* Debug */,
+				35865D6D1C3AE82E0058546B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35865D6E1C3AE82E0058546B /* Build configuration list for PBXNativeTarget "LOL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35865D6F1C3AE82E0058546B /* Debug */,
+				35865D701C3AE82E0058546B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35865D711C3AE82E0058546B /* Build configuration list for PBXNativeTarget "LOLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35865D721C3AE82E0058546B /* Debug */,
+				35865D731C3AE82E0058546B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35865D741C3AE82E0058546B /* Build configuration list for PBXNativeTarget "LOLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35865D751C3AE82E0058546B /* Debug */,
+				35865D761C3AE82E0058546B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35865D391C3AE82E0058546B /* Project object */;
+}
