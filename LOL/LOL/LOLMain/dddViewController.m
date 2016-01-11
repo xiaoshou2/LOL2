@@ -8,7 +8,6 @@
 
 #import "dddViewController.h"
 #import "CCCCViewController.h"
-#import "UINavigationController+FDFullscreenPopGesture.h"
 @interface dddViewController ()
 
 @end
@@ -18,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = [UIColor yellowColor];
     self.title = @"第二页面";
     self.backButton.hidden = NO;
@@ -41,7 +39,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-     self.navigationController.fd_prefersNavigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {

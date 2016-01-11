@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "LOLRootManger.h"
-#import "UINavigationController+FDFullscreenPopGesture.h"
 #import "MMDrawerController.h"
 #import "CCCCViewController.h"
 @interface AppDelegate ()
@@ -54,12 +53,7 @@
     NSInteger index = 0;
     for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
         item.title = tabBarItemTitles[index];
-        if (index == 0) {
-//            item.backgroundColor = [UIColor redColor];
-        }else if(index == 1)
-        {
-            item.backgroundColor = [UIColor yellowColor];
-        }
+       
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
         
         NSString *itemSelectedName = [tabBarItemSelectedImages objectAtIndex:index];
@@ -73,21 +67,21 @@
         index++;
     }
     
-    _lcNavigationController = [[UINavigationController alloc] initWithRootViewController:_tabBarController];
+    _rootNavVC = [[LOLRootNavVC alloc] initWithRootViewController:_tabBarController];
     //viewController.fd_interactivePopDisabled = YES;
-    [_lcNavigationController setNavigationBarHidden:YES];
+    [_rootNavVC setNavigationBarHidden:YES];
 //   _lcNavigationController.fd_fullscreenPopGestureRecognizer.enabled = NO;
-    self.window.rootViewController = _lcNavigationController;
+    self.window.rootViewController = _rootNavVC;
 }
 - (UINavigationController *)getRootNav{
-     return self.lcNavigationController;
+     return self.rootNavVC;
 }
 
 #pragma mark - RDVTabBarControllerDelegate
 - (void)tabBarController:(RDVTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     
     //壹药网统计
-    LOLBaseViewController *viewCtrl = (LOLBaseViewController *)viewController;
+  //  LOLBaseViewController *viewCtrl = (LOLBaseViewController *)viewController;
     switch (tabBarController.selectedIndex) {
         case 0://首页
 //            [YWBehaviorStatisticsManager recordUserHandleBehaviorWithActionName:(NSString *)YW_Action_Click eventId:(NSString *)YW_EventID_tabbar_home viewController:viewCtrl curPageDict:@{} extendedDict:nil];

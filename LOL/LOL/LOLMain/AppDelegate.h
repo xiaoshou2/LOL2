@@ -11,12 +11,12 @@
 #import "LOLHomeViewController.h"
 #import "LOLShowGirlsViewContorller.h"
 #import "LOLAccountViewController.h"
-
+#import "LOLRootNavVC.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate,RDVTabBarControllerDelegate,UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) RDVTabBarController *tabBarController;
-@property (strong, nonatomic) UINavigationController *lcNavigationController;
+@property (strong, nonatomic) LOLRootNavVC *rootNavVC;
 - (void)setupViewControllers;
 - (UINavigationController *)getRootNav;
 @end

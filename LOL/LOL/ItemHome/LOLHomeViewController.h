@@ -7,7 +7,11 @@
 //
 
 #import "LOLBaseViewController.h"
-
-@interface LOLHomeViewController : LOLBaseViewController
+#import "YWFocusImageView.h"
+@interface LOLHomeViewController : LOLBaseViewController<UITableViewDataSource,UITableViewDelegate,YWFocusImageViewDelegate>
+@property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong) NSMutableArray *tableViewDataSource;
+@property (nonatomic,strong)  YWFocusImageView *bannerView;
+@property (nonatomic,strong) NSMutableArray *bannerArray;
 
 @end

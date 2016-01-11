@@ -28,9 +28,18 @@
 #define IsIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)
 #define SharedDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
+#define widthScale ScreenWidth/320.
+#define topHeight ISIOS7 ? 64. : 44.
+
+//字体大小（常规/粗体）
+#define BOLDFONT(FONTSIZE) [UIFont boldSystemFontOfSize:FONTSIZE]
+#define SYSTEMFONT(FONTSIZE)     [UIFont systemFontOfSize:FONTSIZE]
+#define FONT(NAME,FONTSIZE)      [UIFont fontWithName:(NAME) size:(FONTSIZE)]
+
 #import "UIView+Frame.h"
 #import "UIButton+YW.h"
 #import "UIColor+YW.h"
 #import "UIImage+YW.h"
+#import "UIImageView+WebCache.h"
 #endif /* PrefixHeader_pch */
 
