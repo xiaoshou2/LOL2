@@ -30,7 +30,7 @@
         }
             break;
         case LOLHomeCellStyleSpaceSec:{
-            self.cellHeight = 15;
+            self.cellHeight = 25;
         }
             break;
         case LOLHomeCellStyleFloorThree:{

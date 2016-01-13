@@ -19,6 +19,8 @@
     if (self) {
         
         NSArray *titleArray = @[@"我要上分",@"大神认证",@"热门推荐",@"发布需求"];
+    
+        
         for (int i = 0; i<4; i++) {
             self.bottomView = [[UIView alloc] init];
             [self.bottomView setFrame:CGRectMake((i*ScreenWidth/4),0,ScreenWidth/4,80)];
@@ -28,6 +30,7 @@
             
             
             self.menuImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.bottomView.width/2-25,10,50,50)];
+            self.menuImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"h2x_i_0%d",i+1]];
             self.menuTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.bottomView.width/2-25,61,50,20)];
             
             
@@ -38,20 +41,20 @@
                 
             }else if(i ==1)
             {
-                self.bottomView.backgroundColor = [UIColor blackColor];
-                self.menuImageView.backgroundColor = [UIColor redColor];
-                 self.menuTitleLabel.backgroundColor = [UIColor orangeColor];
+//                self.bottomView.backgroundColor = [UIColor blackColor];
+//                self.menuImageView.backgroundColor = [UIColor redColor];
+//                 self.menuTitleLabel.backgroundColor = [UIColor orangeColor];
             }
             else if(i == 2)
             {
-                self.bottomView.backgroundColor = [UIColor yellowColor];
-                self.menuImageView.backgroundColor = [UIColor greenColor];
-                 self.menuTitleLabel.backgroundColor = [UIColor darkGrayColor];
+//                self.bottomView.backgroundColor = [UIColor yellowColor];
+//                self.menuImageView.backgroundColor = [UIColor greenColor];
+//                 self.menuTitleLabel.backgroundColor = [UIColor darkGrayColor];
             }else
             {
-                self.bottomView.backgroundColor = [UIColor greenColor];
-                self.menuImageView.backgroundColor = [UIColor brownColor];
-                self.menuTitleLabel.backgroundColor = [UIColor redColor];
+//                self.bottomView.backgroundColor = [UIColor greenColor];
+//                self.menuImageView.backgroundColor = [UIColor brownColor];
+//                self.menuTitleLabel.backgroundColor = [UIColor redColor];
             }
             [self addSubview:self.bottomView];
             [self.bottomView addSubview:self.menuImageView];

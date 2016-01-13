@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import "YWHomeProduct.h"
+#import "LOLBigGodModel.h"
 #import <UIKit/UIKit.h>
 typedef NS_OPTIONS(NSUInteger, LOLHomeCellStyle) {
     LOLHomeCellStyleFloorOne = 0,//menu
@@ -47,4 +47,5 @@ typedef NS_OPTIONS(NSUInteger, LOLHomeCellStyle) {
 //@property(nonatomic,strong) YWHomeProduct *lastProduct;
 
 @property(nonatomic,assign) BOOL isHiddenLine;//是否隐藏间隙cell的线
+@property (nonatomic,strong) LOLBigGodModel *bigGodModel;
 @end

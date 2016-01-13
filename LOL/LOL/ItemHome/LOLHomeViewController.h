@@ -7,11 +7,12 @@
 //
 
 #import "LOLBaseViewController.h"
-#import "YWFocusImageView.h"
-@interface LOLHomeViewController : LOLBaseViewController<UITableViewDataSource,UITableViewDelegate,YWFocusImageViewDelegate>
+#import "SDCycleScrollView.h"
+@interface LOLHomeViewController : LOLBaseViewController<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate>
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *tableViewDataSource;
-@property (nonatomic,strong)  YWFocusImageView *bannerView;
 @property (nonatomic,strong) NSMutableArray *bannerArray;
+@property (nonatomic,strong) NSMutableArray *bigGodArr;
+@property (nonatomic,strong) NSMutableArray *bigGodListArr;
 
 @end

@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "LOLRootManger.h"
 #import "MMDrawerController.h"
-#import "CCCCViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -30,9 +29,11 @@
    LOLHomeViewController *homeVC = [[LOLHomeViewController alloc] init];
    LOLShowGirlsViewContorller *showGrlsVC = [[LOLShowGirlsViewContorller alloc] init];
    LOLAccountViewController *accountVC = [[LOLAccountViewController alloc] init];
+    LOLDemandHallVC *demanHall = [[LOLDemandHallVC alloc] init];
+    
    _tabBarController = [[RDVTabBarController alloc] init];
    _tabBarController.delegate = self;
-  [_tabBarController setViewControllers:@[homeVC, showGrlsVC, accountVC]];
+  [_tabBarController setViewControllers:@[homeVC,demanHall,showGrlsVC, accountVC]];
   [self customizeTabBarForController:_tabBarController];
 }
 
@@ -48,7 +49,7 @@
                                   @"yw_years_new", @"yw_cart_normal_new",
                                   @"yw_account_normal_new"];
     
-    NSArray *tabBarItemTitles = @[@"", @"showGirl", @"个人中心"];
+    NSArray *tabBarItemTitles = @[@"",@"", @"showGirl", @"个人中心"];
     
     NSInteger index = 0;
     for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {

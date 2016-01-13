@@ -7,7 +7,6 @@
 //
 
 #import "LOLHomeViewController.h"
-#import "dddViewController.h"
 #import "LOLHomeCellProperty.h"
 #import "LOLHomeMenuCell.h"
 #import "LOLSpaceCell.h"
@@ -18,7 +17,9 @@
 #import "LOLGodcertificationVC.h"
 
 @interface LOLHomeViewController ()
-
+{
+    SDCycleScrollView *cycleScrollView2;
+}
 @end
 
 @implementation LOLHomeViewController
@@ -28,16 +29,53 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.title = @"首页";
     self.tableView.hidden = YES;
-    _tableViewDataSource = [NSMutableArray array];
-    self.bannerArray     = [NSMutableArray array];
-    self.bannerArray     = [NSMutableArray arrayWithObjects:@"",@"",@"",@"",nil];
-    [self loadDataSource];
     self.backButton.hidden = YES;
+
+    [self initDataArr];
+    //请求数据
+    [self requestData];
     [self setupCustomNavBar];
     [self setupMainView];
-    [self reloadBannerView];
     [self setupRefreshUI];
+    
+  
 
+}
+-(void)initDataArr
+{
+    _tableViewDataSource = [NSMutableArray array];
+    self.bigGodArr       = [NSMutableArray array];
+    self.bannerArray     = [NSMutableArray array];
+    self.bigGodListArr   = [NSMutableArray array];
+}
+
+-(void)requestData
+{
+    
+    
+    [self showHUD];
+    //请求数据
+    [LOLAFNetWorkUtility  homeViewRequestWithParms:@{} successBlock:^(id responseObject) {
+      //  NSLog(@"-hahahahaha--  LOL请求成功 --%@--",responseObject);
+        self.bigGodArr = responseObject;
+        LOLBigGodModel *model = self.bigGodArr[0];
+        self.bannerArray = model.bannerArr;
+        self.bigGodListArr = responseObject;
+        [self hideHUD];
+        //请求完加载数据
+        [self loadDataSource];
+        NSLog(@"图片 ---  %@",self.bannerArray);
+      //--- 模拟加载延迟
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+         cycleScrollView2.imageURLStringsGroup = self.bannerArray;
+        });
+        
+        
+    } failedBlock:^(NSError *error) {
+        //        [self.commmentView.header endRefreshing  ];
+        [self hideHUD];
+        NSLog(@"---  LOL请求失败 ----");
+    } ];
 }
 
 #pragma mark - setup UI
@@ -76,9 +114,19 @@
 - (void)requireNewData {
    // [self showHUD];
     
-//    BOOL isUpPullRefresh = self.tableView.contentOffset.y >= 0;    // 判断是不是上拉刷新
-//    NSInteger page = isUpPullRefresh ? self.currentPage : 1;
-//    
+//    BOOL isUpPullRefresh = self.tableView.contentOffset.y >= 0;
+    
+    [self requestData];
+   
+    // 刷新表格
+    [self.tableView reloadData];
+    
+    // 拿到当前的下拉刷新控件，结束刷新状态
+    [self.tableView.mj_header endRefreshing];
+    
+    // 判断是不是上拉刷新
+  //  NSInteger page = isUpPullRefresh ? self.currentPage : 1;
+//
 //    __WEAKSELF
 //    [YWAFNetworkUtility getChannelListDataOfPage:page
 //                                        pageSize:10
@@ -123,9 +171,26 @@
     [self.view addSubview:self.tableView];
     [self registCell];
     //[self.view insertSubview:self.tableView belowSubview:self.titleView];
+ 
     /************* 初始化banner视图  ********************/
-    _bannerView = [[YWFocusImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth * 300 / 750) delegate:self imageItems:self.bannerArray isAuto:NO];
-    self.tableView.tableHeaderView = _bannerView;
+    UIScrollView *demoContainerView = [[UIScrollView alloc] init];
+    demoContainerView.frame = CGRectMake(0, 0, ScreenWidth, ScreenWidth * 300 / 750);
+    demoContainerView.contentSize = CGSizeMake(self.view.frame.size.width, 1200);
+    self.tableView.tableHeaderView = demoContainerView;
+    
+    CGFloat w = self.view.bounds.size.width;
+    // 网络加载 --- 创建带标题的图片轮播器
+    cycleScrollView2 = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, w, demoContainerView.height) delegate:self placeholderImage:[UIImage imageNamed:@"yw_home_default_btn"]];
+    
+    cycleScrollView2.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+    cycleScrollView2.autoScrollTimeInterval = 2.0;
+    cycleScrollView2.imageURLStringsGroup = self.bannerArray;
+    //cycleScrollView2.backgroundColor = [UIColor redColor];
+    // cycleScrollView2.titlesGroup = titles;
+    cycleScrollView2.delegate = self;
+    cycleScrollView2.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
+    [demoContainerView addSubview:cycleScrollView2];
+    
 
 }
 
@@ -155,7 +220,8 @@
             cell.menuClickedBk =  ^(NSInteger sender) {
                 [self pushMenuVC:sender];
             };
-            cell.backgroundColor = [UIColor grayColor];
+             cell.backgroundColor = [UIColor clearColor];
+           // cell.backgroundColor = [UIColor grayColor];
            // cell.menuArray = cellProperty.cellData;
               
             return cell;
@@ -164,11 +230,8 @@
         case LOLHomeCellStyleSpaceOne:{
 
             LOLSpaceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LOLSpaceCell"];
-              cell.backgroundColor = [UIColor purpleColor];
+              //cell.backgroundColor = [UIColor purpleColor];
               cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-            //cell.backgroundColor = cellProperty.cellColor ? cellProperty.cellColor : [UIColor colorWithString:@"#f3f3f3"];
-            //cell.isHiddenLine = cellProperty.isHiddenLine;
             return cell;
         }
             break;
@@ -176,27 +239,33 @@
 
             LOLBigGogCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LOLBigGogCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.godClickedBk =  ^(NSInteger sender) {
+            cell.godClickedBk =  ^(NSString *sender) {
                   [self pushGodVC:sender];
               };
-           // cell.floorTitle = cellProperty.floorTitle;
-            //cell.channelArray = _channelArray;
-            //cell.backgroundColor = [UIColor colorWithString:@"#ffffff"];
-              cell.backgroundColor = [UIColor blueColor];
+           cell.modelArr = self.bigGodArr;
+           
+            cell.backgroundColor = [UIColor clearColor];
             return cell;
         }
               break;
         case LOLHomeCellStyleSpaceSec:{
               LOLSpaceSecCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LOLSpaceSecCell"];
-              cell.selectionStyle = UITableViewCellSelectionStyleNone;
-              cell.backgroundColor = [UIColor redColor];
-              
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.backgroundColor = [UIColor clearColor];
+           // cell.backgroundColor = [UIColor redColor];
+
               return cell;
           }break;
           case LOLHomeCellStyleFloorThree:{
+              
               LOLBigGodListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LOLBigGodListCell"];
               cell.selectionStyle = UITableViewCellSelectionStyleNone;
-              cell.backgroundColor = [UIColor grayColor];
+              
+              cell.cellModel = cellProperty.bigGodModel;
+     
+              cell.backgroundColor = [UIColor clearColor];
+
+              //cell.backgroundColor = [UIColor grayColor];
               
               return cell;
           }break;
@@ -212,13 +281,10 @@
 
 #pragma mark - 加载数据源
 - (void) loadDataSource{
-//    if (_tableViewDataSource.count > 0) {
-//        [_tableViewDataSource removeAllObjects];
-//        productPage = 1;
-//    }
-    
-   
-    
+    if (_tableViewDataSource.count > 0) {
+        [_tableViewDataSource removeAllObjects];
+      //  productPage = 1;
+    }
     LOLHomeCellProperty *menuCellProperty = [self createCellPropertyWithType:LOLHomeCellStyleFloorOne];
    // menuCellProperty.cellData = self.menuViewModel.menuSource;
     [_tableViewDataSource addObject:menuCellProperty];// 菜单
@@ -227,51 +293,20 @@
     [_tableViewDataSource addObject:spaceCellProperty];//间隙
     
     LOLHomeCellProperty *bigGogCell = [self createCellPropertyWithType:LOLHomeCellStyleFloorTwo];
-    [_tableViewDataSource addObject:bigGogCell];
+    [_tableViewDataSource addObject:bigGogCell];//大神秀
     
     LOLHomeCellProperty *spaceCellSec = [self createCellPropertyWithType:LOLHomeCellStyleSpaceSec];
-    [_tableViewDataSource addObject:spaceCellSec];
+    [_tableViewDataSource addObject:spaceCellSec];//间隙2
 
-    LOLHomeCellProperty *bigGodList = [self createCellPropertyWithType:LOLHomeCellStyleFloorThree];
-    [_tableViewDataSource addObject:bigGodList];
+    for (int i; i< self.bigGodListArr.count; i++) {//大神list
+        LOLHomeCellProperty *bigGodList = [self createCellPropertyWithType:LOLHomeCellStyleFloorThree];
+        bigGodList.bigGodModel = self.bigGodListArr[i];
+        [_tableViewDataSource addObject:bigGodList];
+    }
+  
     
+    [self.tableView reloadData];
     
-//    //添加楼层数据
-//    for (int i = 0; i < [self.floorViewModel.homeFloorSource count]; i++) {
-//        NSDictionary *dataDic = self.floorViewModel.homeFloorSource[i];
-//        NSString *lctitle = dataDic[@"floorName"];
-//        NSInteger lctype = [dataDic[@"templateId"] intValue];
-//        if (lctype == YWHomeCellStyleSpecial) {
-//            //楼层是否有标题
-//            //            NSLog(@"%@",lctitle);
-//            if (lctitle.length > 0) {
-//                YWHomeCellProperty *floorTitle = [self createCellPropertyWithType:YWHomeCellStyleFloorTitle];//楼层标题单元格
-//                floorTitle.floorTitle = lctitle;
-//                [_tableViewDataSource addObject:floorTitle];
-//                
-//            }
-//            for (int i = 0; i < [dataDic[@"contents"] count]; i++) {
-//                YWHomeCellProperty *floorCellProperty = [self createCellPropertyWithType:[dataDic[@"templateId"] intValue]];//楼层样式
-//                NSArray *tempArray = dataDic[@"contents"];
-//                floorCellProperty.floorData = [NSArray arrayWithObject:tempArray[i]];
-//                [_tableViewDataSource addObject:floorCellProperty];
-//            }
-//        }else{
-//            YWHomeCellProperty *floorCellProperty = [self createCellPropertyWithType:[dataDic[@"templateId"] intValue]];//楼层样式
-//            floorCellProperty.floorData = dataDic[@"contents"];//楼层数据
-//            if (floorCellProperty.cellType == YWHomeCellStyleThemeProdcut) {
-//                floorCellProperty.themeProducts = dataDic[@"itemsToTemplate"];
-//                [_tableViewDataSource addObject:floorCellProperty];
-//                continue;
-//            }else{
-//                [_tableViewDataSource addObject:floorCellProperty];
-//            }
-//            
-//        }
-//        [_tableViewDataSource addObject:spaceCellProperty];//间隙
-//    }
-//    [self requestPoructRecommendwithPage:productPage];
-//    
 }
 
 - (LOLHomeCellProperty *) createCellPropertyWithType:(LOLHomeCellStyle) cellType{
@@ -279,14 +314,7 @@
     productCell.cellType = cellType;
     return productCell;
 }
-//-(void)aaa
-//{
-//    dddViewController *vv = [[dddViewController alloc] init];
-//    //[SharedDelegate.lcNavigationController pushViewController:vv animated:YES];
-//    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//    
-//    [[appdelegate getRootNav] pushViewController:vv animated:YES];
-//}
+
 -(void)setupCustomNavBar
 {
 //    UIView *topView =  [[UIView alloc] initWithFrame:CGRectMake(0,IsIOS7 ? 20 : 0, self.view.width,44.)];
@@ -297,25 +325,23 @@
 //    [self.titleView addSubview:topView];
 }
 
-#pragma mark - 构建广告滚动视图
-- (void)reloadBannerView
-{
-    if ([self.bannerArray count]>1) {
-        id firstObj = [self.bannerArray firstObject];
-        id lastObj = [self.bannerArray lastObject];
-        [self.bannerArray insertObject:lastObj atIndex:0];
-        [self.bannerArray addObject:firstObj];
-    }
-    
-    [_bannerView reloadData:self.bannerArray];
-    
-    
-}
+
 
 -(void)pushMenuVC:(NSInteger)sender
 {
     if (sender == 1000) {
         NSLog(@" --push-1000");
+        [self showHUD];
+        [LOLAFNetWorkUtility  homeViewRequestWithParms:@{} successBlock:^(id responseObject) {
+            NSLog(@"-hahahahaha--  LOL请求成功 ----");
+            [self hideHUD];
+            
+        } failedBlock:^(NSError *error) {
+            //        [self.commmentView.header endRefreshing  ];
+            [self hideHUD];
+            NSLog(@"---  LOL请求失败 ----");
+        } ];
+        
     }
     else if (sender == 1001) {
           LOLGodcertificationVC *godVC = [[LOLGodcertificationVC alloc] init];
@@ -334,13 +360,16 @@
 {
     LOLHomeCellProperty *cellProperty = _tableViewDataSource[indexPath.row];
     if(cellProperty.cellType == LOLHomeCellStyleFloorThree) {
-    NSLog(@"-大神List-cellClicked--%ld",(long)indexPath.row);
+       LOLBigGodModel *selectModel = cellProperty.bigGodModel;
+        
+    NSLog(@"-大神ID--%@",selectModel.mUserID);
     }
 }
 
--(void)pushGodVC:(NSInteger)sender
+
+-(void)pushGodVC:(NSString *)sender
 {
-    NSLog(@"--sender.tag-- %ld",(long)sender);
+    NSLog(@"--大神的 ID-- %@",sender);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -351,7 +380,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - SDCycleScrollViewDelegate
 
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    NSLog(@"---点击了第%ld张图片", (long)index);
+    
+    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
+}
 
 
 @end

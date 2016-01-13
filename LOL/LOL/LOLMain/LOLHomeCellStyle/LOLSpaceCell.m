@@ -17,10 +17,12 @@
         self.titleImageView.image = [UIImage imageNamed:@"home_daka.png"];
         [self addSubview:self.titleImageView];
         self.leftLineView = [[UIView alloc] initWithFrame:CGRectMake(10,self.height/2,ScreenWidth/2-40, 1)];
-        self.leftLineView.backgroundColor = [UIColor yellowColor];
+        self.leftLineView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
+        //self.leftLineView.backgroundColor = [UIColor yellowColor];
         
         self.rightLineView = [[UIView alloc] initWithFrame:CGRectMake(ScreenWidth-10,self.height/2,-(ScreenWidth/2-40), 1)];
-        self.rightLineView.backgroundColor = [UIColor blackColor];
+        //self.rightLineView.backgroundColor = [UIColor blackColor];
+        self.rightLineView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
         [self addSubview:self.rightLineView];
         [self addSubview:self.leftLineView];
         

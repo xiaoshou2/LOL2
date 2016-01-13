@@ -30,16 +30,23 @@
 
 #define widthScale ScreenWidth/320.
 #define topHeight ISIOS7 ? 64. : 44.
-
+//ios7
+#define ISIOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7
 //字体大小（常规/粗体）
 #define BOLDFONT(FONTSIZE) [UIFont boldSystemFontOfSize:FONTSIZE]
 #define SYSTEMFONT(FONTSIZE)     [UIFont systemFontOfSize:FONTSIZE]
 #define FONT(NAME,FONTSIZE)      [UIFont fontWithName:(NAME) size:(FONTSIZE)]
+#define DLogDebug(fmt, ...) do { if (LOG_LEVEL >= LOG_LEVEL_DEBUG ) { MYNSLog(fmt, "YW_DEBUG", ##__VA_ARGS__); } } while(0);
 
 #import "UIView+Frame.h"
 #import "UIButton+YW.h"
 #import "UIColor+YW.h"
 #import "UIImage+YW.h"
 #import "UIImageView+WebCache.h"
+#import "LOLAFHTTPClient.h"
+#import "LOLAFNetworkUtility.h"
+#import "LOLAPI.h"
+#import "UIViewController+MBProgressHUD.h"
+#import "LOLStringUtility.h"
 #endif /* PrefixHeader_pch */
 

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void(^godClickedBlock)(NSInteger sender);
+#import "LOLBigGodModel.h"
+typedef void(^godClickedBlock)(NSString *sender);
 
 @interface LOLBigGogCell : UITableViewCell
 @property (nonatomic,copy)godClickedBlock godClickedBk;
@@ -16,4 +17,6 @@ typedef void(^godClickedBlock)(NSInteger sender);
 @property (nonatomic,strong)UILabel *userNameLb;
 @property (nonatomic,strong)UILabel *userMessageLb;
 @property (nonatomic,strong)UILabel *userMessageSecLb;
+@property (nonatomic,strong)NSMutableArray *modelArr;
+@property (nonatomic,strong)UIView *spaceView;
 @end

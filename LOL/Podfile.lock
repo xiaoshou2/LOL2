@@ -19,6 +19,7 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - MBProgressHUD (0.9.2)
   - MJRefresh (3.0.8)
   - MMDrawerController (0.6.0):
     - MMDrawerController/Core (= 0.6.0)
@@ -39,6 +40,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - FMDB
+  - MBProgressHUD
   - MJRefresh
   - MMDrawerController
   - SDWebImage (~> 3.7.3)
@@ -46,6 +48,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
