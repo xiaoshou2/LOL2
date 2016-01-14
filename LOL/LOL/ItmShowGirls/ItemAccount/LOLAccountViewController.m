@@ -41,7 +41,6 @@
             UIEdgeInsets edgeInset = UIEdgeInsetsMake(TABLEVIEW_CONTENTINSET_TOP, 0, 0, 0);
             _tableView.contentInset = edgeInset;
             [_tableView setContentOffset:CGPointMake(0, -TABLEVIEW_CONTENTINSET_TOP) animated:YES];
-            
             [_tableView scrollsToTop];
             _panView.frame = CGRectMake(0, 0,ScreenWidth, PANVIEW_SIZE_HEIGHT);
         }];
