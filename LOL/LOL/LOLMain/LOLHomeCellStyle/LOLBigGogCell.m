@@ -22,11 +22,14 @@
         CGFloat viewW = ScreenWidth/4;
         CGFloat viewH = 94;
         for (int i = 0; i<8; i++) {
+        
             self.bottmoView = [[UIImageView alloc] init];
-            self.bottmoView.tag = 2000+i;
+            [self.bottmoView setFrame:CGRectMake((i*ScreenWidth/4),0,ScreenWidth/4,80)];
             self.bottmoView.userInteractionEnabled = YES;
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClicked:)];
+            self.bottmoView.tag = 2000+i;
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(itemClicked:)];
             [self.bottmoView addGestureRecognizer:tap];
+            
             self.headImageView = [[UIImageView alloc] init];
             self.headImageView.tag = 3000+i;
             self.userNameLb = [[UILabel alloc] init];
@@ -185,13 +188,11 @@
         UILabel *mesSecLb = [self viewWithTag:6000+i];
         mesSecLb.text = [NSString stringWithFormat:@"胜率:%@",data.mUserShenglv];
         
-        
-        NSLog(@"sheng---%@--",data.mUserShenglv);
     }
 }
 
 
--(void)imageClicked:(UITapGestureRecognizer*)sender
+-(void)itemClicked:(UITapGestureRecognizer*)sender
 {
     UIView *temp = sender.view;
     LOLBigGodModel *selectModel = self.modelArr[temp.tag-2000];
@@ -204,5 +205,7 @@
 
     // Configure the view for the selected state
 }
+
+
 
 @end

@@ -16,4 +16,8 @@
 }
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *tableViewDataSource;
+
+@property (nonatomic, strong) UIView *TopView;
+
+@property (nonatomic, strong) UIButton *btn;
 @end

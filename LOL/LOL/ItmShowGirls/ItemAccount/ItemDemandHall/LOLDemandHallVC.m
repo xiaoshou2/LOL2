@@ -86,6 +86,18 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:self.tableView];
+    
+    _TopView = [[UIView alloc]initWithFrame:CGRectMake(ScreenWidth-65, ScreenHeight-120, 50, 50)];
+    _TopView.backgroundColor = [UIColor lightGrayColor];
+    _TopView.layer.cornerRadius = 25;
+    _TopView.clipsToBounds = YES;
+    //_TopView.backgroundColor = [UIColor redColor];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, _TopView.frame.size.width, _TopView.frame.size.height);
+    [btn setTitle:@"发布" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(DoSomething) forControlEvents:UIControlEventTouchUpInside];
+    [_TopView addSubview:btn];
+    [self.view addSubview:_TopView];
 }
 
 #pragma mark - tableViewDataSource
@@ -102,6 +114,7 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
     if (cell == nil) {
         cell = [[DemandCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
     }
+ 
    [cell.muserHeadImageView sd_setImageWithURL:[NSURL URLWithString:model.mhearAdress] placeholderImage:[UIImage imageNamed:@"yw_load7"]];
     cell.muserNameLb.text = model.muserName;
     cell.mreleaseTimeLb.text = [NSString stringWithFormat:@"发布于:%@",model.mreleaseTime];
@@ -109,22 +122,26 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
     float height = [self heightForCellWithData:model];
     
     NSLog(@"--每个cell的高度--%f",height);
-    
-    cell.mpriceLb.text = [NSString stringWithFormat:@"酬劳:￥%@元",model.mprice];
+    if (model.mprice.length<=0) {
+         cell.mpriceLb.text = [NSString stringWithFormat:@"酬劳未定"];
+    }else{
+         cell.mpriceLb.text = [NSString stringWithFormat:@"酬劳:￥%@元",model.mprice];
+    }
+   
     [cell resetFrame:height];
     cell.mendTimeLb.text = model.mendtime;
     
-    if (indexPath.row == 0) {
-        cell.backgroundColor = [UIColor orangeColor];
-    }else if(indexPath.row == 1)
-    {
-        cell.backgroundColor = [UIColor brownColor];
-    }else if(indexPath.row == 2)
-    {
-        cell.backgroundColor = [UIColor redColor];
-    }else if(indexPath.row == 3){
-        cell.backgroundColor = [UIColor yellowColor];
-    }
+//    if (indexPath.row == 0) {
+//        cell.backgroundColor = [UIColor orangeColor];
+//    }else if(indexPath.row == 1)
+//    {
+//        cell.backgroundColor = [UIColor brownColor];
+//    }else if(indexPath.row == 2)
+//    {
+//        cell.backgroundColor = [UIColor redColor];
+//    }else if(indexPath.row == 3){
+//        cell.backgroundColor = [UIColor yellowColor];
+//    }
     
     
     return cell;
@@ -156,14 +173,28 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView.dragging) {
+        
         if((scrollView.contentOffset.y - _beginOffsetY)>10.0f) {    //向上拖拽
             if (!_hideTopView) {
                 [self hideTopView];
+                //向下
+                CATransition *animation = [CATransition animation];
+               
+                animation.type = kCATransitionMoveIn;
+                animation.duration = 1.0f;
+                [_TopView.layer addAnimation:animation forKey:nil];
+                _TopView.hidden = YES;
+                
             }
             
         } else if ((scrollView.contentOffset.y - _beginOffsetY)<-10.0f) {     //向下拖拽
             if (_hideTopView) {
                 [self showTopView];
+      
+            }else if(scrollView.contentOffset.y < _beginOffsetY)
+            {
+                //向上
+                _TopView.hidden = NO;
             }
         }
     }
@@ -172,7 +203,13 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     _beginOffsetY = scrollView.contentOffset.y;
 }
-
+#pragma mark - btn 点击事件
+- (void)DoSomething{
+    //到顶部
+//    [self.tableview setContentOffset:CGPointMake(0, -60) animated:YES];
+    NSLog(@"发布");
+    
+}
 
 #pragma mark  <隐藏头部View>
 

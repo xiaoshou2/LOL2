@@ -18,5 +18,6 @@
 @property (nonatomic,strong)UILabel *mendTimeLb;
 @property (nonatomic,strong)UIButton *mhelpBtn;
 @property (nonatomic,strong)UIView *spaceView;
+
 -(void)resetFrame:(float)height;
 @end

@@ -15,39 +15,45 @@
     if (self) {
         self.muserHeadImageView = [[UIImageView alloc] init];
         self.muserHeadImageView.frame = CGRectMake(10,10,45, 45);
-        self.muserHeadImageView.backgroundColor = [UIColor redColor];
+        //self.muserHeadImageView.backgroundColor = [UIColor redColor];
+        self.muserHeadImageView.backgroundColor = [UIColor clearColor];
         self.muserHeadImageView.layer.masksToBounds =YES;
         self.muserHeadImageView.layer.cornerRadius =45/2;
         [self addSubview:self.muserHeadImageView];
         
         self.muserNameLb = [[UILabel alloc] init];
         self.muserNameLb.frame = CGRectMake(60,10,120,20);
-        self.muserNameLb.backgroundColor = [UIColor yellowColor];
+        self.muserNameLb.backgroundColor = [UIColor clearColor];
+     // self.muserNameLb.backgroundColor = [UIColor yellowColor];
         [self addSubview:self.muserNameLb];
         
         self.mreleaseTimeLb = [[UILabel alloc] init];
-        self.mreleaseTimeLb.frame = CGRectMake(60,40,120,20);
+        self.mreleaseTimeLb.frame = CGRectMake(60,35,120,20);
         self.mreleaseTimeLb.font = SYSTEMFONT(12);
         self.mreleaseTimeLb.textColor = [UIColor colorWithHex:@"#999999"];
-        self.mreleaseTimeLb.backgroundColor = [UIColor blueColor];
+//        self.mreleaseTimeLb.backgroundColor = [UIColor blueColor];
+        self.mreleaseTimeLb.backgroundColor = [UIColor clearColor];
         [self addSubview:self.mreleaseTimeLb];
         
         self.mcontentLb = [[UILabel alloc] init];
         self.mcontentLb.font = SYSTEMFONT(14);
         self.mcontentLb.numberOfLines = 0;
-        self.mcontentLb.backgroundColor = [UIColor brownColor];
+        //self.mcontentLb.backgroundColor = [UIColor brownColor];
+        self.mcontentLb.backgroundColor = [UIColor clearColor];
+
         [self addSubview:self.mcontentLb];
         
         self.mpriceLb = [[UILabel alloc] init];
         
         self.mpriceLb.font = SYSTEMFONT(13);
-        self.mpriceLb.backgroundColor = [UIColor purpleColor];
+        //self.mpriceLb.backgroundColor = [UIColor purpleColor];
+        self.mpriceLb.backgroundColor = [UIColor clearColor];
         [self addSubview:self.mpriceLb];
         
         
         self.mendTimeLb = [[UILabel alloc] init];
-        
-        self.mendTimeLb.backgroundColor = [UIColor grayColor];
+        self.mendTimeLb.backgroundColor = [UIColor clearColor];
+       // self.mendTimeLb.backgroundColor = [UIColor grayColor];
         [self addSubview:self.mendTimeLb];
         self.mendTimeLb.font = SYSTEMFONT(13);
 
@@ -75,5 +81,6 @@
     self.mhelpBtn.frame = CGRectMake(60, 110+self.mcontentLb.height, 50, 40);
     self.spaceView.frame = CGRectMake(0,155+self.mcontentLb.height, ScreenWidth, 15);
 }
+
 
 @end

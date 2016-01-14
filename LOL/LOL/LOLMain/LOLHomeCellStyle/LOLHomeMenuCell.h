@@ -12,7 +12,7 @@ typedef void(^MenuClickedBlock)(NSInteger sender);
 
 @interface LOLHomeMenuCell : UITableViewCell
 @property (nonatomic,copy)MenuClickedBlock menuClickedBk;
-@property (nonatomic,strong)UIView *bottomView;
+@property (nonatomic,strong)UIButton *bottomView;
 @property (nonatomic,strong)UIImageView *menuImageView;
 @property (nonatomic,strong)UILabel *menuTitleLabel;
 @end

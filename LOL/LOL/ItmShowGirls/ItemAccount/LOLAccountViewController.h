@@ -7,7 +7,13 @@
 //
 
 #import "LOLBaseViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface LOLAccountViewController : LOLBaseViewController
-
+@property (nonatomic,strong)UIImageView *userHeadImageView;
+@property (nonatomic,strong)UILabel *userNameLb;
 @end
+
+
+
+

@@ -22,12 +22,13 @@
     
         
         for (int i = 0; i<4; i++) {
-            self.bottomView = [[UIView alloc] init];
+            self.bottomView = [[UIButton alloc] init];
             [self.bottomView setFrame:CGRectMake((i*ScreenWidth/4),0,ScreenWidth/4,80)];
             self.bottomView.tag = 1000+i;
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClicked:)];
-            [self.bottomView addGestureRecognizer:tap];
             
+            [self.bottomView addTarget:self action:@selector(itemTouchedUpInside:) forControlEvents:UIControlEventTouchUpInside];
+         
+            [self.bottomView addTarget:self action:@selector(itemTouchedDown:) forControlEvents:UIControlEventTouchDown];
             
             self.menuImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.bottomView.width/2-25,10,50,50)];
             self.menuImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"h2x_i_0%d",i+1]];
@@ -68,13 +69,22 @@
     return self;
 }
 
--(void)imageClicked:(UITapGestureRecognizer*)sender
-{
-    UIView *temp = sender.view;
+
+-(void)itemTouchedDown:( id)item {
+    UIButton *temp = (id)item;
+
+    temp.alpha = 0.5;
+}
+- (void)itemTouchedUpInside:( id)item {
+    UIButton *temp = (id)item;
     if (self.menuClickedBk) {
         self.menuClickedBk(temp.tag);
     }
+    temp.alpha = 1;
 }
+
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
