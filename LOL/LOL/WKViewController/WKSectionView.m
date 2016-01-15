@@ -35,8 +35,10 @@
     for (int i = 0; i < 4; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setImage:[UIImage imageNamed:normalImages[i]] forState:UIControlStateNormal];
+        button.tag = 1000+i;
         button.backgroundColor = [UIColor blueColor];
         [button setFrame:CGRectMake((width-40)/2.0+width*i, 30, 40, 40)];
+        [button addTarget:self action:@selector(pushMenu:) forControlEvents:UIControlEventTouchUpInside];
         [button setImage:[UIImage imageNamed:presslImages[i]] forState:UIControlStateHighlighted];
         [self addSubview:button];
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake((width-80)/2.0+width*i, 80, 80, 25)];
@@ -46,6 +48,12 @@
         [self addSubview:titleLabel];
         
     }
+}
+
+-(void)pushMenu:(id)sender
+{
+   UIView *temp = (UIButton *)sender;
+   [self.delegate DoSomethingEveryFrame:temp.tag];
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -74,8 +82,7 @@
     [[UIColor whiteColor] set];
     // 设置填充的路径
     CGContextFillPath(context);
-    
-    
+
     
 }
 

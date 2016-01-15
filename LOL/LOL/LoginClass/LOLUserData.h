@@ -20,7 +20,7 @@
 #define SHInvokerUserInfolocationSign @"sign"
 
 #define SHNotificationNewOrderComeIn @"SHNotificationNewOrderComeIn"
-@interface SHInvoker : NSObject
+@interface LOLUserData : NSObject
 //保存数据
 +(void)saveUserInfo:(NSDictionary *)userinfo;
 //读取数据

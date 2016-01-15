@@ -6,9 +6,9 @@
 //  Copyright © 2015年 beijingduanluo. All rights reserved.
 //
 
-#import "SHInvoker.h"
+#import "LOLUserData.h"
 #define canUseObj(str) ( (str != nil) && ![str isKindOfClass:[NSNull class]] )
-@implementation SHInvoker
+@implementation LOLUserData
 //保存数据到NSUserDefaults
 +(void)saveUserInfo:(NSDictionary *)userinfo
 {

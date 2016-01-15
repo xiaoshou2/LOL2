@@ -54,7 +54,7 @@
 #import "ForgetPassWordVCNew.h"
 #import "AFNetworking.h"
 #import "FormValidator.h"
-#import "SHInvoker.h"
+#import "LOLUserData.h"
 #import "UITextField+Extension.h"
 #define failTipe @"网络开小差了，稍后试试吧"
 //注册

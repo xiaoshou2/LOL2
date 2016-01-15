@@ -204,5 +204,28 @@ const char *finishedHandlerKey = "finishedHandlerKey";
     self.progressHUD.delegate = nil;
 }
 
+- (void)showErrorHUDWithMessage:(NSString *)message {
+  
+////
+    MBProgressHUD * HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HUD_ERROR"]];
+    // Set custom view mode
+    HUD.mode = MBProgressHUDModeCustomView;
+    
+    [self.navigationController.view addSubview:HUD];
+    HUD.labelFont = [UIFont systemFontOfSize:15];
+    HUD.color = [UIColor colorWithWhite:0 alpha:0.8];
+    HUD.minSize = CGSizeMake(SCREEN_WIDTH*0.65, 110);
+    HUD.delegate = self;
+    HUD.labelText = message;
+    [HUD showWhileExecuting:@selector(myTask) onTarget:self withObject:nil animated:YES];
+
+    
+}
+
+- (void)myTask {
+    // Do something usefull in here instead of sleeping ...
+    sleep(1);
+}
 
 @end

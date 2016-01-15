@@ -12,6 +12,7 @@
 @interface LOLAccountViewController : LOLBaseViewController
 @property (nonatomic,strong)UIImageView *userHeadImageView;
 @property (nonatomic,strong)UILabel *userNameLb;
+@property (nonatomic,strong)UIButton *loginBtn;
 @end
 
 

@@ -94,13 +94,12 @@
 		35ED03FB1C432B000088E96B /* h2x_i_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F71C432B000088E96B /* h2x_i_03@2x.png */; };
 		35ED03FC1C432B000088E96B /* h2x_i_04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F81C432B000088E96B /* h2x_i_04@2x.png */; };
 		35ED03FE1C432BB60088E96B /* home_daka@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03FD1C432BB50088E96B /* home_daka@2x.png */; };
-		35F88AF81C44645F0075EEBE /* LOLNetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F88AF71C44645F0075EEBE /* LOLNetWorkTools.m */; };
 		35F88AFB1C44692B0075EEBE /* LOLAFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F88AFA1C44692B0075EEBE /* LOLAFHTTPClient.m */; };
 		35FE5BC31C482E00003E1A94 /* LoginVCNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BC21C482E00003E1A94 /* LoginVCNew.m */; };
 		35FE5BC61C482E09003E1A94 /* RegisterVCNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BC51C482E09003E1A94 /* RegisterVCNew.m */; };
 		35FE5BC91C482E12003E1A94 /* ForgetPassWordVCNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BC81C482E12003E1A94 /* ForgetPassWordVCNew.m */; };
 		35FE5BCF1C482E2E003E1A94 /* FormValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BCC1C482E2E003E1A94 /* FormValidator.m */; };
-		35FE5BD01C482E2E003E1A94 /* SHInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BCE1C482E2E003E1A94 /* SHInvoker.m */; };
+		35FE5BD01C482E2E003E1A94 /* LOLUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BCE1C482E2E003E1A94 /* LOLUserData.m */; };
 		35FE5BDA1C482E8A003E1A94 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BD31C482E8A003E1A94 /* UIButton+Extension.m */; };
 		35FE5BDB1C482E8A003E1A94 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BD51C482E8A003E1A94 /* UIImageView+Extension.m */; };
 		35FE5BDC1C482E8A003E1A94 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BD71C482E8A003E1A94 /* UILabel+Extension.m */; };
@@ -120,6 +119,10 @@
 		35FE5BF81C4833F0003E1A94 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FE5BEA1C4833F0003E1A94 /* x.png */; };
 		35FE5BF91C4833F0003E1A94 /* zuizhongbanquan.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FE5BEB1C4833F0003E1A94 /* zuizhongbanquan.png */; };
 		35FE5BFB1C483E16003E1A94 /* bgimg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35FE5BFA1C483E16003E1A94 /* bgimg.jpg */; };
+		35FE5BFF1C486BFC003E1A94 /* HUD_ERROR.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FE5BFC1C486BFC003E1A94 /* HUD_ERROR.png */; };
+		35FE5C001C486BFC003E1A94 /* HUD_ERROR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FE5BFD1C486BFC003E1A94 /* HUD_ERROR@2x.png */; };
+		35FE5C011C486BFC003E1A94 /* HUD_ERROR@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FE5BFE1C486BFC003E1A94 /* HUD_ERROR@3x.png */; };
+		35FE5C0E1C488482003E1A94 /* LOLUserMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5C0D1C488482003E1A94 /* LOLUserMessageVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,8 +277,6 @@
 		35ED03F71C432B000088E96B /* h2x_i_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_03@2x.png"; sourceTree = "<group>"; };
 		35ED03F81C432B000088E96B /* h2x_i_04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_04@2x.png"; sourceTree = "<group>"; };
 		35ED03FD1C432BB50088E96B /* home_daka@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_daka@2x.png"; sourceTree = "<group>"; };
-		35F88AF61C44645F0075EEBE /* LOLNetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLNetWorkTools.h; sourceTree = "<group>"; };
-		35F88AF71C44645F0075EEBE /* LOLNetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLNetWorkTools.m; sourceTree = "<group>"; };
 		35F88AF91C44692B0075EEBE /* LOLAFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLAFHTTPClient.h; sourceTree = "<group>"; };
 		35F88AFA1C44692B0075EEBE /* LOLAFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLAFHTTPClient.m; sourceTree = "<group>"; };
 		35FE5BC11C482E00003E1A94 /* LoginVCNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVCNew.h; sourceTree = "<group>"; };
@@ -286,8 +287,8 @@
 		35FE5BC81C482E12003E1A94 /* ForgetPassWordVCNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPassWordVCNew.m; sourceTree = "<group>"; };
 		35FE5BCB1C482E2E003E1A94 /* FormValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormValidator.h; sourceTree = "<group>"; };
 		35FE5BCC1C482E2E003E1A94 /* FormValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormValidator.m; sourceTree = "<group>"; };
-		35FE5BCD1C482E2E003E1A94 /* SHInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHInvoker.h; sourceTree = "<group>"; };
-		35FE5BCE1C482E2E003E1A94 /* SHInvoker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHInvoker.m; sourceTree = "<group>"; };
+		35FE5BCD1C482E2E003E1A94 /* LOLUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLUserData.h; sourceTree = "<group>"; };
+		35FE5BCE1C482E2E003E1A94 /* LOLUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLUserData.m; sourceTree = "<group>"; };
 		35FE5BD21C482E8A003E1A94 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
 		35FE5BD31C482E8A003E1A94 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
 		35FE5BD41C482E8A003E1A94 /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
@@ -311,6 +312,11 @@
 		35FE5BEA1C4833F0003E1A94 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 		35FE5BEB1C4833F0003E1A94 /* zuizhongbanquan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuizhongbanquan.png; sourceTree = "<group>"; };
 		35FE5BFA1C483E16003E1A94 /* bgimg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgimg.jpg; sourceTree = "<group>"; };
+		35FE5BFC1C486BFC003E1A94 /* HUD_ERROR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_ERROR.png; sourceTree = "<group>"; };
+		35FE5BFD1C486BFC003E1A94 /* HUD_ERROR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HUD_ERROR@2x.png"; sourceTree = "<group>"; };
+		35FE5BFE1C486BFC003E1A94 /* HUD_ERROR@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HUD_ERROR@3x.png"; sourceTree = "<group>"; };
+		35FE5C0C1C488482003E1A94 /* LOLUserMessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLUserMessageVC.h; sourceTree = "<group>"; };
+		35FE5C0D1C488482003E1A94 /* LOLUserMessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLUserMessageVC.m; sourceTree = "<group>"; };
 		42DB32303C224370D5158818 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E18B4A4FD283CB66A08D27D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBE0005C3CE1120126C3590 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -382,6 +388,9 @@
 		3523259B1C3CF423007A3E1D /* LOLImages */ = {
 			isa = PBXGroup;
 			children = (
+				35FE5BFC1C486BFC003E1A94 /* HUD_ERROR.png */,
+				35FE5BFD1C486BFC003E1A94 /* HUD_ERROR@2x.png */,
+				35FE5BFE1C486BFC003E1A94 /* HUD_ERROR@3x.png */,
 				35FE5BFA1C483E16003E1A94 /* bgimg.jpg */,
 				35FE5BDE1C4833F0003E1A94 /* loginBtn.png */,
 				35FE5BDF1C4833F0003E1A94 /* 注册.png */,
@@ -449,16 +458,8 @@
 				35A6A1EC1C3E1DC000B6FDAB /* ItemAccount(个人中心) */,
 				358E458C1C43947600596D50 /* LOLGodcertification(大神认证) */,
 				35FE5BBD1C482CC4003E1A94 /* LOLLoginVc(用户登录) */,
-				3523259D1C3CF53B007A3E1D /* LOLCells */,
 			);
 			name = "LOLItems(界面)";
-			sourceTree = "<group>";
-		};
-		3523259D1C3CF53B007A3E1D /* LOLCells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LOLCells;
 			sourceTree = "<group>";
 		};
 		3523259E1C3CF5AF007A3E1D /* LOLLib(第三方库) */ = {
@@ -683,6 +684,8 @@
 			children = (
 				35A6A1ED1C3E1DFE00B6FDAB /* LOLAccountViewController.h */,
 				35A6A1EE1C3E1DFE00B6FDAB /* LOLAccountViewController.m */,
+				35FE5C0C1C488482003E1A94 /* LOLUserMessageVC.h */,
+				35FE5C0D1C488482003E1A94 /* LOLUserMessageVC.m */,
 			);
 			name = "ItemAccount(个人中心)";
 			path = ItmShowGirls/ItemAccount;
@@ -787,8 +790,6 @@
 		35F88AF51C4463DF0075EEBE /* LOLNetWork */ = {
 			isa = PBXGroup;
 			children = (
-				35F88AF61C44645F0075EEBE /* LOLNetWorkTools.h */,
-				35F88AF71C44645F0075EEBE /* LOLNetWorkTools.m */,
 				35F88AF91C44692B0075EEBE /* LOLAFHTTPClient.h */,
 				35F88AFA1C44692B0075EEBE /* LOLAFHTTPClient.m */,
 				35758DA61C4479D8005D58EA /* LOLAFNetWorkUtility.h */,
@@ -844,8 +845,8 @@
 			children = (
 				35FE5BCB1C482E2E003E1A94 /* FormValidator.h */,
 				35FE5BCC1C482E2E003E1A94 /* FormValidator.m */,
-				35FE5BCD1C482E2E003E1A94 /* SHInvoker.h */,
-				35FE5BCE1C482E2E003E1A94 /* SHInvoker.m */,
+				35FE5BCD1C482E2E003E1A94 /* LOLUserData.h */,
+				35FE5BCE1C482E2E003E1A94 /* LOLUserData.m */,
 			);
 			path = LoginClass;
 			sourceTree = "<group>";
@@ -991,6 +992,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FE5C001C486BFC003E1A94 /* HUD_ERROR@2x.png in Resources */,
 				35CE19B21C40AE3A002FA778 /* dropdown_anim__00003@2x.png in Resources */,
 				359A16E31C44C0E400CDBDCC /* yw_load5.png in Resources */,
 				35865D541C3AE82E0058546B /* LaunchScreen.storyboard in Resources */,
@@ -1036,11 +1038,13 @@
 				35B7E00A1C4601A3004FB896 /* bgbtn.jpg in Resources */,
 				35CE19AE1C40AE1D002FA778 /* dropdown_anim__00005@2x.png in Resources */,
 				35CE19B41C40AE49002FA778 /* dropdown_anim__00002@2x.png in Resources */,
+				35FE5C011C486BFC003E1A94 /* HUD_ERROR@3x.png in Resources */,
 				3547DB8A1C45E69300EEF595 /* h2x_i_01@2x.png in Resources */,
 				3547DB8B1C45E69300EEF595 /* h2x_i_02@2x.png in Resources */,
 				35ED03F91C432B000088E96B /* h2x_i_01@2x.png in Resources */,
 				35CE19AA1C40A3D0002FA778 /* home_dot_n@2x.png in Resources */,
 				35CE19B81C40AEDB002FA778 /* dropdown_anim__00000@2x.png in Resources */,
+				35FE5BFF1C486BFC003E1A94 /* HUD_ERROR.png in Resources */,
 				35FE5BF51C4833F0003E1A94 /* register_yanzheng.png in Resources */,
 				35FE5BF41C4833F0003E1A94 /* register_loginBtn.png in Resources */,
 				35FE5BEE1C4833F0003E1A94 /* ditu.png in Resources */,
@@ -1132,6 +1136,7 @@
 				35758DA81C4479D8005D58EA /* LOLAFNetWorkUtility.m in Sources */,
 				359A17061C4520D700CDBDCC /* SDCollectionViewCell.m in Sources */,
 				35FE5BC31C482E00003E1A94 /* LoginVCNew.m in Sources */,
+				35FE5C0E1C488482003E1A94 /* LOLUserMessageVC.m in Sources */,
 				359A17031C4520D700CDBDCC /* TAAnimatedDotView.m in Sources */,
 				35C627971C3E340F00D4A6FE /* UIView+Frame.m in Sources */,
 				359A17051C4520D700CDBDCC /* TAPageControl.m in Sources */,
@@ -1146,7 +1151,6 @@
 				35FE5BDA1C482E8A003E1A94 /* UIButton+Extension.m in Sources */,
 				35C627F41C3E6AC800D4A6FE /* UIImage+YW.m in Sources */,
 				35A6A1E51C3E1AD500B6FDAB /* RDVTabBar.m in Sources */,
-				35F88AF81C44645F0075EEBE /* LOLNetWorkTools.m in Sources */,
 				359A17081C4520D700CDBDCC /* UIView+SDExtension.m in Sources */,
 				35A6A1EB1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m in Sources */,
 				35865D461C3AE82E0058546B /* main.m in Sources */,
@@ -1154,7 +1158,7 @@
 				359A16D61C44C04900CDBDCC /* YWSpritesLoadingView.m in Sources */,
 				359A16EA1C44D2C500CDBDCC /* LOLHomeModel.m in Sources */,
 				35B7E0081C460101004FB896 /* LOLDemandHallVC.m in Sources */,
-				35FE5BD01C482E2E003E1A94 /* SHInvoker.m in Sources */,
+				35FE5BD01C482E2E003E1A94 /* LOLUserData.m in Sources */,
 				35C6279F1C3E379600D4A6FE /* UIColor+YW.m in Sources */,
 				359A17021C4520D700CDBDCC /* TAAbstractDotView.m in Sources */,
 				3589EA161C3F89F300C972D2 /* LOLRootNavVC.m in Sources */,

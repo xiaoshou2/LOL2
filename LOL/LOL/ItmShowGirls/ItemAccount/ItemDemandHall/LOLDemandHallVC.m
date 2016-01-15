@@ -67,15 +67,14 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
         self.tableViewDataSource = responseObject;
         
         [self.tableView reloadData];
-        
-      
-        
+   
     } failedBlock:^(NSError *error) {
-        //        [self.commmentView.header endRefreshing  ];
+        //[self.commmentView.header endRefreshing  ];
         [self hideHUD];
         [self.tableView.mj_footer endRefreshing];
         
         NSLog(@"---  LOL请求失败 ----");
+         [self showErrorHUDWithMessage:@"当前网络没有链接"];
     } ];
 }
 -(void)setupMainView

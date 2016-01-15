@@ -75,6 +75,8 @@
         //        [self.commmentView.header endRefreshing  ];
         [self hideHUD];
         NSLog(@"---  LOL请求失败 ----");
+        [self showErrorHUDWithMessage:@"当前网络没有链接"];
+        
     } ];
 }
 
@@ -239,7 +241,7 @@
 
             LOLBigGogCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LOLBigGogCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.godClickedBk =  ^(NSString *sender) {
+            cell.godClickedBk = ^(NSString *sender) {
                   [self pushGodVC:sender];
               };
            cell.modelArr = self.bigGodArr;

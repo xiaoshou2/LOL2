@@ -70,5 +70,6 @@ typedef void (^HUDFinishedHandler)();
 
 - (void)hideHUDWithFailMessage:(NSString *)message finishedHandler:(HUDFinishedHandler)finishedHandler;
 -(void)showHUDwithTime;
+- (void)showErrorHUDWithMessage:(NSString *)message;
  
 @end

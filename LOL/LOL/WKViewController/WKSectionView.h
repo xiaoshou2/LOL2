@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol EveryFrameDelegate <NSObject>
 
+- (void)DoSomethingEveryFrame:(NSInteger)sender;
+
+@end
 @interface WKSectionView : UIView
+@property (nonatomic,retain)id <EveryFrameDelegate> delegate;
 
 @end
