@@ -78,6 +78,10 @@
 		35C627F61C3E6C1800D4A6FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C627F51C3E6C1800D4A6FE /* CoreGraphics.framework */; };
 		35C627F81C3E6C3900D4A6FE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C627F71C3E6C3900D4A6FE /* Security.framework */; };
 		35C627FA1C3E6C5500D4A6FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C627F91C3E6C5500D4A6FE /* QuartzCore.framework */; };
+		35C8EEBA1C48D42600A7D85C /* icon_can.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C8EEB91C48D42600A7D85C /* icon_can.png */; };
+		35C8EEBC1C48D43500A7D85C /* icon_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C8EEBB1C48D43500A7D85C /* icon_img.png */; };
+		35C8EEBE1C48D43F00A7D85C /* icon_pos.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C8EEBD1C48D43F00A7D85C /* icon_pos.png */; };
+		35C8EEC21C48F69300A7D85C /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8EEC11C48F69300A7D85C /* DWBubbleMenuButton.m */; };
 		35CE19A41C40A2D1002FA778 /* yw_home_default_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CE19A31C40A2D1002FA778 /* yw_home_default_btn.png */; };
 		35CE19A91C40A3D0002FA778 /* home_dot_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CE19A51C40A3D0002FA778 /* home_dot_n.png */; };
 		35CE19AA1C40A3D0002FA778 /* home_dot_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CE19A61C40A3D0002FA778 /* home_dot_n@2x.png */; };
@@ -261,6 +265,11 @@
 		35C627F51C3E6C1800D4A6FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		35C627F71C3E6C3900D4A6FE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		35C627F91C3E6C5500D4A6FE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		35C8EEB91C48D42600A7D85C /* icon_can.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_can.png; sourceTree = "<group>"; };
+		35C8EEBB1C48D43500A7D85C /* icon_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_img.png; sourceTree = "<group>"; };
+		35C8EEBD1C48D43F00A7D85C /* icon_pos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_pos.png; sourceTree = "<group>"; };
+		35C8EEC01C48F69300A7D85C /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBubbleMenuButton.h; sourceTree = "<group>"; };
+		35C8EEC11C48F69300A7D85C /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBubbleMenuButton.m; sourceTree = "<group>"; };
 		35CE19A31C40A2D1002FA778 /* yw_home_default_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yw_home_default_btn.png; sourceTree = "<group>"; };
 		35CE19A51C40A3D0002FA778 /* home_dot_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_dot_n.png; sourceTree = "<group>"; };
 		35CE19A61C40A3D0002FA778 /* home_dot_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_dot_n@2x.png"; sourceTree = "<group>"; };
@@ -388,6 +397,9 @@
 		3523259B1C3CF423007A3E1D /* LOLImages */ = {
 			isa = PBXGroup;
 			children = (
+				35C8EEBD1C48D43F00A7D85C /* icon_pos.png */,
+				35C8EEBB1C48D43500A7D85C /* icon_img.png */,
+				35C8EEB91C48D42600A7D85C /* icon_can.png */,
 				35FE5BFC1C486BFC003E1A94 /* HUD_ERROR.png */,
 				35FE5BFD1C486BFC003E1A94 /* HUD_ERROR@2x.png */,
 				35FE5BFE1C486BFC003E1A94 /* HUD_ERROR@3x.png */,
@@ -465,6 +477,7 @@
 		3523259E1C3CF5AF007A3E1D /* LOLLib(第三方库) */ = {
 			isa = PBXGroup;
 			children = (
+				35C8EEBF1C48F69300A7D85C /* DWBubbleMenuButton */,
 				35FE5BD11C482E8A003E1A94 /* Extension */,
 				35B13AF71C47846B00C7E465 /* WKView(个人中心下拉) */,
 				359A16F21C4520D700CDBDCC /* SDCycleScrollView(首页banner) */,
@@ -787,6 +800,15 @@
 			path = LOLUiimage;
 			sourceTree = "<group>";
 		};
+		35C8EEBF1C48F69300A7D85C /* DWBubbleMenuButton */ = {
+			isa = PBXGroup;
+			children = (
+				35C8EEC01C48F69300A7D85C /* DWBubbleMenuButton.h */,
+				35C8EEC11C48F69300A7D85C /* DWBubbleMenuButton.m */,
+			);
+			path = DWBubbleMenuButton;
+			sourceTree = "<group>";
+		};
 		35F88AF51C4463DF0075EEBE /* LOLNetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -1008,6 +1030,7 @@
 				35CE19A91C40A3D0002FA778 /* home_dot_n.png in Resources */,
 				35ED03FE1C432BB60088E96B /* home_daka@2x.png in Resources */,
 				35CE19A41C40A2D1002FA778 /* yw_home_default_btn.png in Resources */,
+				35C8EEBA1C48D42600A7D85C /* icon_can.png in Resources */,
 				35FE5BF71C4833F0003E1A94 /* touxiang.png in Resources */,
 				35FE5BF91C4833F0003E1A94 /* zuizhongbanquan.png in Resources */,
 				359A16E21C44C0E400CDBDCC /* yw_load4.png in Resources */,
@@ -1039,7 +1062,9 @@
 				35CE19AE1C40AE1D002FA778 /* dropdown_anim__00005@2x.png in Resources */,
 				35CE19B41C40AE49002FA778 /* dropdown_anim__00002@2x.png in Resources */,
 				35FE5C011C486BFC003E1A94 /* HUD_ERROR@3x.png in Resources */,
+				35C8EEBE1C48D43F00A7D85C /* icon_pos.png in Resources */,
 				3547DB8A1C45E69300EEF595 /* h2x_i_01@2x.png in Resources */,
+				35C8EEBC1C48D43500A7D85C /* icon_img.png in Resources */,
 				3547DB8B1C45E69300EEF595 /* h2x_i_02@2x.png in Resources */,
 				35ED03F91C432B000088E96B /* h2x_i_01@2x.png in Resources */,
 				35CE19AA1C40A3D0002FA778 /* home_dot_n@2x.png in Resources */,
@@ -1160,6 +1185,7 @@
 				35B7E0081C460101004FB896 /* LOLDemandHallVC.m in Sources */,
 				35FE5BD01C482E2E003E1A94 /* LOLUserData.m in Sources */,
 				35C6279F1C3E379600D4A6FE /* UIColor+YW.m in Sources */,
+				35C8EEC21C48F69300A7D85C /* DWBubbleMenuButton.m in Sources */,
 				359A17021C4520D700CDBDCC /* TAAbstractDotView.m in Sources */,
 				3589EA161C3F89F300C972D2 /* LOLRootNavVC.m in Sources */,
 				35FE5BDD1C482E8A003E1A94 /* UITextField+Extension.m in Sources */,

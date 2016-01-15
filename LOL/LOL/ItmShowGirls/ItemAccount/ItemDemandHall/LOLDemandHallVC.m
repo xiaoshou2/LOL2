@@ -61,7 +61,6 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
     [self showHUD];
     //请求数据
     [LOLAFNetWorkUtility  demandRequestWithParms:@{} successBlock:^(id responseObject) {
-        NSLog(@"-hahahahaha--  LOL请求成功 --%@--",responseObject);
         [self hideHUD];
         //请求完加载数据
         self.tableViewDataSource = responseObject;
@@ -84,20 +83,74 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
-    [self.view addSubview:self.tableView];
+   [self.view addSubview:self.tableView];
     
-    _TopView = [[UIView alloc]initWithFrame:CGRectMake(ScreenWidth-65, ScreenHeight-120, 50, 50)];
-    _TopView.backgroundColor = [UIColor lightGrayColor];
-    _TopView.layer.cornerRadius = 25;
-    _TopView.clipsToBounds = YES;
-    //_TopView.backgroundColor = [UIColor redColor];
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, _TopView.frame.size.width, _TopView.frame.size.height);
-    [btn setTitle:@"发布" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(DoSomething) forControlEvents:UIControlEventTouchUpInside];
-    [_TopView addSubview:btn];
-    [self.view addSubview:_TopView];
+  
+
+    // Create up menu button
+   UIImageView * bottomBtn = [self createHomeButtonView];
+    bottomBtn.userInteractionEnabled = YES;
+    DWBubbleMenuButton *upMenuView = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - bottomBtn.frame.size.width - 20.f,
+                                                                                          self.view.frame.size.height - bottomBtn.frame.size.height - 80.0f,
+                                                                                          bottomBtn.frame.size.width,
+                                                                                          bottomBtn.frame.size.height)
+                                                            expansionDirection:DirectionUp];
+    upMenuView.homeButtonView = bottomBtn;
+    
+    [upMenuView addButtons:[self createDemoButtonArray]];
+    
+    [self.view addSubview:upMenuView];
+    
 }
+
+
+
+- (UIImageView *)createHomeButtonView {
+    UIImageView *imageView = [[UIImageView alloc]init];
+    imageView.frame = CGRectMake(0.f, 0.f, 45.f, 45.f);
+    imageView.image = [UIImage imageNamed:@"h2x_i_01"];
+    
+    return imageView;
+}
+
+- (NSArray *)createDemoButtonArray {
+    NSMutableArray *buttonsMutable = [[NSMutableArray alloc] init];
+    
+    int i = 0;
+    for (NSString *title in @[@"h2x_i_01", @"h2x_i_02", @"h2x_i_03", @"h2x_i_04"]) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        //[button setTitle:title forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",title]] forState:UIControlStateNormal];
+        button.frame = CGRectMake(0.f, 0.f, 30.f, 30.f);
+        button.layer.cornerRadius = button.frame.size.height / 2.f;
+        button.backgroundColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.5f];
+        button.clipsToBounds = YES;
+        button.tag = i++;
+        
+        [button addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [buttonsMutable addObject:button];
+    }
+    
+    return [buttonsMutable copy];
+}
+
+- (void)test:(UIButton *)sender {
+    NSLog(@"Button tapped, tag: %ld", (long)sender.tag);
+}
+
+- (UIButton *)createButtonWithName:(NSString *)imageName {
+    UIButton *button = [[UIButton alloc] init];
+    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [button sizeToFit];
+    
+    [button addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
+    
+    return button;
+}
+
 
 #pragma mark - tableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -177,12 +230,12 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
             if (!_hideTopView) {
                 [self hideTopView];
                 //向下
-                CATransition *animation = [CATransition animation];
+                //CATransition *animation = [CATransition animation];
                
-                animation.type = kCATransitionMoveIn;
-                animation.duration = 1.0f;
-                [_TopView.layer addAnimation:animation forKey:nil];
-                _TopView.hidden = YES;
+                //animation.type = kCATransitionMoveIn;
+               // animation.duration = 1.0f;
+              //  [self.upMenuView.layer addAnimation:animation forKey:nil];
+              //  self.upMenuView.hidden = YES;
                 
             }
             
@@ -193,7 +246,7 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
             }else if(scrollView.contentOffset.y < _beginOffsetY)
             {
                 //向上
-                _TopView.hidden = NO;
+              //  self.upMenuView.hidden = NO;
             }
         }
     }
@@ -202,13 +255,7 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     _beginOffsetY = scrollView.contentOffset.y;
 }
-#pragma mark - btn 点击事件
-- (void)DoSomething{
-    //到顶部
-//    [self.tableview setContentOffset:CGPointMake(0, -60) animated:YES];
-    NSLog(@"发布");
-    
-}
+
 
 #pragma mark  <隐藏头部View>
 

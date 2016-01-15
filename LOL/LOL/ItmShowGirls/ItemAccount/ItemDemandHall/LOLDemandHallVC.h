@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DemandCell.h"
+#import "DWBubbleMenuButton.h"
 @interface LOLDemandHallVC : LOLBaseViewController<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat _beginOffsetY; //开始拖动的位置
@@ -17,7 +18,5 @@
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *tableViewDataSource;
 
-@property (nonatomic, strong) UIView *TopView;
-
-@property (nonatomic, strong) UIButton *btn;
+@property (nonatomic, strong)  DWBubbleMenuButton *upMenuView;
 @end
