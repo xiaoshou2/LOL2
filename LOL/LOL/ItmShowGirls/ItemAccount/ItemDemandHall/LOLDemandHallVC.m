@@ -205,7 +205,7 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
     
     NSLog(@" -----当前cell高度 %f ",200+height);
     
-    return 185+height;
+    return 180+height;
     
 }
 
@@ -220,7 +220,7 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
             CGFloat height = [LOLStringUtility getStringHight:str font:SYSTEMFONT(14) width:ScreenWidth-45];
             return height;
         }
-    return 50;
+    return 10;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{

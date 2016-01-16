@@ -42,11 +42,11 @@
     UIImage *unfinishedImage =  KAPPIMAGE;//[self buttonImageFromColor:KDEFAULT_COLOR];
   
     NSArray *tabBarItemSelectedImages = @[@"yw_home_selected_new",
-                                          @"yw_years_new", @"yw_cart_selected_new",
+                                          @"dropdown_anim__00000", @"yw_cart_selected_new",
                                           @"yw_account_selected_new"];
     
     NSArray *tabBarItemImages = @[@"yw_home_normal_new",
-                                  @"yw_years_new", @"yw_cart_normal_new",
+                                  @"dropdown_anim__00003", @"yw_cart_normal_new",
                                   @"yw_account_normal_new"];
     
     NSArray *tabBarItemTitles = @[@"",@"", @"showGirl", @"个人中心"];

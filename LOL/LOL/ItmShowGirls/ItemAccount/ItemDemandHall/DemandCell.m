@@ -13,6 +13,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.selectionStyle = UITableViewCellSeparatorStyleNone;
         self.muserHeadImageView = [[UIImageView alloc] init];
         self.muserHeadImageView.frame = CGRectMake(10,10,45, 45);
         //self.muserHeadImageView.backgroundColor = [UIColor redColor];
@@ -74,12 +75,12 @@
 
 -(void)resetFrame:(float)height
 {
-    self.mcontentLb.frame = CGRectMake(60,70,ScreenWidth-80,height+15);
+    self.mcontentLb.frame = CGRectMake(60,60,ScreenWidth-80,height+15);
  
-    self.mpriceLb.frame = CGRectMake(60,80+self.mcontentLb.height,100,20);
-    self.mendTimeLb.frame = CGRectMake(170,80+self.mcontentLb.height,60,20);
+    self.mpriceLb.frame = CGRectMake(60,70+self.mcontentLb.height,100,20);
+    self.mendTimeLb.frame = CGRectMake(170,70+self.mcontentLb.height,60,20);
     self.mhelpBtn.frame = CGRectMake(60, 110+self.mcontentLb.height, 50, 40);
-    self.spaceView.frame = CGRectMake(0,155+self.mcontentLb.height, ScreenWidth, 15);
+    self.spaceView.frame = CGRectMake(0,145+self.mcontentLb.height, ScreenWidth, 15);
 }
 
 

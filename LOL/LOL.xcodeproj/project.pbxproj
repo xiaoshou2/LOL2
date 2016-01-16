@@ -64,6 +64,15 @@
 		35B7E00E1C4606CE004FB896 /* DemandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B7E00D1C4606CE004FB896 /* DemandCell.m */; };
 		35B7E0121C461BA9004FB896 /* LOLStringUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B7E0111C461BA9004FB896 /* LOLStringUtility.m */; };
 		35B7E0161C462171004FB896 /* LOLDemandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B7E0151C462171004FB896 /* LOLDemandModel.m */; };
+		35BEB6271C4997BF004F9B63 /* LOLReleaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BEB6261C4997BF004F9B63 /* LOLReleaseVC.m */; };
+		35BEB62B1C4998EC004F9B63 /* LOLAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BEB62A1C4998EC004F9B63 /* LOLAccountCell.m */; };
+		35BEB62E1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB62C1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@2x.png */; };
+		35BEB62F1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB62D1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@3x.png */; };
+		35BEB63C1C49BD2E004F9B63 /* yw_load1.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB6371C49BD2E004F9B63 /* yw_load1.png */; };
+		35BEB6411C49BD66004F9B63 /* party_female_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB63D1C49BD66004F9B63 /* party_female_1@2x.png */; };
+		35BEB6421C49BD66004F9B63 /* party_female_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB63E1C49BD66004F9B63 /* party_female_2@2x.png */; };
+		35BEB6431C49BD66004F9B63 /* party_male_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB63F1C49BD66004F9B63 /* party_male_1@2x.png */; };
+		35BEB6441C49BD66004F9B63 /* party_male_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB6401C49BD66004F9B63 /* party_male_2@2x.png */; };
 		35C6278E1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C6278C1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png */; };
 		35C6278F1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C6278D1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png */; };
 		35C627921C3E319D00D4A6FE /* yw_home_selected_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C627901C3E319D00D4A6FE /* yw_home_selected_new@2x.png */; };
@@ -244,6 +253,17 @@
 		35B7E0111C461BA9004FB896 /* LOLStringUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLStringUtility.m; sourceTree = "<group>"; };
 		35B7E0141C462171004FB896 /* LOLDemandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLDemandModel.h; sourceTree = "<group>"; };
 		35B7E0151C462171004FB896 /* LOLDemandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLDemandModel.m; sourceTree = "<group>"; };
+		35BEB6251C4997BF004F9B63 /* LOLReleaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLReleaseVC.h; sourceTree = "<group>"; };
+		35BEB6261C4997BF004F9B63 /* LOLReleaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLReleaseVC.m; sourceTree = "<group>"; };
+		35BEB6291C4998EC004F9B63 /* LOLAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLAccountCell.h; sourceTree = "<group>"; };
+		35BEB62A1C4998EC004F9B63 /* LOLAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLAccountCell.m; sourceTree = "<group>"; };
+		35BEB62C1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_customerservice_ico_arrowgrey@2x.png"; sourceTree = "<group>"; };
+		35BEB62D1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_customerservice_ico_arrowgrey@3x.png"; sourceTree = "<group>"; };
+		35BEB6371C49BD2E004F9B63 /* yw_load1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yw_load1.png; sourceTree = "<group>"; };
+		35BEB63D1C49BD66004F9B63 /* party_female_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "party_female_1@2x.png"; sourceTree = "<group>"; };
+		35BEB63E1C49BD66004F9B63 /* party_female_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "party_female_2@2x.png"; sourceTree = "<group>"; };
+		35BEB63F1C49BD66004F9B63 /* party_male_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "party_male_1@2x.png"; sourceTree = "<group>"; };
+		35BEB6401C49BD66004F9B63 /* party_male_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "party_male_2@2x.png"; sourceTree = "<group>"; };
 		35C6278C1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_normal_new@2x.png"; sourceTree = "<group>"; };
 		35C6278D1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_normal_new@3x.png"; sourceTree = "<group>"; };
 		35C627901C3E319D00D4A6FE /* yw_home_selected_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_selected_new@2x.png"; sourceTree = "<group>"; };
@@ -397,7 +417,10 @@
 		3523259B1C3CF423007A3E1D /* LOLImages */ = {
 			isa = PBXGroup;
 			children = (
+				35BEB6371C49BD2E004F9B63 /* yw_load1.png */,
 				35C8EEBD1C48D43F00A7D85C /* icon_pos.png */,
+				35BEB62C1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@2x.png */,
+				35BEB62D1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@3x.png */,
 				35C8EEBB1C48D43500A7D85C /* icon_img.png */,
 				35C8EEB91C48D42600A7D85C /* icon_can.png */,
 				35FE5BFC1C486BFC003E1A94 /* HUD_ERROR.png */,
@@ -452,6 +475,10 @@
 				35CE19A81C40A3D0002FA778 /* home_dot_s@2x.png */,
 				35CE19A31C40A2D1002FA778 /* yw_home_default_btn.png */,
 				35C627901C3E319D00D4A6FE /* yw_home_selected_new@2x.png */,
+				35BEB63D1C49BD66004F9B63 /* party_female_1@2x.png */,
+				35BEB63E1C49BD66004F9B63 /* party_female_2@2x.png */,
+				35BEB63F1C49BD66004F9B63 /* party_male_1@2x.png */,
+				35BEB6401C49BD66004F9B63 /* party_male_2@2x.png */,
 				35C627911C3E319D00D4A6FE /* yw_home_selected_new@3x.png */,
 				35C6278C1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png */,
 				35C6278D1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png */,
@@ -695,6 +722,7 @@
 		35A6A1EC1C3E1DC000B6FDAB /* ItemAccount(个人中心) */ = {
 			isa = PBXGroup;
 			children = (
+				35BEB6281C4998C2004F9B63 /* AccountCell */,
 				35A6A1ED1C3E1DFE00B6FDAB /* LOLAccountViewController.h */,
 				35A6A1EE1C3E1DFE00B6FDAB /* LOLAccountViewController.m */,
 				35FE5C0C1C488482003E1A94 /* LOLUserMessageVC.h */,
@@ -721,6 +749,8 @@
 				35B7E00B1C460692004FB896 /* DemandCell */,
 				35B7E0061C460101004FB896 /* LOLDemandHallVC.h */,
 				35B7E0071C460101004FB896 /* LOLDemandHallVC.m */,
+				35BEB6251C4997BF004F9B63 /* LOLReleaseVC.h */,
+				35BEB6261C4997BF004F9B63 /* LOLReleaseVC.m */,
 			);
 			name = "ItemDemandHall(需求大厅)";
 			path = ItmShowGirls/ItemAccount/ItemDemandHall;
@@ -751,6 +781,15 @@
 				35B7E0151C462171004FB896 /* LOLDemandModel.m */,
 			);
 			name = "LOLDemandModel(需求页模型)";
+			sourceTree = "<group>";
+		};
+		35BEB6281C4998C2004F9B63 /* AccountCell */ = {
+			isa = PBXGroup;
+			children = (
+				35BEB6291C4998EC004F9B63 /* LOLAccountCell.h */,
+				35BEB62A1C4998EC004F9B63 /* LOLAccountCell.m */,
+			);
+			name = AccountCell;
 			sourceTree = "<group>";
 		};
 		35C627941C3E33F500D4A6FE /* ViewSize */ = {
@@ -1026,6 +1065,7 @@
 				35CE19B01C40AE2A002FA778 /* dropdown_anim__00004@2x.png in Resources */,
 				358E45931C439A9200596D50 /* yw_nav_button_arrow@2x.png in Resources */,
 				35FE5BEC1C4833F0003E1A94 /* loginBtn.png in Resources */,
+				35BEB62E1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@2x.png in Resources */,
 				35ED03FA1C432B000088E96B /* h2x_i_02@2x.png in Resources */,
 				35CE19A91C40A3D0002FA778 /* home_dot_n.png in Resources */,
 				35ED03FE1C432BB60088E96B /* home_daka@2x.png in Resources */,
@@ -1034,24 +1074,30 @@
 				35FE5BF71C4833F0003E1A94 /* touxiang.png in Resources */,
 				35FE5BF91C4833F0003E1A94 /* zuizhongbanquan.png in Resources */,
 				359A16E21C44C0E400CDBDCC /* yw_load4.png in Resources */,
+				35BEB63C1C49BD2E004F9B63 /* yw_load1.png in Resources */,
 				35C627931C3E319D00D4A6FE /* yw_home_selected_new@3x.png in Resources */,
 				359A16DF1C44C0E400CDBDCC /* yw_load1.png in Resources */,
 				35865D511C3AE82E0058546B /* Assets.xcassets in Resources */,
 				358E45921C439A9200596D50 /* yw_nav_button_arrow.png in Resources */,
 				35CE19B61C40AEC9002FA778 /* dropdown_anim__00001@2x.png in Resources */,
 				35865D4F1C3AE82E0058546B /* Main.storyboard in Resources */,
+				35BEB6411C49BD66004F9B63 /* party_female_1@2x.png in Resources */,
 				359A16E61C44C0E400CDBDCC /* yw_load8.png in Resources */,
 				3547DB8C1C45E69300EEF595 /* h2x_i_03@2x.png in Resources */,
 				3547DB8E1C45E69300EEF595 /* h2x_i_05@2x.png in Resources */,
+				35BEB6431C49BD66004F9B63 /* party_male_1@2x.png in Resources */,
 				359A16E01C44C0E400CDBDCC /* yw_load2.png in Resources */,
 				35CE19AB1C40A3D0002FA778 /* home_dot_s.png in Resources */,
 				35FE5BF11C4833F0003E1A94 /* login_WhiteFont.png in Resources */,
 				35FE5BF61C4833F0003E1A94 /* registerBtn.png in Resources */,
 				35FE5BF31C4833F0003E1A94 /* register_huoqu.png in Resources */,
 				35CE19AC1C40A3D0002FA778 /* home_dot_s@2x.png in Resources */,
+				35BEB6441C49BD66004F9B63 /* party_male_2@2x.png in Resources */,
+				35BEB62F1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@3x.png in Resources */,
 				35C627921C3E319D00D4A6FE /* yw_home_selected_new@2x.png in Resources */,
 				35C6278F1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png in Resources */,
 				35FE5BEF1C4833F0003E1A94 /* login_Register_Bord.png in Resources */,
+				35BEB6421C49BD66004F9B63 /* party_female_2@2x.png in Resources */,
 				35FE5BED1C4833F0003E1A94 /* 注册.png in Resources */,
 				3547DB8D1C45E69300EEF595 /* h2x_i_04@2x.png in Resources */,
 				35FE5BF21C4833F0003E1A94 /* regist_WhiteFont.png in Resources */,
@@ -1153,6 +1199,7 @@
 				3589EA191C3F97B800C972D2 /* LOLHomeCellProperty.m in Sources */,
 				35FE5BCF1C482E2E003E1A94 /* FormValidator.m in Sources */,
 				359A17071C4520D700CDBDCC /* SDCycleScrollView.m in Sources */,
+				35BEB62B1C4998EC004F9B63 /* LOLAccountCell.m in Sources */,
 				35C627ED1C3E562700D4A6FE /* LOLRootManger.m in Sources */,
 				35C627AB1C3E487300D4A6FE /* NSMutableDictionary+YW.m in Sources */,
 				35FE5BDC1C482E8A003E1A94 /* UILabel+Extension.m in Sources */,
@@ -1187,6 +1234,7 @@
 				35C6279F1C3E379600D4A6FE /* UIColor+YW.m in Sources */,
 				35C8EEC21C48F69300A7D85C /* DWBubbleMenuButton.m in Sources */,
 				359A17021C4520D700CDBDCC /* TAAbstractDotView.m in Sources */,
+				35BEB6271C4997BF004F9B63 /* LOLReleaseVC.m in Sources */,
 				3589EA161C3F89F300C972D2 /* LOLRootNavVC.m in Sources */,
 				35FE5BDD1C482E8A003E1A94 /* UITextField+Extension.m in Sources */,
 				352325A51C3CFD05007A3E1D /* LOLBaseViewController.m in Sources */,

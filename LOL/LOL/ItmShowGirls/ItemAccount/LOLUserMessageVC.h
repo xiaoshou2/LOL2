@@ -11,5 +11,5 @@
 @interface LOLUserMessageVC : LOLBaseViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *tableViewDataSource;
-
+@property (nonatomic,strong)UIButton *exitBtn;
 @end
