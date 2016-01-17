@@ -63,6 +63,8 @@
         if (spaceCell == nil) {
             spaceCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
         }
+        spaceCell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         UIView *spaceView = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 20)];
         spaceView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
         [spaceCell addSubview:spaceView];
@@ -71,12 +73,13 @@
     }
     else {
         LOLAccountCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         if (cell == nil) {
             cell = [[LOLAccountCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
         }
-        if(indexPath.row == 1){//头像            
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+        if(indexPath.row == 1){//头像
             self.headimage = [[UIImageView alloc] init];
             self.headimage.image = [UIImage imageNamed:@"h2x_i_02"];
             self.headimage.frame = CGRectMake(SCREEN_WIDTH-70,5,44,44);

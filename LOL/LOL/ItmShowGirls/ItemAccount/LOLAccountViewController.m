@@ -163,6 +163,8 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     NSArray *titleArr = @[@"擅长段位",@"绑定账号",@"妹子收藏"];
     cell.textLabel.text = [NSString stringWithFormat:@"%@",titleArr[indexPath.row]];
     return cell;

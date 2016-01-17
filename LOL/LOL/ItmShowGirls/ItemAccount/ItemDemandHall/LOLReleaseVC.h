@@ -19,9 +19,10 @@
 @property (nonatomic,strong)UILabel *placeholderLabel;
 @property (nonatomic,strong)UITextField *payMoneTf;
 @property (nonatomic,strong)UITextField *getMoneyTf;
-@property (nonatomic,strong)UITextField *phoneTf;
-@property (nonatomic,strong)UITextField *qqTf;
-@property (nonatomic,strong)UITextField *weixinTf;
+@property (nonatomic,strong)UILabel *phoneLb;
+@property (nonatomic,strong)UILabel *qqLb;
+@property (nonatomic,strong)UILabel *weixinLb;
+
 
 
 @end

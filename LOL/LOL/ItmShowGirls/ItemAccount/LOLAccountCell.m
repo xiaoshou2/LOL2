@@ -13,7 +13,6 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.selectionStyle = UITableViewCellSeparatorStyleNone;
         self.accImge = [[UIImageView alloc] init];
         self.accImge.image = [UIImage imageNamed:@"main_customerservice_ico_arrowgrey"];
         self.accImge.frame = CGRectMake(SCREEN_WIDTH -18,self.frame.size.height/2-4,8,8);
