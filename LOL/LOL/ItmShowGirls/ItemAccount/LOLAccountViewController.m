@@ -153,7 +153,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 3;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -163,8 +163,8 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
     }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"测试%ld",indexPath.row];
+    NSArray *titleArr = @[@"擅长段位",@"绑定账号",@"妹子收藏"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",titleArr[indexPath.row]];
     return cell;
 }
 

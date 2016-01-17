@@ -8,6 +8,10 @@
 
 #import "LOLUserMessageVC.h"
 #import "LOLAccountCell.h"
+#define CHANGE_NAME @"修改昵称"
+#define CHANGE_SIGN @"修改签名"
+#define CHange_PHONE @"修改电话"
+#define CHANGE_PASSWORD @"修改密码"
 @implementation LOLUserMessageVC
 -(void)viewDidLoad
 {
@@ -15,7 +19,7 @@
      self.title = @"个人信息";
     [self setupMainView];
     self.tableViewDataSource = [NSMutableArray arrayWithObjects:@"",@"头像",@"昵称",@"性别",@"等级",@"个人签名",@"电话",@"修改密码", nil];
-    
+    changImg = NO;
 }
 
 -(void)setupMainView
@@ -72,14 +76,13 @@
         if (cell == nil) {
             cell = [[LOLAccountCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
         }
-        if(indexPath.row == 1){//头像
-            
-            UIImageView *headImageView = [[UIImageView alloc] init];
-            headImageView.image = [UIImage imageNamed:@"h2x_i_02"];
-            headImageView.frame = CGRectMake(SCREEN_WIDTH-70,5,44,44);
-            headImageView.layer.masksToBounds =YES;
-            headImageView.layer.cornerRadius =44/2;
-            [cell addSubview:headImageView];
+        if(indexPath.row == 1){//头像            
+            self.headimage = [[UIImageView alloc] init];
+            self.headimage.image = [UIImage imageNamed:@"h2x_i_02"];
+            self.headimage.frame = CGRectMake(SCREEN_WIDTH-70,5,44,44);
+            self.headimage.layer.masksToBounds =YES;
+            self.headimage.layer.cornerRadius =44/2;
+            [cell addSubview:self.headimage];
         }else if(indexPath.row == 2){
             UILabel *nameLbel = [[UILabel alloc] init];
             nameLbel.frame  = CGRectMake(SCREEN_WIDTH-123,10,100,18);
@@ -134,6 +137,185 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@" ---  %ld ----",(long)indexPath.row);
+    switch (indexPath.row) {
+        case 1:
+            [self head_img_clicked];
+            break;
+        case 2:
+            [self pushChangeMseVC:CHANGE_NAME];
+            break;
+        case 3:
+            [self changeSex];
+            break;
+        case 4:
+            
+            break;
+        case 5:
+            [self pushChangeMseVC:CHANGE_SIGN];
+            break;
+        case 6:
+            [self pushChangeMseVC:CHange_PHONE];
+            break;
+        case 7:
+            [self pushChangeMseVC:CHANGE_PASSWORD];
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)changeSex
+{
+    
+}
+-(void)pushChangeMseVC:(NSString *)temp
+{
+    LOLChangeMesVC *changeMesVC = [[LOLChangeMesVC alloc] init];
+    changeMesVC.VCtype = temp;
+    [[SharedDelegate getRootNav]pushViewController:changeMesVC animated:YES];
+}
+//头像点击
+-(void)head_img_clicked
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:@"选择头像"
+                                  delegate:self
+                                  cancelButtonTitle:@"取消"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:@"拍照", @"从相册选择",nil];
+    actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    
+    [actionSheet showInView:self.view];
+    
+    
+}
+
+#pragma Mark alertView代理
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex==0){
+        [self fromCamera];
+    }else if(buttonIndex==1){
+        [self fromPhotos];
+    }else if(buttonIndex==2){
+        
+    }
+}
+
+//从相册中选择
+-(void) fromPhotos
+{
+    //初始化UIImagePickerController 指定代理
+    UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
+    //选择类型相机，相册还是什么
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    imagePicker.delegate = self;
+    //允许编辑
+    imagePicker.allowsEditing = YES;
+    
+    imagePicker.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    //显示相册
+    [self presentViewController:imagePicker animated:YES completion:nil];
+    
+}
+
+//保存图片
+- (void)saveImage:(UIImage *)tempImage WithName:(NSString *)imageName
+{
+    NSData* imageData = UIImagePNGRepresentation(tempImage);
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentsDirectory = [paths objectAtIndex:0];
+    // Now we get the full path to the file
+    NSString* fullPathToFile = [documentsDirectory stringByAppendingPathComponent:imageName];
+    // and then we write it out
+    [imageData writeToFile:fullPathToFile atomically:NO];
+    
+}
+
+// 打开相机
+-(void) fromCamera {
+    
+    BOOL isCamera = [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
+    if (!isCamera) {
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"设备不可用" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    self.mypicker = [[UIImagePickerController alloc] init];
+    self.mypicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.mypicker.delegate = self;
+    // 编辑模式
+    self.mypicker.allowsEditing = YES;
+    [self  presentViewController:self.mypicker animated:YES completion:^{
+    }];
+    
+    
+}
+
+// 选中照片
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    
+    changImg = YES;
+    [picker dismissViewControllerAnimated:YES completion:^{}];
+    
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    
+    [self saveImage:image withName:@"hearImg.png"];
+    
+    NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"hearImg.png"];
+    
+    UIImage *savedImage44 = [[UIImage alloc] initWithContentsOfFile:fullPath];
+    
+    
+    _headimage.image = savedImage44;
+    
+    
+}
+
+#pragma mark - 保存图片至沙盒
+- (void) saveImage:(UIImage *)currentImage withName:(NSString *)imageName
+{
+    
+    NSData *imageData = UIImageJPEGRepresentation(currentImage, 0.5);
+    // 获取沙盒目录
+    
+    NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:imageName];
+    
+    // 将图片写入文件
+    
+    [imageData writeToFile:fullPath atomically:NO];
+}
+
+
+//压缩图片
++ (UIImage*)imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize
+{
+    // Create a graphics image context
+    UIGraphicsBeginImageContext(newSize);
+    
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // End the context
+    UIGraphicsEndImageContext();
+    
+    // Return the new image.
+    return newImage;
+}
+
+
+
+// 取消相册
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

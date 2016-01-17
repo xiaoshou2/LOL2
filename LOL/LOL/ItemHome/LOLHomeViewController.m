@@ -15,7 +15,7 @@
 #import "LOLSpaceSecCell.h"
 #import "LOLBigGodListCell.h"
 #import "LOLGodcertificationVC.h"
-
+#import "LOLReleaseVC.h"
 @interface LOLHomeViewController ()
 {
     SDCycleScrollView *cycleScrollView2;
@@ -51,12 +51,10 @@
 
 -(void)requestData
 {
-    
-    
     [self showHUD];
     //请求数据
     [LOLAFNetWorkUtility  homeViewRequestWithParms:@{} successBlock:^(id responseObject) {
-      //  NSLog(@"-hahahahaha--  LOL请求成功 --%@--",responseObject);
+      //NSLog(@"--- LOL首页请求成功 --%@--",responseObject);
         self.bigGodArr = responseObject;
         LOLBigGodModel *model = self.bigGodArr[0];
         self.bannerArray = model.bannerArr;
@@ -95,7 +93,6 @@
     
     [header setImages:idleImages forState:MJRefreshStateIdle];
     
-    
     // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
     NSMutableArray *refreshingImages = [NSMutableArray array];
     for (NSUInteger i = 1; i<=3; i++) {
@@ -114,7 +111,6 @@
 #pragma mark - require Data
 
 - (void)requireNewData {
-   // [self showHUD];
     
 //    BOOL isUpPullRefresh = self.tableView.contentOffset.y >= 0;
     
@@ -164,7 +160,6 @@
 -(void)setupMainView
 {
     /************* 初始化tableView  ********************/
-    
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 49) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -355,6 +350,9 @@
  
     }else if(sender == 1003){
        NSLog(@"--push--1003");
+        LOLReleaseVC *releaseVC = [[LOLReleaseVC alloc] init];
+        [[SharedDelegate getRootNav] pushViewController:releaseVC animated:YES];
+        
     }
 }
 

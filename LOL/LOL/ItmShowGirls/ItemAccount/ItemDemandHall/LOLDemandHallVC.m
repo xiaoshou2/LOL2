@@ -8,7 +8,7 @@
 
 #import "LOLDemandHallVC.h"
 #import "MJRefresh.h"
-
+#import "LOLReleaseVC.h"
 CGFloat  ProductFilterNormalHeight = 50.0f;
 @implementation LOLDemandHallVC
 
@@ -139,6 +139,10 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
 
 - (void)test:(UIButton *)sender {
     NSLog(@"Button tapped, tag: %ld", (long)sender.tag);
+    LOLReleaseVC *releaseVC = [[LOLReleaseVC alloc] init];
+    [[SharedDelegate getRootNav]pushViewController:releaseVC animated:YES];
+    
+    
 }
 
 - (UIButton *)createButtonWithName:(NSString *)imageName {

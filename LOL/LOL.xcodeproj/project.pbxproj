@@ -11,6 +11,7 @@
 		352325971C3CF20A007A3E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325941C3CF20A007A3E1D /* AppDelegate.m */; };
 		352325A51C3CFD05007A3E1D /* LOLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325A41C3CFD05007A3E1D /* LOLBaseViewController.m */; };
 		352325A81C3D0131007A3E1D /* LOLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325A71C3D0131007A3E1D /* LOLHomeViewController.m */; };
+		353C15701C49E859002A0BCC /* LOLChangeMesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 353C156F1C49E859002A0BCC /* LOLChangeMesVC.m */; };
 		3547DB8A1C45E69300EEF595 /* h2x_i_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB851C45E69300EEF595 /* h2x_i_01@2x.png */; };
 		3547DB8B1C45E69300EEF595 /* h2x_i_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB861C45E69300EEF595 /* h2x_i_02@2x.png */; };
 		3547DB8C1C45E69300EEF595 /* h2x_i_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB871C45E69300EEF595 /* h2x_i_03@2x.png */; };
@@ -163,6 +164,8 @@
 		352325A41C3CFD05007A3E1D /* LOLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLBaseViewController.m; sourceTree = "<group>"; };
 		352325A61C3D0131007A3E1D /* LOLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLHomeViewController.h; sourceTree = "<group>"; };
 		352325A71C3D0131007A3E1D /* LOLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLHomeViewController.m; sourceTree = "<group>"; };
+		353C156E1C49E859002A0BCC /* LOLChangeMesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLChangeMesVC.h; sourceTree = "<group>"; };
+		353C156F1C49E859002A0BCC /* LOLChangeMesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLChangeMesVC.m; sourceTree = "<group>"; };
 		3547DB851C45E69300EEF595 /* h2x_i_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_01@2x.png"; sourceTree = "<group>"; };
 		3547DB861C45E69300EEF595 /* h2x_i_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_02@2x.png"; sourceTree = "<group>"; };
 		3547DB871C45E69300EEF595 /* h2x_i_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_03@2x.png"; sourceTree = "<group>"; };
@@ -380,6 +383,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35148D591C4AD76F00139FA2 /* LOLReleaseCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LOLReleaseCell;
+			sourceTree = "<group>";
+		};
 		352325921C3CF20A007A3E1D /* LOLMain */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,6 +737,8 @@
 				35A6A1EE1C3E1DFE00B6FDAB /* LOLAccountViewController.m */,
 				35FE5C0C1C488482003E1A94 /* LOLUserMessageVC.h */,
 				35FE5C0D1C488482003E1A94 /* LOLUserMessageVC.m */,
+				353C156E1C49E859002A0BCC /* LOLChangeMesVC.h */,
+				353C156F1C49E859002A0BCC /* LOLChangeMesVC.m */,
 			);
 			name = "ItemAccount(个人中心)";
 			path = ItmShowGirls/ItemAccount;
@@ -745,12 +757,11 @@
 		35B7E0051C460045004FB896 /* ItemDemandHall(需求大厅) */ = {
 			isa = PBXGroup;
 			children = (
-				35B7E0131C46213A004FB896 /* LOLDemandModel(需求页模型) */,
-				35B7E00B1C460692004FB896 /* DemandCell */,
 				35B7E0061C460101004FB896 /* LOLDemandHallVC.h */,
 				35B7E0071C460101004FB896 /* LOLDemandHallVC.m */,
-				35BEB6251C4997BF004F9B63 /* LOLReleaseVC.h */,
-				35BEB6261C4997BF004F9B63 /* LOLReleaseVC.m */,
+				35BEB6451C49D779004F9B63 /* LOLReleaseVC(发布信息页面) */,
+				35B7E0131C46213A004FB896 /* LOLDemandModel(需求页模型) */,
+				35B7E00B1C460692004FB896 /* DemandCell */,
 			);
 			name = "ItemDemandHall(需求大厅)";
 			path = ItmShowGirls/ItemAccount/ItemDemandHall;
@@ -790,6 +801,16 @@
 				35BEB62A1C4998EC004F9B63 /* LOLAccountCell.m */,
 			);
 			name = AccountCell;
+			sourceTree = "<group>";
+		};
+		35BEB6451C49D779004F9B63 /* LOLReleaseVC(发布信息页面) */ = {
+			isa = PBXGroup;
+			children = (
+				35148D591C4AD76F00139FA2 /* LOLReleaseCell */,
+				35BEB6251C4997BF004F9B63 /* LOLReleaseVC.h */,
+				35BEB6261C4997BF004F9B63 /* LOLReleaseVC.m */,
+			);
+			name = "LOLReleaseVC(发布信息页面)";
 			sourceTree = "<group>";
 		};
 		35C627941C3E33F500D4A6FE /* ViewSize */ = {
@@ -1239,6 +1260,7 @@
 				35FE5BDD1C482E8A003E1A94 /* UITextField+Extension.m in Sources */,
 				352325A51C3CFD05007A3E1D /* LOLBaseViewController.m in Sources */,
 				35FE5BC61C482E09003E1A94 /* RegisterVCNew.m in Sources */,
+				353C15701C49E859002A0BCC /* LOLChangeMesVC.m in Sources */,
 				358F5C3D1C40804F00CCFD1E /* LOLHomeMenuCell.m in Sources */,
 				35C627AA1C3E487300D4A6FE /* NSDictionary+YW.m in Sources */,
 				35B13AFA1C47852A00C7E465 /* WKSectionView.m in Sources */,
@@ -1338,7 +1360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1376,7 +1398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1394,6 +1416,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feibai.LOL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1407,6 +1430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feibai.LOL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
