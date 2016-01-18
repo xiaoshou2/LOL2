@@ -105,6 +105,10 @@
 		35CE19B41C40AE49002FA778 /* dropdown_anim__00002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CE19B31C40AE49002FA778 /* dropdown_anim__00002@2x.png */; };
 		35CE19B61C40AEC9002FA778 /* dropdown_anim__00001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CE19B51C40AEC9002FA778 /* dropdown_anim__00001@2x.png */; };
 		35CE19B81C40AEDB002FA778 /* dropdown_anim__00000@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CE19B71C40AEDB002FA778 /* dropdown_anim__00000@2x.png */; };
+		35E651591C4C0EE500F91E5D /* LOLChooseTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E651581C4C0EE500F91E5D /* LOLChooseTitleCell.m */; };
+		35E6515C1C4C513E00F91E5D /* home_topBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E6515A1C4C513E00F91E5D /* home_topBtn.png */; };
+		35E6515D1C4C513F00F91E5D /* home_topBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E6515B1C4C513E00F91E5D /* home_topBtn@2x.png */; };
+		35E651601C4C53B300F91E5D /* LOLDemandDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E6515F1C4C53B300F91E5D /* LOLDemandDetail.m */; };
 		35ED03F91C432B000088E96B /* h2x_i_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F51C432B000088E96B /* h2x_i_01@2x.png */; };
 		35ED03FA1C432B000088E96B /* h2x_i_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F61C432B000088E96B /* h2x_i_02@2x.png */; };
 		35ED03FB1C432B000088E96B /* h2x_i_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F71C432B000088E96B /* h2x_i_03@2x.png */; };
@@ -310,6 +314,12 @@
 		35CE19B31C40AE49002FA778 /* dropdown_anim__00002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00002@2x.png"; sourceTree = "<group>"; };
 		35CE19B51C40AEC9002FA778 /* dropdown_anim__00001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00001@2x.png"; sourceTree = "<group>"; };
 		35CE19B71C40AEDB002FA778 /* dropdown_anim__00000@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00000@2x.png"; sourceTree = "<group>"; };
+		35E651571C4C0EE500F91E5D /* LOLChooseTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLChooseTitleCell.h; sourceTree = "<group>"; };
+		35E651581C4C0EE500F91E5D /* LOLChooseTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLChooseTitleCell.m; sourceTree = "<group>"; };
+		35E6515A1C4C513E00F91E5D /* home_topBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_topBtn.png; sourceTree = "<group>"; };
+		35E6515B1C4C513E00F91E5D /* home_topBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_topBtn@2x.png"; sourceTree = "<group>"; };
+		35E6515E1C4C53B300F91E5D /* LOLDemandDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLDemandDetail.h; sourceTree = "<group>"; };
+		35E6515F1C4C53B300F91E5D /* LOLDemandDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLDemandDetail.m; sourceTree = "<group>"; };
 		35ED03F51C432B000088E96B /* h2x_i_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_01@2x.png"; sourceTree = "<group>"; };
 		35ED03F61C432B000088E96B /* h2x_i_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_02@2x.png"; sourceTree = "<group>"; };
 		35ED03F71C432B000088E96B /* h2x_i_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_03@2x.png"; sourceTree = "<group>"; };
@@ -392,6 +402,8 @@
 		35148D591C4AD76F00139FA2 /* LOLReleaseCell */ = {
 			isa = PBXGroup;
 			children = (
+				35E651571C4C0EE500F91E5D /* LOLChooseTitleCell.h */,
+				35E651581C4C0EE500F91E5D /* LOLChooseTitleCell.m */,
 			);
 			name = LOLReleaseCell;
 			sourceTree = "<group>";
@@ -433,6 +445,8 @@
 		3523259B1C3CF423007A3E1D /* LOLImages */ = {
 			isa = PBXGroup;
 			children = (
+				35E6515A1C4C513E00F91E5D /* home_topBtn.png */,
+				35E6515B1C4C513E00F91E5D /* home_topBtn@2x.png */,
 				35BEB6371C49BD2E004F9B63 /* yw_load1.png */,
 				35C8EEBD1C48D43F00A7D85C /* icon_pos.png */,
 				35BEB62C1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@2x.png */,
@@ -765,6 +779,8 @@
 			children = (
 				35B7E0061C460101004FB896 /* LOLDemandHallVC.h */,
 				35B7E0071C460101004FB896 /* LOLDemandHallVC.m */,
+				35E6515E1C4C53B300F91E5D /* LOLDemandDetail.h */,
+				35E6515F1C4C53B300F91E5D /* LOLDemandDetail.m */,
 				35BEB6451C49D779004F9B63 /* LOLReleaseVC(发布信息页面) */,
 				35B7E0131C46213A004FB896 /* LOLDemandModel(需求页模型) */,
 				35B7E00B1C460692004FB896 /* DemandCell */,
@@ -1088,6 +1104,7 @@
 				35CE19B21C40AE3A002FA778 /* dropdown_anim__00003@2x.png in Resources */,
 				359A16E31C44C0E400CDBDCC /* yw_load5.png in Resources */,
 				35865D541C3AE82E0058546B /* LaunchScreen.storyboard in Resources */,
+				35E6515D1C4C513F00F91E5D /* home_topBtn@2x.png in Resources */,
 				35FE5BF81C4833F0003E1A94 /* x.png in Resources */,
 				35ED03FB1C432B000088E96B /* h2x_i_03@2x.png in Resources */,
 				359A16EF1C450B2800CDBDCC /* icon_new@2x.png in Resources */,
@@ -1142,6 +1159,7 @@
 				35C8EEBE1C48D43F00A7D85C /* icon_pos.png in Resources */,
 				3547DB8A1C45E69300EEF595 /* h2x_i_01@2x.png in Resources */,
 				35C8EEBC1C48D43500A7D85C /* icon_img.png in Resources */,
+				35E6515C1C4C513E00F91E5D /* home_topBtn.png in Resources */,
 				3547DB8B1C45E69300EEF595 /* h2x_i_02@2x.png in Resources */,
 				35ED03F91C432B000088E96B /* h2x_i_01@2x.png in Resources */,
 				35CE19AA1C40A3D0002FA778 /* home_dot_n@2x.png in Resources */,
@@ -1231,6 +1249,7 @@
 				3589EA191C3F97B800C972D2 /* LOLHomeCellProperty.m in Sources */,
 				35FE5BCF1C482E2E003E1A94 /* FormValidator.m in Sources */,
 				359A17071C4520D700CDBDCC /* SDCycleScrollView.m in Sources */,
+				35E651601C4C53B300F91E5D /* LOLDemandDetail.m in Sources */,
 				35BEB62B1C4998EC004F9B63 /* LOLAccountCell.m in Sources */,
 				35C627ED1C3E562700D4A6FE /* LOLRootManger.m in Sources */,
 				35C627AB1C3E487300D4A6FE /* NSMutableDictionary+YW.m in Sources */,
@@ -1276,6 +1295,7 @@
 				358F5C3D1C40804F00CCFD1E /* LOLHomeMenuCell.m in Sources */,
 				35C627AA1C3E487300D4A6FE /* NSDictionary+YW.m in Sources */,
 				35B13AFA1C47852A00C7E465 /* WKSectionView.m in Sources */,
+				35E651591C4C0EE500F91E5D /* LOLChooseTitleCell.m in Sources */,
 				359A16ED1C44D7F200CDBDCC /* LOLBigGodModel.m in Sources */,
 				35FE5BDB1C482E8A003E1A94 /* UIImageView+Extension.m in Sources */,
 				358F5C431C40812600CCFD1E /* LOLBigGogCell.m in Sources */,

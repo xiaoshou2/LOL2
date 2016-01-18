@@ -46,7 +46,12 @@
 #define FONT(NAME,FONTSIZE)      [UIFont fontWithName:(NAME) size:(FONTSIZE)]
 #define DLogDebug(fmt, ...) do { if (LOG_LEVEL >= LOG_LEVEL_DEBUG ) { MYNSLog(fmt, "YW_DEBUG", ##__VA_ARGS__); } } while(0);
 
+//shareSDK短信验证
+#define MyappKey @"ee56aa842f9a"
+#define MyappSecret @"3bd800dbc9ed1f9ad70c7aff2a799a84"
+
 #define RECEIVEDSTR @"changNum"
+#define CHOOSETITLE @"chooseTitle"
 #define PRINT_PHHONE @"输入手机号"
 #define PRINT_QQ @"输入QQ号"
 #define PRINT_WEIXIN @"输入微信号"

@@ -9,6 +9,10 @@
 #import "LOLBaseViewController.h"
 
 @interface LOLchooseTitleVC : LOLBaseViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    NSInteger  currentIndex;
+}
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *dataSuroceArr;
+
 @end

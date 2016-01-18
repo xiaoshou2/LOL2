@@ -19,6 +19,9 @@
     
     ////创建通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receivedStr:) name:RECEIVEDSTR object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(chooseTitle:) name:CHOOSETITLE object:nil];
+    
 //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewClicked)];
 //    self.view.userInteractionEnabled = YES;
 //    [self.view addGestureRecognizer:tap];
@@ -36,12 +39,7 @@
     [self.view addSubview:self.tableView];
     
     
-    UIButton *releaseBtn = [[UIButton alloc]init];
-    releaseBtn.frame = CGRectMake(SCREEN_WIDTH/2-60,SCREEN_HEIGHT- 105 ,120, 35);
-    releaseBtn.backgroundColor = [UIColor redColor];
-    [self.tableView addSubview:releaseBtn];
-    [releaseBtn addTarget:self action:@selector(releaseClicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.tableView addSubview:releaseBtn];
+  
 }
 
 -(void)releaseClicked{
@@ -55,7 +53,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 13;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,14 +90,14 @@
          accrmage.frame = CGRectMake(SCREEN_WIDTH -18,16,8,8);
         [cell addSubview:accrmage];
         
-        UILabel *titleContentLb = [[UILabel alloc] init];
-        titleContentLb.frame = CGRectMake(SCREEN_WIDTH/2-55,8,140,25);
-        titleContentLb.text = @"请选择标题内容...";
-        titleContentLb.textColor = [UIColor colorWithHex:@"#999999"];
-        titleContentLb.font = SYSTEMFONT(13);
-        titleContentLb.backgroundColor = [UIColor clearColor];
+        self.titleContentLb = [[UILabel alloc] init];
+        self.titleContentLb.frame = CGRectMake(SCREEN_WIDTH/2-55,8,140,25);
+        self.titleContentLb.text = @"请选择标题内容...";
+        self.titleContentLb.textColor = [UIColor colorWithHex:@"#999999"];
+        self.titleContentLb.font = SYSTEMFONT(13);
+        self.titleContentLb.backgroundColor = [UIColor clearColor];
         // self.mendTimeLb.backgroundColor = [UIColor grayColor];
-        [cell addSubview:titleContentLb];
+        [cell addSubview:self.titleContentLb];
         
         UIView *lineView = [[UIView alloc] init];
         lineView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
@@ -144,6 +142,85 @@
             return cell;
 
         }else if(indexPath.row == 3){
+            
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            UIView *spaceView2 = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 15)];
+            spaceView2.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
+            [cell addSubview:spaceView2];
+            return cell;
+        }else if(indexPath.row == 4){
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+        
+            
+            UILabel *lianxiLb = [[UILabel alloc] init];
+            lianxiLb.frame = CGRectMake(10,10,90,15);
+            lianxiLb.backgroundColor = [UIColor clearColor];
+           // lianxiLb.textColor = [UIColor colorWithHex:@"#999999"];
+            lianxiLb.font = SYSTEMFONT(12);
+            lianxiLb.text = @"完成时间:";
+            [cell addSubview:lianxiLb];
+            
+            
+            UILabel *dayLb = [[UILabel alloc] init];
+            dayLb.frame = CGRectMake(150,10,50,15);
+            dayLb.backgroundColor = [UIColor clearColor];
+            //            payLab.textColor = [UIColor colorWithHex:@"#999999"];
+            dayLb.font = SYSTEMFONT(12);
+            dayLb.text = @"天之内";
+            [cell addSubview:dayLb];
+            
+            self.dayTf = [[UITextField alloc] initWithFrame:CGRectMake(100,8,45, 20)];
+            self.dayTf.tag = 4001;
+            self.dayTf.enabled = YES;
+            self.dayTf.font = SYSTEMFONT(12);
+            //self.payMoneTf.delegate = self;
+            self.dayTf.borderStyle = UITextBorderStyleNone;
+            self.dayTf.keyboardType = UIKeyboardTypeDecimalPad;
+            [self.dayTf resignFirstResponder];
+            [self.dayTf addTarget:self action:@selector(limit_usemame_tf:) forControlEvents:UIControlEventEditingChanged];
+            self.getMoneyTf.backgroundColor = [UIColor whiteColor];
+            [cell addSubview:self.dayTf];
+            
+            //            payLab.textColor = [UIColor colorWithHex:@"#999999"];
+            
+            UIView *lineView = [[UIView alloc] init];
+            lineView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
+            lineView.frame = CGRectMake(10,40,ScreenWidth-20, 1);
+            [cell addSubview: lineView];
+            
+            //----键盘上添加按钮
+            UIToolbar * topView = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 30)];
+            [topView setBarStyle:UIBarStyleBlackTranslucent];
+            
+            UIBarButtonItem * btnSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+            
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            btn.frame = CGRectMake(2, 5, 50, 25);
+            [btn addTarget:self action:@selector(dismissKeyBoard) forControlEvents:UIControlEventTouchUpInside];
+            [btn setImage:[UIImage imageNamed:@"yw_load1"] forState:UIControlStateNormal];
+            UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc]initWithCustomView:btn];
+            NSArray * buttonsArray = [NSArray arrayWithObjects:btnSpace,doneBtn,nil];
+            [topView setItems:buttonsArray];
+            [self.dayTf setInputAccessoryView:topView];
+            
+            UILabel *tealLb = [[UILabel alloc] init];
+            tealLb.frame = CGRectMake(SCREEN_WIDTH -50,10,50,15);
+            tealLb.backgroundColor = [UIColor clearColor];
+            tealLb.textColor = [UIColor colorWithHex:@"#999999"];
+            tealLb.font = SYSTEMFONT(11);
+            tealLb.text = @"(可选填)";
+            [cell addSubview:tealLb];
+
+            
+            return cell;
+            
+        }else if(indexPath.row == 5){
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -161,7 +238,7 @@
             [cell addSubview:lianxiLb];
             return cell;
 
-        }else if(indexPath.row == 4){
+        }else if(indexPath.row == 6){
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -173,6 +250,14 @@
             payLab.font = SYSTEMFONT(12);
             payLab.text = @"想支付报酬多少";
             [cell addSubview:payLab];
+            
+            UILabel *tealLb = [[UILabel alloc] init];
+            tealLb.frame = CGRectMake(SCREEN_WIDTH -50,10,50,15);
+            tealLb.backgroundColor = [UIColor clearColor];
+            tealLb.textColor = [UIColor colorWithHex:@"#999999"];
+            tealLb.font = SYSTEMFONT(11);
+            tealLb.text = @"(可选填)";
+            [cell addSubview:tealLb];
             
             self.payMoneTf = [[UITextField alloc] initWithFrame:CGRectMake(100,8,45, 20)];
             self.payMoneTf.tag = 1001;
@@ -192,6 +277,22 @@
             //            payLab.textColor = [UIColor colorWithHex:@"#999999"];
             yuanLb.font = SYSTEMFONT(12);
             yuanLb.text = @"元";
+            
+            //----键盘上添加按钮
+            UIToolbar * topView = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 30)];
+            [topView setBarStyle:UIBarStyleBlackTranslucent];
+            
+            UIBarButtonItem * btnSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+            
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            btn.frame = CGRectMake(2, 5, 50, 25);
+            [btn addTarget:self action:@selector(dismissKeyBoard) forControlEvents:UIControlEventTouchUpInside];
+            [btn setImage:[UIImage imageNamed:@"yw_load1"] forState:UIControlStateNormal];
+            UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc]initWithCustomView:btn];
+            NSArray * buttonsArray = [NSArray arrayWithObjects:btnSpace,doneBtn,nil];
+            [topView setItems:buttonsArray];
+            [self.payMoneTf setInputAccessoryView:topView];
+            
             [cell addSubview:yuanLb];
             
             UIView *lineView = [[UIView alloc] init];
@@ -200,7 +301,7 @@
             [cell addSubview: lineView];
             return cell;
  
-        }else if(indexPath.row == 5){
+        }else if(indexPath.row == 7){
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -216,6 +317,14 @@
             UILabel *yuanLb = [[UILabel alloc] init];
             yuanLb.frame = CGRectMake(150,10,20,15);
             yuanLb.backgroundColor = [UIColor clearColor];
+            
+            UILabel *tealLb = [[UILabel alloc] init];
+            tealLb.frame = CGRectMake(SCREEN_WIDTH -50,10,50,15);
+            tealLb.backgroundColor = [UIColor clearColor];
+            tealLb.textColor = [UIColor colorWithHex:@"#999999"];
+            tealLb.font = SYSTEMFONT(11);
+            tealLb.text = @"(可选填)";
+            [cell addSubview:tealLb];
             
             self.getMoneyTf = [[UITextField alloc] initWithFrame:CGRectMake(100,8,45, 20)];
             self.getMoneyTf.tag = 1001;
@@ -238,9 +347,25 @@
             lineView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
             lineView.frame = CGRectMake(10,39,ScreenWidth-20, 1);
             [cell addSubview: lineView];
+           
+            //----键盘上添加按钮
+            UIToolbar * topView = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 30)];
+            [topView setBarStyle:UIBarStyleBlackTranslucent];
+            
+            UIBarButtonItem * btnSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+            
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            btn.frame = CGRectMake(2, 5, 50, 25);
+            [btn addTarget:self action:@selector(dismissKeyBoard) forControlEvents:UIControlEventTouchUpInside];
+            [btn setImage:[UIImage imageNamed:@"yw_load1"] forState:UIControlStateNormal];
+            UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc]initWithCustomView:btn];
+            NSArray * buttonsArray = [NSArray arrayWithObjects:btnSpace,doneBtn,nil];
+            [topView setItems:buttonsArray];
+            [self.getMoneyTf setInputAccessoryView:topView];
+            
             return cell;
 
-        }else if(indexPath.row == 6){
+        }else if(indexPath.row == 8){
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -274,7 +399,7 @@
             return cell;
 
             
-        }else if(indexPath.row == 7){
+        }else if(indexPath.row == 9){
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -283,7 +408,7 @@
             lianxiLb.frame = CGRectMake(10,10,90,15);
             lianxiLb.backgroundColor = [UIColor clearColor];
             //            payLab.textColor = [UIColor colorWithHex:@"#999999"];
-            lianxiLb.font = SYSTEMFONT(12);
+            lianxiLb.font = SYSTEMFONT(10);
             lianxiLb.text = @"用QQ账号联系";
             [cell addSubview:lianxiLb];
             
@@ -308,7 +433,7 @@
             [cell addSubview: lineView];
             return cell;
 
-        }else if(indexPath.row == 8){
+        }else if(indexPath.row == 10){
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -341,17 +466,17 @@
             return cell;
 
             
-        }else if(indexPath.row == 9){
+        }else if(indexPath.row == 11){
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-            UIView *spaceView = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 20)];
+            UIView *spaceView = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 25)];
             spaceView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
             [cell addSubview:spaceView];
             
             UILabel *lianxiLb = [[UILabel alloc] init];
-            lianxiLb.frame = CGRectMake(10,10,140,12);
+            lianxiLb.frame = CGRectMake(10,5,140,12);
             lianxiLb.backgroundColor = [UIColor clearColor];
             lianxiLb.textColor = [UIColor colorWithHex:@"#999999"];
             lianxiLb.font = SYSTEMFONT(11);
@@ -359,7 +484,19 @@
             [cell addSubview:lianxiLb];
             return cell;
         }
-        
+        else if(indexPath.row == 12){
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.backgroundColor = [UIColor clearColor];
+            UIButton *releaseBtn = [[UIButton alloc]init];
+            releaseBtn.frame = CGRectMake(SCREEN_WIDTH/2-60,2,120, 35);
+            releaseBtn.backgroundColor = [UIColor redColor];
+            [self.tableView addSubview:releaseBtn];
+            [releaseBtn addTarget:self action:@selector(releaseClicked) forControlEvents:UIControlEventTouchUpInside];
+            [cell addSubview:releaseBtn];
+             return cell;
+        }
         
         //cell.titleLb.text = self.tableViewDataSource[indexPath.row];
     return nil;
@@ -368,8 +505,10 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         return 10;
-    }else if(indexPath.row==9){
-        return 20;
+    }else if(indexPath.row == 3){
+        return 15;
+    }else if(indexPath.row==11){
+        return 25;
     }else if(indexPath.row == 2){
         return 140;
     }else{
@@ -435,8 +574,7 @@
     }
     
     
-    if(sender.tag == 1001)
-    {
+    if(sender.tag == 1001){
     
         //5位
         NSString *str = [[sender text] stringByReplacingOccurrencesOfString:@"?" withString:@""];
@@ -488,6 +626,58 @@
             }
         }
     
+    if(sender.tag == 4001){
+        
+        //5位
+        NSString *str = [[sender text] stringByReplacingOccurrencesOfString:@"?" withString:@""];
+        if (isChinese) { //中文输入法下
+            UITextRange *selectedRange = [sender markedTextRange];
+            //获取高亮部分
+            UITextPosition *position = [sender positionFromPosition:selectedRange.start offset:0];
+            // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
+            if (!position) {
+                
+                if ( str.length>=4) {
+                    NSString *strNew = [NSString stringWithString:str];
+                    [sender setText:[strNew substringToIndex:3]];
+                    
+                }
+            }
+        }else{
+            if ([str length]>=4){
+                NSString *strNew = [NSString stringWithString:str];
+                [sender setText:[strNew substringToIndex:3]];
+                
+                
+            }
+        }
+    }else{
+        
+        //5位
+        NSString *str = [[sender text] stringByReplacingOccurrencesOfString:@"?" withString:@""];
+        if (isChinese) { //中文输入法下
+            UITextRange *selectedRange = [sender markedTextRange];
+            //获取高亮部分
+            UITextPosition *position = [sender positionFromPosition:selectedRange.start offset:0];
+            // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
+            if (!position) {
+                
+                if ( str.length>=4) {
+                    NSString *strNew = [NSString stringWithString:str];
+                    [sender setText:[strNew substringToIndex:3]];
+                    
+                }
+            }
+        }else{
+            if ([str length]>=4){
+                NSString *strNew = [NSString stringWithString:str];
+                [sender setText:[strNew substringToIndex:3]];
+                
+                
+            }
+        }
+    }
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -495,13 +685,13 @@
         LOLchooseTitleVC *chooseTitle = [[LOLchooseTitleVC alloc] init];
         [[SharedDelegate getRootNav]pushViewController:chooseTitle animated:YES];
         
-    }else if(indexPath.row == 6||indexPath.row == 7||indexPath.row==8){
+    }else if(indexPath.row == 8||indexPath.row == 9||indexPath.row==10){
         LOLPrintNumVC *printNum = [[LOLPrintNumVC alloc] init];
-        if (indexPath.row == 6) {
+        if (indexPath.row == 8) {
             printNum.titleStr = @"输入手机号";
-        }else if(indexPath.row == 7){
+        }else if(indexPath.row == 9){
             printNum.titleStr = @"输入QQ号";
-        }else if(indexPath.row == 8){
+        }else if(indexPath.row == 10){
             printNum.titleStr = @"输入微信号";
         }
           [[SharedDelegate getRootNav]pushViewController:printNum animated:YES];
@@ -534,9 +724,30 @@
 
     }
 }
+
+-(void)chooseTitle:(NSNotification*)obj{
+    
+    self.titleContentLb.text = [obj.userInfo objectForKey:@"title"];
+}
 -(void)dealloc
 {
     //移除
     [[NSNotificationCenter defaultCenter]removeObserver:self name:RECEIVEDSTR object:nil];
+    //移除
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:CHOOSETITLE object:nil];
+}
+-(void)dismissKeyBoard
+{
+    if (self.payMoneTf) {
+        [self.payMoneTf resignFirstResponder];
+    }
+    if (self.getMoneyTf) {
+        [self.getMoneyTf resignFirstResponder];
+
+    }
+    if (self.dayTf) {
+        [self.dayTf resignFirstResponder];
+        
+    }
 }
 @end

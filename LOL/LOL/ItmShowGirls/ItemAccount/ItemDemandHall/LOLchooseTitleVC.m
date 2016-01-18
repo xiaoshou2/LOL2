@@ -7,6 +7,7 @@
 //
 
 #import "LOLchooseTitleVC.h"
+#import "LOLChooseTitleCell.h"
 
 @implementation LOLchooseTitleVC
 -(void)viewDidLoad
@@ -58,16 +59,16 @@
         [cell addSubview:spaceView];
         return cell;
     }else{
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
+        LOLChooseTitleCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
+        cell = [[LOLChooseTitleCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
+        cell.titleLb.text = self.dataSuroceArr[indexPath.row];
         UIView *lineView = [[UIView alloc] init];
         lineView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
-        lineView.frame = CGRectMake(10,40,ScreenWidth-20, 1);
+        lineView.frame = CGRectMake(10,39,ScreenWidth-20, 1);
         [cell addSubview:lineView];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.textLabel.text = self.dataSuroceArr[indexPath.row];
 
         return cell;
     }
@@ -85,4 +86,43 @@
     return 40;
     
 }
+//
+//- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
+//{
+//    if(indexPath.row == currentIndex){
+//      //  return UITableViewCellAccessoryCheckmark;
+//        return nil;
+//    }
+//    else{
+//        return UITableViewCellAccessoryNone;
+//    }
+//}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row!=0) {
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        if(indexPath.row == currentIndex){
+            return;
+        }
+        NSIndexPath *oldIndexPath = [NSIndexPath indexPathForRow:currentIndex
+                                                       inSection:0];
+        UITableViewCell *newCell = [tableView cellForRowAtIndexPath:indexPath];
+        if (newCell.accessoryType == UITableViewCellAccessoryNone) {
+            newCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+        UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:oldIndexPath];
+        if (oldCell.accessoryType == UITableViewCellAccessoryCheckmark) {
+            oldCell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        currentIndex = indexPath.row;
+        
+        NSLog(@"-- %ld --",(long)currentIndex);
+        //发送通知
+        [[NSNotificationCenter defaultCenter]postNotificationName:CHOOSETITLE object:self userInfo:@{@"title":self.dataSuroceArr[currentIndex]}];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
 @end

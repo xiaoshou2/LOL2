@@ -16,6 +16,8 @@
 #import "LOLBigGodListCell.h"
 #import "LOLGodcertificationVC.h"
 #import "LOLReleaseVC.h"
+CGFloat  ProductFilterNormalHeight2 = 50.0f;
+
 @interface LOLHomeViewController ()
 {
     SDCycleScrollView *cycleScrollView2;
@@ -62,6 +64,7 @@
         [self hideHUD];
         //请求完加载数据
         [self loadDataSource];
+         _isLoadFinish = YES;
         NSLog(@"图片 ---  %@",self.bannerArray);
       //--- 模拟加载延迟
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -78,9 +81,26 @@
     } ];
 }
 
+-(void)loadMoreData
+{
+    _isLoadFinish = NO;
+    [self requestData];
+    // 刷新表格
+    [self.tableView reloadData];
+    // 拿到当前的下拉刷新控件，结束刷新状态
+    [self.tableView.mj_footer endRefreshing];
+    self.tableView.mj_footer.hidden = YES;
+}
+
 #pragma mark - setup UI
 
 - (void)setupRefreshUI {
+   
+    
+    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self loadMoreData];
+    }];
     
     // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
     MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(requireNewData)];
@@ -113,7 +133,7 @@
 - (void)requireNewData {
     
 //    BOOL isUpPullRefresh = self.tableView.contentOffset.y >= 0;
-    
+    _isLoadFinish = NO;
     [self requestData];
    
     // 刷新表格
@@ -168,6 +188,18 @@
     [self.view addSubview:self.tableView];
     [self registCell];
     //[self.view insertSubview:self.tableView belowSubview:self.titleView];
+    _TopView = [[UIView alloc]initWithFrame:CGRectMake(ScreenWidth-65, ScreenHeight-120, 50, 50)];
+    _TopView.backgroundColor = [UIColor clearColor];
+    _TopView.layer.cornerRadius = 25;
+    _TopView.clipsToBounds = YES;
+    //_TopView.backgroundColor = [UIColor redColor];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, _TopView.frame.size.width, _TopView.frame.size.height);
+    [btn setBackgroundImage:[UIImage imageNamed:@"home_topBtn"] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(topButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [_TopView addSubview:btn];
+    _TopView.alpha = 0;
+    [self.view addSubview:_TopView];
  
     /************* 初始化banner视图  ********************/
     UIScrollView *demoContainerView = [[UIScrollView alloc] init];
@@ -388,6 +420,129 @@
     
     [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
 }
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    if (scrollView.dragging) {
+//        
+//        if((scrollView.contentOffset.y - _beginOffsetY)>10.0f) {    //向上拖拽
+//            if (!_hideTopView) {
+//                [self hideTopView];
+//                //向下
+//                CATransition *animation = [CATransition animation];
+//                
+//                animation.type = kCATransitionMoveIn;
+//                animation.duration = 1.0f;
+//                [_TopView.layer addAnimation:animation forKey:nil];
+//                _TopView.hidden = YES;
+//                
+//            }
+//            
+//        } else if ((scrollView.contentOffset.y - _beginOffsetY)<-10.0f) {     //向下拖拽
+//            if (_hideTopView) {
+//                [self showTopView];
+//                
+//            }else if(scrollView.contentOffset.y < _beginOffsetY)
+//            {
+//                //向上
+//                _TopView.hidden = NO;
+//            }
+//        }
+//    }
+//    
+//}
+
+
+#pragma scrollView Delegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //NSLog(@"ofset = %f \t contentY = %f",scrollView.contentOffset.y,scrollView.contentSize.height);
+    CGFloat offsetY = self.tableView.contentOffset.y;
+    UIColor * color = [UIColor  colorWithRed:1.0/255.0 green:147.0/255.0 blue:232.0/255.0 alpha:1];
+    
+//    if (offsetY < -20.) {
+//        self.titleView.hidden = YES;
+//    }else if(offsetY >=0){
+//        self.titleView.hidden = NO;
+//        CGFloat alpha = offsetY / (topHeight()+50);
+//        [self.titleView setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+//    }
+    if (_isLoadFinish) {
+        float height = self.tableView.height;
+        if ((NSInteger)offsetY >= (NSInteger)height) {
+            [UIView animateWithDuration:1.0 animations:^{
+                _TopView.alpha = 1.0;
+            }];
+            
+        }else{
+            [UIView animateWithDuration:1.0 animations:^{
+                _TopView.alpha = 0.0;
+            }];
+        }
+    }
+}
+
+#pragma mark  <显示头部View>
+
+- (void)showTopView{
+    if (_hideOrShowTopViewProgress)  return;
+    
+    _hideOrShowTopViewProgress = YES;
+    //    if (ISIOS7) {
+    //        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    //    }
+    
+    CGFloat translationHeight = topHeight+ProductFilterNormalHeight2;
+    [UIView animateWithDuration:0.2 animations:^{
+        [self.titleView setTransform:CGAffineTransformIdentity];
+        [self.tableView setTransform:CGAffineTransformIdentity];
+        CGRect frame = self.tableView.frame;
+        frame.origin.y = translationHeight;
+        frame.size.height -= translationHeight;
+        self.tableView.frame = frame;
+        
+    } completion:^(BOOL finished) {
+        _hideOrShowTopViewProgress = NO;
+        _hideTopView = NO;
+    }];
+    
+}
+
+#pragma mark  <隐藏头部View>
+
+- (void)hideTopView{
+    if (_hideOrShowTopViewProgress) {
+        return;
+    }
+    _hideOrShowTopViewProgress = YES;
+    //    if (ISIOS7) {
+    //        [[UIApplication sharedApplication]setStatusBarHidden:YES];
+    //    }
+    
+    CGFloat translationHeight = topHeight+ProductFilterNormalHeight2;
+    [UIView animateWithDuration:0.2 animations:^{
+        [self.titleView setTransform:CGAffineTransformMakeTranslation(0,-translationHeight)];
+        [self.tableView setTransform:CGAffineTransformMakeTranslation(0, -translationHeight)];
+        CGRect frame = self.tableView.frame;
+        frame.origin.y = 0;
+        frame.size.height += translationHeight;
+        self.tableView.frame = frame;
+        
+    } completion:^(BOOL finished) {
+        _hideOrShowTopViewProgress = NO;
+        _hideTopView = YES;
+    }];
+}
+
+- (void)topButtonClick{
+    
+    [UIView animateWithDuration:
+     .25 animations:^{
+         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+         CGPoint topOffset = CGPointZero;
+         [self.tableView setContentOffset:topOffset animated:YES];
+     }];
+}
+
 
 
 @end

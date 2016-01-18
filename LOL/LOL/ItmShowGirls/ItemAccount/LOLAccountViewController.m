@@ -119,7 +119,7 @@
 
 -(void)hindView
 {
-    if(![LOLUserData isLogined]){//用户已登录
+    if([LOLUserData isLogined]){//用户已登录
         self.loginBtn.hidden = YES;
         self.userNameLb.hidden = NO;
         self.userHeadImageView.hidden = NO;

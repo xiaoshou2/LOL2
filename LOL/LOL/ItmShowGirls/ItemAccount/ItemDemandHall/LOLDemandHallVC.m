@@ -9,6 +9,7 @@
 #import "LOLDemandHallVC.h"
 #import "MJRefresh.h"
 #import "LOLReleaseVC.h"
+#import "LOLDemandDetail.h"
 CGFloat  ProductFilterNormalHeight = 50.0f;
 @implementation LOLDemandHallVC
 
@@ -215,6 +216,9 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    LOLDemandDetail *demandDetailVC = [[LOLDemandDetail alloc] init];
+    [[SharedDelegate getRootNav]pushViewController:demandDetailVC animated:YES];
+    
     
 }
 

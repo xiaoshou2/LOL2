@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "LOLRootManger.h"
 #import "MMDrawerController.h"
+#import <SMS_SDK/SMSSDK.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //初始化应用，appKey和appSecret从后台申请得
+    [SMSSDK registerApp:MyappKey withSecret:MyappSecret];
+    
     [[LOLRootManger shareManager] gotoIntroView];//初始化tabBar
 //    [self setupViewControllers];
     return YES;
