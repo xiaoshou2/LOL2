@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04F75A3F1C4E19EA00BCA267 /* LOLshowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A3E1C4E19EA00BCA267 /* LOLshowModel.m */; };
+		04F75A421C4E227200BCA267 /* LOLGirlsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A411C4E227200BCA267 /* LOLGirlsCollectionViewCell.m */; };
+		04F75A481C4E26FE00BCA267 /* 占@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F75A471C4E26FE00BCA267 /* 占@2x.png */; };
+		04F75A4B1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A4A1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m */; };
 		11CF186700B95A34D652A282 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E18B4A4FD283CB66A08D27D /* libPods.a */; };
 		35148D5C1C4B405800139FA2 /* LOLchooseTitleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35148D5B1C4B405800139FA2 /* LOLchooseTitleVC.m */; };
 		35148D5F1C4B84A200139FA2 /* LOLPrintNumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35148D5E1C4B84A200139FA2 /* LOLPrintNumVC.m */; };
@@ -163,6 +167,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04F75A3D1C4E19EA00BCA267 /* LOLshowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLshowModel.h; sourceTree = "<group>"; };
+		04F75A3E1C4E19EA00BCA267 /* LOLshowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLshowModel.m; sourceTree = "<group>"; };
+		04F75A401C4E227200BCA267 /* LOLGirlsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLGirlsCollectionViewCell.h; sourceTree = "<group>"; };
+		04F75A411C4E227200BCA267 /* LOLGirlsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLGirlsCollectionViewCell.m; sourceTree = "<group>"; };
+		04F75A471C4E26FE00BCA267 /* 占@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "占@2x.png"; sourceTree = "<group>"; };
+		04F75A491C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryGoodsDetailsViewController.h; sourceTree = "<group>"; };
+		04F75A4A1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryGoodsDetailsViewController.m; sourceTree = "<group>"; };
 		35148D5A1C4B405800139FA2 /* LOLchooseTitleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLchooseTitleVC.h; sourceTree = "<group>"; };
 		35148D5B1C4B405800139FA2 /* LOLchooseTitleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLchooseTitleVC.m; sourceTree = "<group>"; };
 		35148D5D1C4B84A200139FA2 /* LOLPrintNumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLPrintNumVC.h; sourceTree = "<group>"; };
@@ -580,6 +591,7 @@
 		35865D381C3AE82E0058546B = {
 			isa = PBXGroup;
 			children = (
+				04F75A471C4E26FE00BCA267 /* 占@2x.png */,
 				35865D431C3AE82E0058546B /* LOL */,
 				3523259A1C3CF35F007A3E1D /* LOLResources */,
 				35865D441C3AE82E0058546B /* Supporting Files */,
@@ -742,8 +754,14 @@
 		35A6A1E81C3E1CFF00B6FDAB /* ItmShowGirls(妹子秀) */ = {
 			isa = PBXGroup;
 			children = (
+				04F75A491C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.h */,
+				04F75A4A1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m */,
 				35A6A1E91C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.h */,
 				35A6A1EA1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m */,
+				04F75A3D1C4E19EA00BCA267 /* LOLshowModel.h */,
+				04F75A3E1C4E19EA00BCA267 /* LOLshowModel.m */,
+				04F75A401C4E227200BCA267 /* LOLGirlsCollectionViewCell.h */,
+				04F75A411C4E227200BCA267 /* LOLGirlsCollectionViewCell.m */,
 			);
 			name = "ItmShowGirls(妹子秀)";
 			path = ItmShowGirls;
@@ -1138,6 +1156,7 @@
 				35CE19AB1C40A3D0002FA778 /* home_dot_s.png in Resources */,
 				35FE5BF11C4833F0003E1A94 /* login_WhiteFont.png in Resources */,
 				35FE5BF61C4833F0003E1A94 /* registerBtn.png in Resources */,
+				04F75A481C4E26FE00BCA267 /* 占@2x.png in Resources */,
 				35FE5BF31C4833F0003E1A94 /* register_huoqu.png in Resources */,
 				35CE19AC1C40A3D0002FA778 /* home_dot_s@2x.png in Resources */,
 				35BEB6441C49BD66004F9B63 /* party_male_2@2x.png in Resources */,
@@ -1287,10 +1306,13 @@
 				35C8EEC21C48F69300A7D85C /* DWBubbleMenuButton.m in Sources */,
 				359A17021C4520D700CDBDCC /* TAAbstractDotView.m in Sources */,
 				35BEB6271C4997BF004F9B63 /* LOLReleaseVC.m in Sources */,
+				04F75A4B1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m in Sources */,
+				04F75A421C4E227200BCA267 /* LOLGirlsCollectionViewCell.m in Sources */,
 				3589EA161C3F89F300C972D2 /* LOLRootNavVC.m in Sources */,
 				35FE5BDD1C482E8A003E1A94 /* UITextField+Extension.m in Sources */,
 				352325A51C3CFD05007A3E1D /* LOLBaseViewController.m in Sources */,
 				35FE5BC61C482E09003E1A94 /* RegisterVCNew.m in Sources */,
+				04F75A3F1C4E19EA00BCA267 /* LOLshowModel.m in Sources */,
 				353C15701C49E859002A0BCC /* LOLChangeMesVC.m in Sources */,
 				358F5C3D1C40804F00CCFD1E /* LOLHomeMenuCell.m in Sources */,
 				35C627AA1C3E487300D4A6FE /* NSDictionary+YW.m in Sources */,
