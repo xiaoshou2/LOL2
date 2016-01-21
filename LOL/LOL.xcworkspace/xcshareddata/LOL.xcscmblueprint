@@ -1,30 +1,35 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BC919DEBBDEBC31111D386DDECA3424C90F52EEB+++4651EC9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
-    "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330" : {
+    "BC919DEBBDEBC31111D386DDECA3424C90F52EEB+++4651EC9" : {
+
+    },
+    "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330+++447796D" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330" : 0
+    "BC919DEBBDEBC31111D386DDECA3424C90F52EEB+++4651EC9" : 0,
+    "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330+++447796D" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F867B816-EAC0-43E8-8DA8-761B2D6DE653",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330" : "MyLOL\/"
+    "BC919DEBBDEBC31111D386DDECA3424C90F52EEB+++4651EC9" : "MyLOL\/",
+    "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330+++447796D" : "MyLOL\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "LOL",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LOL\/LOL.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xiaoshou2\/LOL2.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330"
-    },
-    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/code.taobao.org\/svn\/superLOL",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BC919DEBBDEBC31111D386DDECA3424C90F52EEB+++4651EC9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xiaoshou2\/LOL2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "faf2b25f-7d27-483a-9398-8069a2cfb0c6++3330+++447796D"
     }
   ]
 }

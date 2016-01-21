@@ -91,6 +91,11 @@
 
 #pragma mark-->跑秒操作
 -(void)dealTimer{
+    NSString *tiemNum = [NSString stringWithFormat:@"%d",timeCount];
+
+    //发送通知
+    [[NSNotificationCenter defaultCenter]postNotificationName:TIMECOUNT object:self userInfo:@{@"forgetcount":tiemNum}];
+    
     _tipLabel.text=[[NSString alloc]initWithFormat:@"%ds",timeCount];
     timeCount=timeCount - 1;
     if(timeCount== 0){

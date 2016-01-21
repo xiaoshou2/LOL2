@@ -53,7 +53,8 @@
 //shareSDK短信验证
 #define MyappKey @"ee56aa842f9a"
 #define MyappSecret @"3bd800dbc9ed1f9ad70c7aff2a799a84"
-
+#define TIMECOUNT @"timeCount"
+#define FORGETCOUNT @"forgetCount"
 #define RECEIVEDSTR @"changNum"
 #define CHOOSETITLE @"chooseTitle"
 #define PRINT_PHHONE @"输入手机号"

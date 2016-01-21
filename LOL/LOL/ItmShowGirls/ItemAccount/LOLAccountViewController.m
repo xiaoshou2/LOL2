@@ -9,6 +9,7 @@
 #import "LOLAccountViewController.h"
 #import "WKSectionView.h"
 #import "LoginVCNew.h"
+#import "LOLForgetPasswordFirVC.h"
 #import "LOLUserMessageVC.h"
 #define TABLEVIEW_CONTENTINSET_TOP 170
 #define PANVIEW_SIZE_HEIGHT TABLEVIEW_CONTENTINSET_TOP+12
@@ -119,7 +120,7 @@
 
 -(void)hindView
 {
-    if(![LOLUserData isLogined]){//用户已登录
+    if([LOLUserData isLogined]){//用户已登录
         self.loginBtn.hidden = YES;
         self.userNameLb.hidden = NO;
         self.userHeadImageView.hidden = NO;
@@ -141,9 +142,10 @@
 -(void)loginAccountButton
 {
     NSLog(@"点击去登录");
-    LoginVCNew *login = [[LoginVCNew alloc] init];
-    login.loadType = YWBasePresentType;
-    [self presentViewController:login animated:NO completion:nil];
+    //LoginVCNew *login = [[LoginVCNew alloc] init];
+    LOLForgetPasswordFirVC *forget = [[LOLForgetPasswordFirVC alloc] init];
+    forget.loadType = YWBasePresentType;
+    [self presentViewController:forget animated:NO completion:nil];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

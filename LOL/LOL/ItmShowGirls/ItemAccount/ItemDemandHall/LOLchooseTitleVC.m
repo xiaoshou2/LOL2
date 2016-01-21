@@ -65,8 +65,15 @@
 
         cell.titleLb.text = self.dataSuroceArr[indexPath.row];
         UIView *lineView = [[UIView alloc] init];
+        
         lineView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
-        lineView.frame = CGRectMake(10,39,ScreenWidth-20, 1);
+        if(indexPath.row == 4){
+            lineView.frame = CGRectMake(10,40,ScreenWidth-20, 1);
+ 
+        }else{
+           lineView.frame = CGRectMake(10,39,ScreenWidth-20, 1);
+
+        }
         [cell addSubview:lineView];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
 

@@ -9,9 +9,8 @@
 #import "LOLAFNetWorkUtility.h"
 @implementation LOLAFNetWorkUtility
 
-/**
- * 首页请求
- */
+#pragma mark --- 首页接口  ----
+
 + (void)homeViewRequestWithParms:(NSDictionary *)params
                          successBlock:(LOLHomeSuccessBlock)successBlock
                           failedBlock:(LOLAFFailedBlock)failedBlock {
@@ -49,9 +48,8 @@
 }
 
 
-/**
- * 发布需求页面请求
- */
+#pragma mark --- 发布需求页面接口  ----
+
 + (void)demandRequestWithParms:(NSDictionary *)params
                     successBlock:(LOLDemandSuccessBlock)successBlock
                      failedBlock:(LOLAFFailedBlock)failedBlock {
@@ -86,5 +84,137 @@
 }
 
 
+
+#pragma mark --- 判断手机号是否被使用接口 ----
+
++ (void)phoneNumRequestWithParms:(NSDictionary *)params
+                    successBlock:(LOLPhoneNumBlock)successBlock
+                     failedBlock:(LOLAFFailedBlock)failedBlock {
+    
+    NSString *str = @"http://127.0.0.1/temp3.json";
+    [LOLAFHTTPClient getRequestWithMethod:str params:params successBlock:^(LOLAFHTTPClient *request, id responseObject) {
+        
+        NSDictionary *dataDict = [responseObject objectForKey:@"code"];
+     
+        NSMutableArray *dataArray = [NSMutableArray array];
+        [dataArray addObject:dataDict];
+        
+        if (successBlock) {
+            successBlock(dataArray);
+            
+        }
+//        if ([dataDict[@"result"] integerValue] == 0) {
+//            if (successBlock) {
+//                successBlock(dataArray);
+//                
+//            }
+//        }
+  
+    } failedBlock:^(LOLAFHTTPClient *request, NSError *error) {
+        if (failedBlock) {
+            failedBlock(error);
+        }
+        
+    }];
+    
+}
+
+#pragma mark --- 注册接口 ----
+
++ (void)registerRequestWithParms:(NSDictionary *)params
+                    successBlock:(LOLRegisterBlock)successBlock
+                     failedBlock:(LOLAFFailedBlock)failedBlock
+{
+    
+    NSString *str = @"http://127.0.0.1/temp3.json";
+    [LOLAFHTTPClient getRequestWithMethod:str params:params successBlock:^(LOLAFHTTPClient *request, id responseObject) {
+        
+        NSDictionary *dataDict = [responseObject objectForKey:@"code"];
+        
+        
+        if (successBlock) {
+            successBlock(dataDict);
+            
+        }
+        //        if ([dataDict[@"result"] integerValue] == 0) {
+        //            if (successBlock) {
+        //                successBlock(dataArray);
+        //
+        //            }
+        //        }
+        
+    } failedBlock:^(LOLAFHTTPClient *request, NSError *error) {
+        if (failedBlock) {
+            failedBlock(error);
+        }
+        
+    }];
+
+}
+
+#pragma mark --- 登录接口 ----
+
++ (void)loginRequestWithParms:(NSDictionary *)params
+                 successBlock:(LOLLoginBlock)successBlock
+                  failedBlock:(LOLAFFailedBlock)failedBlock
+{
+    
+    NSString *str = @"http://127.0.0.1/temp3.json";
+    [LOLAFHTTPClient getRequestWithMethod:str params:params successBlock:^(LOLAFHTTPClient *request, id responseObject) {
+        
+        NSDictionary *dataDict = [responseObject objectForKey:@"code"];
+        
+        
+        if (successBlock) {
+            successBlock(dataDict);
+            
+        }
+        //        if ([dataDict[@"result"] integerValue] == 0) {
+        //            if (successBlock) {
+        //                successBlock(dataArray);
+        //
+        //            }
+        //        }
+        
+    } failedBlock:^(LOLAFHTTPClient *request, NSError *error) {
+        if (failedBlock) {
+            failedBlock(error);
+        }
+        
+    }];
+}
+
+
+#pragma mark --- 登录接口 ----
+
++ (void)resetPassWordRequestWithParms:(NSDictionary *)params
+                 successBlock:(LOLResetPassWordBlock)successBlock
+                  failedBlock:(LOLAFFailedBlock)failedBlock
+{
+    
+    NSString *str = @"http://127.0.0.1/temp3.json";
+    [LOLAFHTTPClient getRequestWithMethod:str params:params successBlock:^(LOLAFHTTPClient *request, id responseObject) {
+        
+        NSDictionary *dataDict = [responseObject objectForKey:@"code"];
+        
+        
+        if (successBlock) {
+            successBlock(dataDict);
+            
+        }
+        //        if ([dataDict[@"result"] integerValue] == 0) {
+        //            if (successBlock) {
+        //                successBlock(dataArray);
+        //
+        //            }
+        //        }
+        
+    } failedBlock:^(LOLAFHTTPClient *request, NSError *error) {
+        if (failedBlock) {
+            failedBlock(error);
+        }
+        
+    }];
+}
 
 @end

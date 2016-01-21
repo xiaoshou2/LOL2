@@ -14,6 +14,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.titleLb = [[UILabel alloc] init];
+        self.titleLb.font = SYSTEMFONT(13);
         self.titleLb.frame = CGRectMake(10,8, 120,20);
         self.titleLb.backgroundColor = [UIColor clearColor];
         [self addSubview:self.titleLb];

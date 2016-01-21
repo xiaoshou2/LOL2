@@ -44,6 +44,20 @@
 
 -(void)releaseClicked{
     NSLog(@"点击发布");
+    NSString *temp = [self.textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSString *text = [temp stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if(self.titleStr == nil||[self.titleStr isEqualToString:@""]){
+        UIAlertView * alterView=[[UIAlertView alloc]initWithTitle:@"提示" message:@"请选择发布的标题" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alterView show];
+    }else if(self.textView.text.length<=0||text.length<=0){
+        UIAlertView * alterView=[[UIAlertView alloc]initWithTitle:@"提示" message:@"请描述详细信息" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alterView show];
+    }else if (self.phoneLb.text.length==0&&self.weixinLb.text.length==0&&self.qqLb.text.length == 0) {
+        UIAlertView * alterView=[[UIAlertView alloc]initWithTitle:@"提示" message:@"请至少填写一种联系方式" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alterView show];
+    }
+
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -59,10 +73,13 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *CellWithIdentifier = [NSString stringWithFormat:@"cell%ld%ld",indexPath.section,indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellWithIdentifier];
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+   
     if (indexPath.row == 0) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
+       
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         UIView *spaceView = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 10)];
@@ -72,10 +89,9 @@
 
     
     }else if(indexPath.row == 1){
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-        cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
+//        cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
 
         UILabel *titleLb = [[UILabel alloc] init];
         titleLb.frame = CGRectMake(12,8,45,25);
@@ -91,8 +107,13 @@
         [cell addSubview:accrmage];
         
         self.titleContentLb = [[UILabel alloc] init];
-        self.titleContentLb.frame = CGRectMake(SCREEN_WIDTH/2-55,8,140,25);
+        self.titleContentLb.frame = CGRectMake(SCREEN_WIDTH/2-60,8,140,25);
+        self.titleContentLb.textAlignment = NSTextAlignmentCenter;
+        if(self.titleStr == nil||[self.titleStr isEqualToString:@""]){
         self.titleContentLb.text = @"请选择标题内容...";
+        }else{
+            self.titleContentLb.text = self.titleStr;
+        }
         self.titleContentLb.textColor = [UIColor colorWithHex:@"#999999"];
         self.titleContentLb.font = SYSTEMFONT(13);
         self.titleContentLb.backgroundColor = [UIColor clearColor];
@@ -107,10 +128,7 @@
 
         
         }else if(indexPath.row == 2){ //请详细补充你要发布的信息
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+            
             self.textView = [[UITextView alloc]initWithFrame:CGRectMake(10,5, self.view.frame.size.width-20, 130)];
             [cell addSubview:self.textView];
             self.textView.delegate = self;
@@ -142,10 +160,6 @@
             return cell;
 
         }else if(indexPath.row == 3){
-            
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             UIView *spaceView2 = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 15)];
             spaceView2.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
@@ -221,9 +235,6 @@
             return cell;
             
         }else if(indexPath.row == 5){
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             UIView *spaceView = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 40)];
             spaceView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
@@ -239,10 +250,7 @@
             return cell;
 
         }else if(indexPath.row == 6){
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
- 
+            
             UILabel *payLab = [[UILabel alloc] init];
             payLab.frame = CGRectMake(10,10,90,15);
             payLab.backgroundColor = [UIColor clearColor];
@@ -366,10 +374,7 @@
             return cell;
 
         }else if(indexPath.row == 8){
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+            
             UILabel *payLab = [[UILabel alloc] init];
             payLab.frame = CGRectMake(10,10,90,15);
             payLab.backgroundColor = [UIColor clearColor];
@@ -400,10 +405,6 @@
 
             
         }else if(indexPath.row == 9){
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
             UILabel *lianxiLb = [[UILabel alloc] init];
             lianxiLb.frame = CGRectMake(10,10,90,15);
             lianxiLb.backgroundColor = [UIColor clearColor];
@@ -434,10 +435,7 @@
             return cell;
 
         }else if(indexPath.row == 10){
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+           
             UILabel *lianxiLb = [[UILabel alloc] init];
             lianxiLb.frame = CGRectMake(10,10,90,15);
             lianxiLb.backgroundColor = [UIColor clearColor];
@@ -467,10 +465,7 @@
 
             
         }else if(indexPath.row == 11){
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+            
             UIView *spaceView = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 25)];
             spaceView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];
             [cell addSubview:spaceView];
@@ -485,9 +480,6 @@
             return cell;
         }
         else if(indexPath.row == 12){
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.backgroundColor = [UIColor clearColor];
             UIButton *releaseBtn = [[UIButton alloc]init];
             releaseBtn.frame = CGRectMake(SCREEN_WIDTH/2-60,2,120, 35);
@@ -726,8 +718,8 @@
 }
 
 -(void)chooseTitle:(NSNotification*)obj{
-    
-    self.titleContentLb.text = [obj.userInfo objectForKey:@"title"];
+    self.titleStr = [obj.userInfo objectForKey:@"title"];
+    self.titleContentLb.text = self.titleStr;
 }
 -(void)dealloc
 {

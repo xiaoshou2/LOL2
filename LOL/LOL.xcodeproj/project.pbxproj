@@ -9,14 +9,23 @@
 /* Begin PBXBuildFile section */
 		04F75A3F1C4E19EA00BCA267 /* LOLshowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A3E1C4E19EA00BCA267 /* LOLshowModel.m */; };
 		04F75A421C4E227200BCA267 /* LOLGirlsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A411C4E227200BCA267 /* LOLGirlsCollectionViewCell.m */; };
-		04F75A481C4E26FE00BCA267 /* 占@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F75A471C4E26FE00BCA267 /* 占@2x.png */; };
 		04F75A4B1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A4A1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m */; };
 		11CF186700B95A34D652A282 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E18B4A4FD283CB66A08D27D /* libPods.a */; };
+		3512EC491C5039F100E839E3 /* pay_btn_grey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC431C5039F100E839E3 /* pay_btn_grey@2x.png */; };
+		3512EC4A1C5039F100E839E3 /* pay_btn_grey@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC441C5039F100E839E3 /* pay_btn_grey@3x.png */; };
+		3512EC4B1C5039F100E839E3 /* pay_btn_orange_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC451C5039F100E839E3 /* pay_btn_orange_on@2x.png */; };
+		3512EC4C1C5039F100E839E3 /* pay_btn_orange_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC461C5039F100E839E3 /* pay_btn_orange_on@3x.png */; };
+		3512EC4D1C5039F100E839E3 /* pay_btn_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC471C5039F100E839E3 /* pay_btn_orange@2x.png */; };
+		3512EC4E1C5039F100E839E3 /* pay_btn_orange@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC481C5039F100E839E3 /* pay_btn_orange@3x.png */; };
 		35148D5C1C4B405800139FA2 /* LOLchooseTitleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35148D5B1C4B405800139FA2 /* LOLchooseTitleVC.m */; };
 		35148D5F1C4B84A200139FA2 /* LOLPrintNumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35148D5E1C4B84A200139FA2 /* LOLPrintNumVC.m */; };
 		352325971C3CF20A007A3E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325941C3CF20A007A3E1D /* AppDelegate.m */; };
 		352325A51C3CFD05007A3E1D /* LOLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325A41C3CFD05007A3E1D /* LOLBaseViewController.m */; };
 		352325A81C3D0131007A3E1D /* LOLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325A71C3D0131007A3E1D /* LOLHomeViewController.m */; };
+		353596D81C4EAF2B00B982D2 /* LOLRegisterFirVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 353596D71C4EAF2B00B982D2 /* LOLRegisterFirVC.m */; };
+		353596EF1C4EC50F00B982D2 /* LOLRegisterSecVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 353596EE1C4EC50F00B982D2 /* LOLRegisterSecVC.m */; };
+		353596F21C4EEA7200B982D2 /* LOLRegisterThrVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 353596F11C4EEA7200B982D2 /* LOLRegisterThrVC.m */; };
+		353596F51C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 353596F41C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.m */; };
 		353C15701C49E859002A0BCC /* LOLChangeMesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 353C156F1C49E859002A0BCC /* LOLChangeMesVC.m */; };
 		3547DB8A1C45E69300EEF595 /* h2x_i_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB851C45E69300EEF595 /* h2x_i_01@2x.png */; };
 		3547DB8B1C45E69300EEF595 /* h2x_i_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB861C45E69300EEF595 /* h2x_i_02@2x.png */; };
@@ -80,6 +89,8 @@
 		35BEB6421C49BD66004F9B63 /* party_female_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB63E1C49BD66004F9B63 /* party_female_2@2x.png */; };
 		35BEB6431C49BD66004F9B63 /* party_male_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB63F1C49BD66004F9B63 /* party_male_1@2x.png */; };
 		35BEB6441C49BD66004F9B63 /* party_male_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BEB6401C49BD66004F9B63 /* party_male_2@2x.png */; };
+		35C33C991C4F422300736456 /* LOLForgetPasswordSecVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C33C981C4F422300736456 /* LOLForgetPasswordSecVC.m */; };
+		35C33C9C1C4F43D700736456 /* LOLForgetPassWordThrVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C33C9B1C4F43D700736456 /* LOLForgetPassWordThrVC.m */; };
 		35C6278E1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C6278C1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png */; };
 		35C6278F1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C6278D1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png */; };
 		35C627921C3E319D00D4A6FE /* yw_home_selected_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C627901C3E319D00D4A6FE /* yw_home_selected_new@2x.png */; };
@@ -171,9 +182,14 @@
 		04F75A3E1C4E19EA00BCA267 /* LOLshowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLshowModel.m; sourceTree = "<group>"; };
 		04F75A401C4E227200BCA267 /* LOLGirlsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLGirlsCollectionViewCell.h; sourceTree = "<group>"; };
 		04F75A411C4E227200BCA267 /* LOLGirlsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLGirlsCollectionViewCell.m; sourceTree = "<group>"; };
-		04F75A471C4E26FE00BCA267 /* 占@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "占@2x.png"; sourceTree = "<group>"; };
 		04F75A491C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryGoodsDetailsViewController.h; sourceTree = "<group>"; };
 		04F75A4A1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryGoodsDetailsViewController.m; sourceTree = "<group>"; };
+		3512EC431C5039F100E839E3 /* pay_btn_grey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_grey@2x.png"; sourceTree = "<group>"; };
+		3512EC441C5039F100E839E3 /* pay_btn_grey@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_grey@3x.png"; sourceTree = "<group>"; };
+		3512EC451C5039F100E839E3 /* pay_btn_orange_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_orange_on@2x.png"; sourceTree = "<group>"; };
+		3512EC461C5039F100E839E3 /* pay_btn_orange_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_orange_on@3x.png"; sourceTree = "<group>"; };
+		3512EC471C5039F100E839E3 /* pay_btn_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_orange@2x.png"; sourceTree = "<group>"; };
+		3512EC481C5039F100E839E3 /* pay_btn_orange@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_orange@3x.png"; sourceTree = "<group>"; };
 		35148D5A1C4B405800139FA2 /* LOLchooseTitleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLchooseTitleVC.h; sourceTree = "<group>"; };
 		35148D5B1C4B405800139FA2 /* LOLchooseTitleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLchooseTitleVC.m; sourceTree = "<group>"; };
 		35148D5D1C4B84A200139FA2 /* LOLPrintNumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLPrintNumVC.h; sourceTree = "<group>"; };
@@ -185,6 +201,14 @@
 		352325A41C3CFD05007A3E1D /* LOLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLBaseViewController.m; sourceTree = "<group>"; };
 		352325A61C3D0131007A3E1D /* LOLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLHomeViewController.h; sourceTree = "<group>"; };
 		352325A71C3D0131007A3E1D /* LOLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLHomeViewController.m; sourceTree = "<group>"; };
+		353596D61C4EAF2B00B982D2 /* LOLRegisterFirVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLRegisterFirVC.h; sourceTree = "<group>"; };
+		353596D71C4EAF2B00B982D2 /* LOLRegisterFirVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLRegisterFirVC.m; sourceTree = "<group>"; };
+		353596ED1C4EC50F00B982D2 /* LOLRegisterSecVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLRegisterSecVC.h; sourceTree = "<group>"; };
+		353596EE1C4EC50F00B982D2 /* LOLRegisterSecVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLRegisterSecVC.m; sourceTree = "<group>"; };
+		353596F01C4EEA7200B982D2 /* LOLRegisterThrVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLRegisterThrVC.h; sourceTree = "<group>"; };
+		353596F11C4EEA7200B982D2 /* LOLRegisterThrVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLRegisterThrVC.m; sourceTree = "<group>"; };
+		353596F31C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLForgetPasswordFirVC.h; sourceTree = "<group>"; };
+		353596F41C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLForgetPasswordFirVC.m; sourceTree = "<group>"; };
 		353C156E1C49E859002A0BCC /* LOLChangeMesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLChangeMesVC.h; sourceTree = "<group>"; };
 		353C156F1C49E859002A0BCC /* LOLChangeMesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLChangeMesVC.m; sourceTree = "<group>"; };
 		3547DB851C45E69300EEF595 /* h2x_i_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_01@2x.png"; sourceTree = "<group>"; };
@@ -288,6 +312,10 @@
 		35BEB63E1C49BD66004F9B63 /* party_female_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "party_female_2@2x.png"; sourceTree = "<group>"; };
 		35BEB63F1C49BD66004F9B63 /* party_male_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "party_male_1@2x.png"; sourceTree = "<group>"; };
 		35BEB6401C49BD66004F9B63 /* party_male_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "party_male_2@2x.png"; sourceTree = "<group>"; };
+		35C33C971C4F422300736456 /* LOLForgetPasswordSecVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLForgetPasswordSecVC.h; sourceTree = "<group>"; };
+		35C33C981C4F422300736456 /* LOLForgetPasswordSecVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLForgetPasswordSecVC.m; sourceTree = "<group>"; };
+		35C33C9A1C4F43D700736456 /* LOLForgetPassWordThrVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLForgetPassWordThrVC.h; sourceTree = "<group>"; };
+		35C33C9B1C4F43D700736456 /* LOLForgetPassWordThrVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLForgetPassWordThrVC.m; sourceTree = "<group>"; };
 		35C6278C1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_normal_new@2x.png"; sourceTree = "<group>"; };
 		35C6278D1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_normal_new@3x.png"; sourceTree = "<group>"; };
 		35C627901C3E319D00D4A6FE /* yw_home_selected_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yw_home_selected_new@2x.png"; sourceTree = "<group>"; };
@@ -456,6 +484,12 @@
 		3523259B1C3CF423007A3E1D /* LOLImages */ = {
 			isa = PBXGroup;
 			children = (
+				3512EC431C5039F100E839E3 /* pay_btn_grey@2x.png */,
+				3512EC441C5039F100E839E3 /* pay_btn_grey@3x.png */,
+				3512EC451C5039F100E839E3 /* pay_btn_orange_on@2x.png */,
+				3512EC461C5039F100E839E3 /* pay_btn_orange_on@3x.png */,
+				3512EC471C5039F100E839E3 /* pay_btn_orange@2x.png */,
+				3512EC481C5039F100E839E3 /* pay_btn_orange@3x.png */,
 				35E6515A1C4C513E00F91E5D /* home_topBtn.png */,
 				35E6515B1C4C513E00F91E5D /* home_topBtn@2x.png */,
 				35BEB6371C49BD2E004F9B63 /* yw_load1.png */,
@@ -591,7 +625,6 @@
 		35865D381C3AE82E0058546B = {
 			isa = PBXGroup;
 			children = (
-				04F75A471C4E26FE00BCA267 /* 占@2x.png */,
 				35865D431C3AE82E0058546B /* LOL */,
 				3523259A1C3CF35F007A3E1D /* LOLResources */,
 				35865D441C3AE82E0058546B /* Supporting Files */,
@@ -951,6 +984,12 @@
 			children = (
 				35FE5BC41C482E09003E1A94 /* RegisterVCNew.h */,
 				35FE5BC51C482E09003E1A94 /* RegisterVCNew.m */,
+				353596D61C4EAF2B00B982D2 /* LOLRegisterFirVC.h */,
+				353596D71C4EAF2B00B982D2 /* LOLRegisterFirVC.m */,
+				353596ED1C4EC50F00B982D2 /* LOLRegisterSecVC.h */,
+				353596EE1C4EC50F00B982D2 /* LOLRegisterSecVC.m */,
+				353596F01C4EEA7200B982D2 /* LOLRegisterThrVC.h */,
+				353596F11C4EEA7200B982D2 /* LOLRegisterThrVC.m */,
 			);
 			name = "RegisterVC(注册)";
 			path = RegisterVC;
@@ -961,6 +1000,12 @@
 			children = (
 				35FE5BC71C482E12003E1A94 /* ForgetPassWordVCNew.h */,
 				35FE5BC81C482E12003E1A94 /* ForgetPassWordVCNew.m */,
+				353596F31C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.h */,
+				353596F41C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.m */,
+				35C33C971C4F422300736456 /* LOLForgetPasswordSecVC.h */,
+				35C33C981C4F422300736456 /* LOLForgetPasswordSecVC.m */,
+				35C33C9A1C4F43D700736456 /* LOLForgetPassWordThrVC.h */,
+				35C33C9B1C4F43D700736456 /* LOLForgetPassWordThrVC.m */,
 			);
 			name = "ForgetPassWordVC(忘记密码)";
 			path = ForgetPassWordVC;
@@ -1121,6 +1166,7 @@
 				35FE5C001C486BFC003E1A94 /* HUD_ERROR@2x.png in Resources */,
 				35CE19B21C40AE3A002FA778 /* dropdown_anim__00003@2x.png in Resources */,
 				359A16E31C44C0E400CDBDCC /* yw_load5.png in Resources */,
+				3512EC4D1C5039F100E839E3 /* pay_btn_orange@2x.png in Resources */,
 				35865D541C3AE82E0058546B /* LaunchScreen.storyboard in Resources */,
 				35E6515D1C4C513F00F91E5D /* home_topBtn@2x.png in Resources */,
 				35FE5BF81C4833F0003E1A94 /* x.png in Resources */,
@@ -1152,11 +1198,11 @@
 				3547DB8C1C45E69300EEF595 /* h2x_i_03@2x.png in Resources */,
 				3547DB8E1C45E69300EEF595 /* h2x_i_05@2x.png in Resources */,
 				35BEB6431C49BD66004F9B63 /* party_male_1@2x.png in Resources */,
+				3512EC4E1C5039F100E839E3 /* pay_btn_orange@3x.png in Resources */,
 				359A16E01C44C0E400CDBDCC /* yw_load2.png in Resources */,
 				35CE19AB1C40A3D0002FA778 /* home_dot_s.png in Resources */,
 				35FE5BF11C4833F0003E1A94 /* login_WhiteFont.png in Resources */,
 				35FE5BF61C4833F0003E1A94 /* registerBtn.png in Resources */,
-				04F75A481C4E26FE00BCA267 /* 占@2x.png in Resources */,
 				35FE5BF31C4833F0003E1A94 /* register_huoqu.png in Resources */,
 				35CE19AC1C40A3D0002FA778 /* home_dot_s@2x.png in Resources */,
 				35BEB6441C49BD66004F9B63 /* party_male_2@2x.png in Resources */,
@@ -1171,6 +1217,8 @@
 				359A16E41C44C0E400CDBDCC /* yw_load6.png in Resources */,
 				35FE5BF01C4833F0003E1A94 /* login_Return_Left.png in Resources */,
 				359A16E11C44C0E400CDBDCC /* yw_load3.png in Resources */,
+				3512EC4B1C5039F100E839E3 /* pay_btn_orange_on@2x.png in Resources */,
+				3512EC4A1C5039F100E839E3 /* pay_btn_grey@3x.png in Resources */,
 				35B7E00A1C4601A3004FB896 /* bgbtn.jpg in Resources */,
 				35CE19AE1C40AE1D002FA778 /* dropdown_anim__00005@2x.png in Resources */,
 				35CE19B41C40AE49002FA778 /* dropdown_anim__00002@2x.png in Resources */,
@@ -1180,8 +1228,10 @@
 				35C8EEBC1C48D43500A7D85C /* icon_img.png in Resources */,
 				35E6515C1C4C513E00F91E5D /* home_topBtn.png in Resources */,
 				3547DB8B1C45E69300EEF595 /* h2x_i_02@2x.png in Resources */,
+				3512EC491C5039F100E839E3 /* pay_btn_grey@2x.png in Resources */,
 				35ED03F91C432B000088E96B /* h2x_i_01@2x.png in Resources */,
 				35CE19AA1C40A3D0002FA778 /* home_dot_n@2x.png in Resources */,
+				3512EC4C1C5039F100E839E3 /* pay_btn_orange_on@3x.png in Resources */,
 				35CE19B81C40AEDB002FA778 /* dropdown_anim__00000@2x.png in Resources */,
 				35FE5BFF1C486BFC003E1A94 /* HUD_ERROR.png in Resources */,
 				35FE5BF51C4833F0003E1A94 /* register_yanzheng.png in Resources */,
@@ -1280,6 +1330,8 @@
 				35FE5BC31C482E00003E1A94 /* LoginVCNew.m in Sources */,
 				35FE5C0E1C488482003E1A94 /* LOLUserMessageVC.m in Sources */,
 				359A17031C4520D700CDBDCC /* TAAnimatedDotView.m in Sources */,
+				353596D81C4EAF2B00B982D2 /* LOLRegisterFirVC.m in Sources */,
+				353596F21C4EEA7200B982D2 /* LOLRegisterThrVC.m in Sources */,
 				35C627971C3E340F00D4A6FE /* UIView+Frame.m in Sources */,
 				359A17051C4520D700CDBDCC /* TAPageControl.m in Sources */,
 				35A6A1E71C3E1AD500B6FDAB /* RDVTabBarItem.m in Sources */,
@@ -1290,6 +1342,7 @@
 				352325971C3CF20A007A3E1D /* AppDelegate.m in Sources */,
 				35A6A1E61C3E1AD500B6FDAB /* RDVTabBarController.m in Sources */,
 				35148D5F1C4B84A200139FA2 /* LOLPrintNumVC.m in Sources */,
+				35C33C9C1C4F43D700736456 /* LOLForgetPassWordThrVC.m in Sources */,
 				359A16D31C44C00C00CDBDCC /* UIViewController+MBProgressHUD.m in Sources */,
 				35FE5BDA1C482E8A003E1A94 /* UIButton+Extension.m in Sources */,
 				35C627F41C3E6AC800D4A6FE /* UIImage+YW.m in Sources */,
@@ -1319,8 +1372,11 @@
 				35B13AFA1C47852A00C7E465 /* WKSectionView.m in Sources */,
 				35E651591C4C0EE500F91E5D /* LOLChooseTitleCell.m in Sources */,
 				359A16ED1C44D7F200CDBDCC /* LOLBigGodModel.m in Sources */,
+				35C33C991C4F422300736456 /* LOLForgetPasswordSecVC.m in Sources */,
 				35FE5BDB1C482E8A003E1A94 /* UIImageView+Extension.m in Sources */,
 				358F5C431C40812600CCFD1E /* LOLBigGogCell.m in Sources */,
+				353596EF1C4EC50F00B982D2 /* LOLRegisterSecVC.m in Sources */,
+				353596F51C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.m in Sources */,
 				35FE5BC91C482E12003E1A94 /* ForgetPassWordVCNew.m in Sources */,
 				352325A81C3D0131007A3E1D /* LOLHomeViewController.m in Sources */,
 				35F88AFB1C44692B0075EEBE /* LOLAFHTTPClient.m in Sources */,

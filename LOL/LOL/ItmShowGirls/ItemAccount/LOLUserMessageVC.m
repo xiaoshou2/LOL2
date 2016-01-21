@@ -54,15 +54,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    static NSString *CellWithIdentifier = @"Cell";
+    NSString *CellWithIdentifier = [NSString stringWithFormat:@"cell%ld%ld",indexPath.section,indexPath.row];
    
     if (indexPath.row == 0) {
         UITableViewCell *spaceCell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
         spaceCell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        if (spaceCell == nil) {
             spaceCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-        }
+    
         spaceCell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         UIView *spaceView = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 20)];
@@ -74,9 +73,8 @@
     else {
         LOLAccountCell *cell = [tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
         
-        if (cell == nil) {
             cell = [[LOLAccountCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellWithIdentifier];
-        }
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         if(indexPath.row == 1){//头像

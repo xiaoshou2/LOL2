@@ -9,6 +9,7 @@
 #import "LoginVCNew.h"
 #import "RegisterVCNew.h"
 #import "ForgetPassWordVCNew.h"
+#import "LOLRegisterFirVC.h"
 @interface LoginVCNew ()
 @property(nonatomic,strong)UIImageView *backImgV;
 @property(nonatomic,strong)UIImageView *backView;
@@ -72,10 +73,12 @@
     ForgetPassWordVCNew *forget=[[ForgetPassWordVCNew alloc]init];
     [self presentViewController:forget animated:YES completion:nil];
 }
-//注册接口
+//注册页面跳转
 -(void)registAccountInterface
 {
-    RegisterVCNew *regist=[[RegisterVCNew alloc]init];
+   LOLRegisterFirVC *regist = [[LOLRegisterFirVC alloc] init];
+    regist.loadType = YWBasePresentType;
+   // RegisterVCNew *regist=[[RegisterVCNew alloc]init];
     [self presentViewController:regist animated:YES completion:nil];
     
 }
@@ -141,8 +144,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    
+
     self.navigationController.navigationBarHidden = YES;
 }
 -(void)viewWillDisappear:(BOOL)animated
