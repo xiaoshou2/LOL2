@@ -16,6 +16,9 @@
 #import "LOLBigGodListCell.h"
 #import "LOLGodcertificationVC.h"
 #import "LOLReleaseVC.h"
+#import "LOLGodcertificationVC.h"
+#import "LOLNewsVC.h"
+#import "LOLPromotionVC.h"
 CGFloat  ProductFilterNormalHeight2 = 50.0f;
 
 @interface LOLHomeViewController ()
@@ -360,17 +363,8 @@ CGFloat  ProductFilterNormalHeight2 = 50.0f;
 {
     if (sender == 1000) {
         NSLog(@" --push-1000");
-        [self showHUD];
-        [LOLAFNetWorkUtility  homeViewRequestWithParms:@{} successBlock:^(id responseObject) {
-            NSLog(@"-hahahahaha--  LOL请求成功 ----");
-            [self hideHUD];
-            
-        } failedBlock:^(NSError *error) {
-            //        [self.commmentView.header endRefreshing  ];
-            [self hideHUD];
-            NSLog(@"---  LOL请求失败 ----");
-        } ];
-        
+        LOLPromotionVC *PromotionVC = [[LOLPromotionVC alloc] init];
+         [SharedDelegate.rootNavVC pushViewController:PromotionVC animated:YES];
     }
     else if (sender == 1001) {
           LOLGodcertificationVC *godVC = [[LOLGodcertificationVC alloc] init];
@@ -379,12 +373,14 @@ CGFloat  ProductFilterNormalHeight2 = 50.0f;
 
     }else if(sender == 1002){
         NSLog(@"--push-1002");
- 
-    }else if(sender == 1003){
-       NSLog(@"--push--1003");
+        NSLog(@"--push--1003");
         LOLReleaseVC *releaseVC = [[LOLReleaseVC alloc] init];
         [[SharedDelegate getRootNav] pushViewController:releaseVC animated:YES];
         
+ 
+    }else if(sender == 1003){
+        LOLNewsVC *newVC = [[LOLNewsVC alloc] init];
+         [[SharedDelegate getRootNav] pushViewController:newVC animated:YES];
     }
 }
 

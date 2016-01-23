@@ -19,4 +19,5 @@ typedef void(^godClickedBlock)(NSString *sender);
 @property (nonatomic,strong)UILabel *userMessageSecLb;
 @property (nonatomic,strong)NSMutableArray *modelArr;
 @property (nonatomic,strong)UIView *spaceView;
+@property (nonatomic,strong)UIImageView *bottomImg;
 @end

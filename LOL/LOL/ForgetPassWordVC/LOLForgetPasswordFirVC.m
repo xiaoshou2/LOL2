@@ -99,7 +99,7 @@
         [bottomView addSubview:self.phoneTf];
         
         
-        UIButton *registerBtn = [UIButton buttonWithFrame:CGRectMake(15, 90, SCREEN_WIDTH-30,40) title:@"下一步，验证手机号" backgroundImage:IMAGENAMED(@"pay_btn_orange_on")];
+        UIButton *registerBtn = [UIButton buttonWithFrame:CGRectMake(15, 90, SCREEN_WIDTH-30,40) title:@"下一步，验证手机号" backgroundImage:IMAGENAMED(@"myctrip_btn_login")];
         [registerBtn addTarget:self action:@selector(pushRegisterVC) forControlEvents:UIControlEventTouchUpInside];
         [cell addSubview:registerBtn];
         

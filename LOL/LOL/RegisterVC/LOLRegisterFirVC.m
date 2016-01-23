@@ -5,6 +5,56 @@
 //  Created by feibai on 16/1/20.
 //  Copyright © 2016年 feibai. All rights reserved.
 //
+/*
+ ============获取验证码的方法
+ **
+ *  @from                    v1.1.1
+ *  @brief                   获取验证码(Get verification code)
+ *
+ *  @param method            获取验证码的方法(The method of getting verificationCode)
+ *  @param phoneNumber       电话号码(The phone number)
+ *  @param zone              区域号，不要加"+"号(Area code)
+ *  @param customIdentifier  自定义短信模板标识 该标识需从官网http://www.mob.com上申请，审核通过后获得。(Custom model of SMS.  The identifier can get it  from http://www.mob.com  when the application had approved)
+ *  @param result            请求结果回调(Results of the request)
+ 
+ 
+ [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:@"159****1689"
+ zone:@"86"
+ customIdentifier:nil
+ result:^(NSError *error)
+ if (!error) {
+ NSLog(@"获取验证码成功");
+ } else {
+ NSLog(@"错误信息：%@",error);
+ }];
+ 
+ 
+ =========   提交验证码的方法
+ **
+ * @from               v1.1.1
+ * @brief              提交验证码(Commit the verification code)
+ *
+ * @param code         验证码(Verification code)
+ * @param phoneNumber  电话号码(The phone number)
+ * @param zone         区域号，不要加"+"号(Area code)
+ * @param result       请求结果回调(Results of the request)
+ 
+ [SMSSDK commitVerificationCode:self.verifyCodeField.text phoneNumber:_phone zone:_areaCode result:^(NSError *error) {
+ 
+ if (!error) {
+ 
+ NSLog(@"验证成功");
+ 
+ }
+ else
+ {
+ NSLog(@"错误信息：%@",error);
+ 
+ }
+ }];
+ 
+ */
+
 
 #import "LOLRegisterFirVC.h"
 #import "LOLRegisterSecVC.h"
@@ -105,7 +155,7 @@
         [bottomView addSubview:self.phoneTf];
         
         
-        UIButton *registerBtn = [UIButton buttonWithFrame:CGRectMake(15, 90, SCREEN_WIDTH-30,40) title:@"下一步，验证手机号" backgroundImage:IMAGENAMED(@"pay_btn_orange_on")];
+        UIButton *registerBtn = [UIButton buttonWithFrame:CGRectMake(15, 90, SCREEN_WIDTH-30,40) title:@"下一步，验证手机号" backgroundImage:IMAGENAMED(@"myctrip_btn_login")];
         [registerBtn addTarget:self action:@selector(pushRegisterVC) forControlEvents:UIControlEventTouchUpInside];
         [cell addSubview:registerBtn];
         

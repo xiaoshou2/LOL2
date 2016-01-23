@@ -109,7 +109,7 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
 - (UIImageView *)createHomeButtonView {
     UIImageView *imageView = [[UIImageView alloc]init];
     imageView.frame = CGRectMake(0.f, 0.f, 45.f, 45.f);
-    imageView.image = [UIImage imageNamed:@"h2x_i_01"];
+    imageView.image = [UIImage imageNamed:@"lol_send"];
     
     return imageView;
 }
@@ -118,15 +118,15 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
     NSMutableArray *buttonsMutable = [[NSMutableArray alloc] init];
     
     int i = 0;
-    for (NSString *title in @[@"h2x_i_01", @"h2x_i_02", @"h2x_i_03", @"h2x_i_04"]) {
+    for (NSString *title in @[@"lol_money", @"lol_together", @"lol_paiwei", @"lol_more"]) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
         
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         //[button setTitle:title forState:UIControlStateNormal];
         [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",title]] forState:UIControlStateNormal];
-        button.frame = CGRectMake(0.f, 0.f, 30.f, 30.f);
+        button.frame = CGRectMake(0.f, 0.f, 42, 42);
         button.layer.cornerRadius = button.frame.size.height / 2.f;
-        button.backgroundColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.5f];
+        button.backgroundColor = [UIColor clearColor];
         button.clipsToBounds = YES;
         button.tag = i++;
         
@@ -272,9 +272,9 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
         return;
     }
     _hideOrShowTopViewProgress = YES;
-//    if (ISIOS7) {
-//        [[UIApplication sharedApplication]setStatusBarHidden:YES];
-//    }
+    if (ISIOS7) {
+        [[UIApplication sharedApplication]setStatusBarHidden:YES];
+    }
     
     CGFloat translationHeight = topHeight+ProductFilterNormalHeight;
     [UIView animateWithDuration:0.2 animations:^{
@@ -297,9 +297,9 @@ CGFloat  ProductFilterNormalHeight = 50.0f;
     if (_hideOrShowTopViewProgress)  return;
     
     _hideOrShowTopViewProgress = YES;
-//    if (ISIOS7) {
-//        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
-//    }
+    if (ISIOS7) {
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    }
     
     CGFloat translationHeight = topHeight+ProductFilterNormalHeight;
     [UIView animateWithDuration:0.2 animations:^{

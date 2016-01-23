@@ -7,8 +7,7 @@
 //
 
 #import "LoginVCNew.h"
-#import "RegisterVCNew.h"
-#import "ForgetPassWordVCNew.h"
+#import "LOLForgetPasswordFirVC.h"
 #import "LOLRegisterFirVC.h"
 @interface LoginVCNew ()
 @property(nonatomic,strong)UIImageView *backImgV;
@@ -42,26 +41,26 @@
     [self.view addSubview:_backView];
     _backView.userInteractionEnabled = YES;
     
-    _headImgV =[UIImageView addImgWithFrame:CGRectMake(125*Width, 90*Height, 70*Width, 70*Height) AndImage:@"touxiang"];
+    _headImgV =[UIImageView addImgWithFrame:CGRectMake(125*Width, 60*Height, 70*Width, 70*Height) AndImage:@"touxiang"];
     [_backView addSubview:_headImgV];
     
-    _phoneTextField =[self addtextFieldWithHeight:200 AndImgStr:nil AndStr:@"请输入手机号码"];
+    _phoneTextField =[self addtextFieldWithHeight:170 AndImgStr:nil AndStr:@"请输入手机号码"];
     _phoneTextField.keyboardType =UIKeyboardTypeNumberPad;
     [_backView addSubview:_phoneTextField];
     
-    _passwordText =[self addtextFieldWithHeight:250 AndImgStr:nil AndStr:@"请输入密码"];
+    _passwordText =[self addtextFieldWithHeight:220 AndImgStr:nil AndStr:@"请输入密码"];
     _passwordText.secureTextEntry = YES;
     [_backView addSubview:_passwordText];
     
-    _loginBtn =[UIButton addBtnImage:@"loginBtn" AndFrame:CGRectMake(30*Width, 300*Height, 260*Width, 36*Height) WithTarget:self action:@selector(loginAccountButton)];
+    _loginBtn =[UIButton addBtnImage:@"loginBtn" AndFrame:CGRectMake(30*Width, 270*Height, 260*Width, 36*Height) WithTarget:self action:@selector(loginAccountButton)];
     [_backView addSubview:_loginBtn];
     
-    _forgetPassWordBtn =[UIButton addBtnImage:nil AndFrame:CGRectMake(215*Width, 340*Height, 90*Width, 20*Height) WithTarget:self action:@selector(forgetPasswordClick)];
+    _forgetPassWordBtn =[UIButton addBtnImage:nil AndFrame:CGRectMake(215*Width, 315*Height, 90*Width, 20*Height) WithTarget:self action:@selector(forgetPasswordClick)];
     [_forgetPassWordBtn setTitle:@"忘记密码 ?" forState:UIControlStateNormal];
     _forgetPassWordBtn.titleLabel.font =[UIFont systemFontOfSize:12*Width weight:0.5];
     [_backView addSubview:_forgetPassWordBtn];
     
-    _registBtn =[UIButton addBtnImage:@"register_loginBtn" AndFrame:CGRectMake(110*Width, 380*Height, 100*Width, 15*Height) WithTarget:self action:@selector(registAccountInterface)];
+    _registBtn =[UIButton addBtnImage:@"register_loginBtn" AndFrame:CGRectMake(110*Width, 355*Height, 100*Width, 15*Height) WithTarget:self action:@selector(registAccountInterface)];
     [_backView addSubview:_registBtn];
     
 }
@@ -70,7 +69,9 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)forgetPasswordClick{
-    ForgetPassWordVCNew *forget=[[ForgetPassWordVCNew alloc]init];
+    
+    LOLForgetPasswordFirVC *forget=[[LOLForgetPasswordFirVC alloc]init];
+    forget.loadType = YWBasePresentType;
     [self presentViewController:forget animated:YES completion:nil];
 }
 //注册页面跳转
@@ -88,15 +89,18 @@
     NSString *userName =[FormValidator checkMobile:_phoneTextField.text];
     NSString *passWord=[FormValidator checkPassword:_passwordText.text];
     if ([_phoneTextField.text isEqualToString:@""]||_phoneTextField.text == nil||[_passwordText.text isEqualToString:@""]||_passwordText.text == nil) {
-        [FormValidator showAlertWithStr:@"用户名或密码不能为空"];
+        UIAlertView * alterView=[[UIAlertView alloc]initWithTitle:@"提示" message:@"用户名或密码不能为空" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alterView show];
         return;
     }else{
         if (userName) {
-            [FormValidator showAlertWithStr:userName];
+            UIAlertView * alterView=[[UIAlertView alloc]initWithTitle:@"提示" message:userName delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alterView show];
             return;
         }
         if (passWord) {
-            [FormValidator showAlertWithStr:passWord];
+            UIAlertView * alterView=[[UIAlertView alloc]initWithTitle:@"提示" message:passWord delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alterView show];
             return;
         }
     }
@@ -110,6 +114,25 @@
 -(void)loginAccountInter
 {
     [self.view endEditing:YES];
+    
+    //登录接口调用
+    //请求数据
+    [self showHUD];
+    [LOLAFNetWorkUtility loginRequestWithParms:@{} successBlock:^(id responseObject) {
+        
+     
+            [self hideHUD];
+          
+            [SharedDelegate setupViewControllers];
+            
+        } failedBlock:^(NSError *error) {
+            //        [self.commmentView.header endRefreshing  ];
+            [self hideHUD];
+            NSLog(@"---  LOL请求失败 ----");
+            [self showErrorHUDWithMessage:@"当前网络没有链接"];
+            
+        } ];
+
 //    AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
 //    NSDictionary *dic =[NSDictionary dictionaryWithObjectsAndKeys:_phoneTextField.text,@"number",_passwordText.text,@"password",nil];
 //    [manager POST:loginAccount parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {

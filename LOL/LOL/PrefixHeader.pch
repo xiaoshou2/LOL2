@@ -65,8 +65,6 @@
 #import "UIButton+Extension.h"
 #import "UIImageView+Extension.h"
 #import "LoginVCNew.h"
-#import "RegisterVCNew.h"
-#import "ForgetPassWordVCNew.h"
 #import "AFNetworking.h"
 #import "FormValidator.h"
 #import "LOLUserData.h"

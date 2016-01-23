@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleView.hidden = NO;
+    self.title = @"大神认证";
     // Do any additional setup after loading the view.
 }
 

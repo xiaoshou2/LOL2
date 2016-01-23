@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		04F75A3F1C4E19EA00BCA267 /* LOLshowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A3E1C4E19EA00BCA267 /* LOLshowModel.m */; };
 		04F75A421C4E227200BCA267 /* LOLGirlsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A411C4E227200BCA267 /* LOLGirlsCollectionViewCell.m */; };
-		04F75A4B1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A4A1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m */; };
+		04F75A4B1C4E2DC700BCA267 /* LOLGirlsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F75A4A1C4E2DC700BCA267 /* LOLGirlsDetailsViewController.m */; };
 		11CF186700B95A34D652A282 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E18B4A4FD283CB66A08D27D /* libPods.a */; };
 		3512EC491C5039F100E839E3 /* pay_btn_grey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC431C5039F100E839E3 /* pay_btn_grey@2x.png */; };
 		3512EC4A1C5039F100E839E3 /* pay_btn_grey@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC441C5039F100E839E3 /* pay_btn_grey@3x.png */; };
@@ -17,11 +17,21 @@
 		3512EC4C1C5039F100E839E3 /* pay_btn_orange_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC461C5039F100E839E3 /* pay_btn_orange_on@3x.png */; };
 		3512EC4D1C5039F100E839E3 /* pay_btn_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC471C5039F100E839E3 /* pay_btn_orange@2x.png */; };
 		3512EC4E1C5039F100E839E3 /* pay_btn_orange@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC481C5039F100E839E3 /* pay_btn_orange@3x.png */; };
+		3512EC591C506AAC00E839E3 /* myctrip_btn_login_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC551C506AAC00E839E3 /* myctrip_btn_login_pressed@2x.png */; };
+		3512EC5A1C506AAC00E839E3 /* myctrip_btn_login_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC561C506AAC00E839E3 /* myctrip_btn_login_pressed@3x.png */; };
+		3512EC5B1C506AAC00E839E3 /* myctrip_btn_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC571C506AAC00E839E3 /* myctrip_btn_login@2x.png */; };
+		3512EC5C1C506AAC00E839E3 /* myctrip_btn_login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512EC581C506AAC00E839E3 /* myctrip_btn_login@3x.png */; };
 		35148D5C1C4B405800139FA2 /* LOLchooseTitleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35148D5B1C4B405800139FA2 /* LOLchooseTitleVC.m */; };
 		35148D5F1C4B84A200139FA2 /* LOLPrintNumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35148D5E1C4B84A200139FA2 /* LOLPrintNumVC.m */; };
 		352325971C3CF20A007A3E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325941C3CF20A007A3E1D /* AppDelegate.m */; };
 		352325A51C3CFD05007A3E1D /* LOLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325A41C3CFD05007A3E1D /* LOLBaseViewController.m */; };
 		352325A81C3D0131007A3E1D /* LOLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352325A71C3D0131007A3E1D /* LOLHomeViewController.m */; };
+		352372571C5309EA006F40BF /* lol_hmenu_i_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352372541C5309EA006F40BF /* lol_hmenu_i_4@2x.png */; };
+		3523725F1C530A9B006F40BF /* lol_hmenu_i_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3523725E1C530A9B006F40BF /* lol_hmenu_i_2@2x.png */; };
+		352372611C531A96006F40BF /* lol_hmenu_i_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352372601C531A96006F40BF /* lol_hmenu_i_1@2x.png */; };
+		352372631C531B60006F40BF /* lol_hmenu_i_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352372621C531B60006F40BF /* lol_hmenu_i_3@2x.png */; };
+		352372671C532589006F40BF /* LOLNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 352372661C532589006F40BF /* LOLNewsVC.m */; };
+		3523726B1C533112006F40BF /* LOLPromotionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3523726A1C533112006F40BF /* LOLPromotionVC.m */; };
 		353596D81C4EAF2B00B982D2 /* LOLRegisterFirVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 353596D71C4EAF2B00B982D2 /* LOLRegisterFirVC.m */; };
 		353596EF1C4EC50F00B982D2 /* LOLRegisterSecVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 353596EE1C4EC50F00B982D2 /* LOLRegisterSecVC.m */; };
 		353596F21C4EEA7200B982D2 /* LOLRegisterThrVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 353596F11C4EEA7200B982D2 /* LOLRegisterThrVC.m */; };
@@ -30,7 +40,6 @@
 		3547DB8A1C45E69300EEF595 /* h2x_i_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB851C45E69300EEF595 /* h2x_i_01@2x.png */; };
 		3547DB8B1C45E69300EEF595 /* h2x_i_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB861C45E69300EEF595 /* h2x_i_02@2x.png */; };
 		3547DB8C1C45E69300EEF595 /* h2x_i_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB871C45E69300EEF595 /* h2x_i_03@2x.png */; };
-		3547DB8D1C45E69300EEF595 /* h2x_i_04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB881C45E69300EEF595 /* h2x_i_04@2x.png */; };
 		3547DB8E1C45E69300EEF595 /* h2x_i_05@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3547DB891C45E69300EEF595 /* h2x_i_05@2x.png */; };
 		35758DA81C4479D8005D58EA /* LOLAFNetWorkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 35758DA71C4479D8005D58EA /* LOLAFNetWorkUtility.m */; };
 		35865D461C3AE82E0058546B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35865D451C3AE82E0058546B /* main.m */; };
@@ -69,12 +78,19 @@
 		359A17061C4520D700CDBDCC /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 359A16FD1C4520D700CDBDCC /* SDCollectionViewCell.m */; };
 		359A17071C4520D700CDBDCC /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 359A16FF1C4520D700CDBDCC /* SDCycleScrollView.m */; };
 		359A17081C4520D700CDBDCC /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 359A17011C4520D700CDBDCC /* UIView+SDExtension.m */; };
+		35A20A011C50A10000645B65 /* mainmenubg.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A20A001C50A10000645B65 /* mainmenubg.png */; };
 		35A6A1E51C3E1AD500B6FDAB /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1E01C3E1AD500B6FDAB /* RDVTabBar.m */; };
 		35A6A1E61C3E1AD500B6FDAB /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1E21C3E1AD500B6FDAB /* RDVTabBarController.m */; };
 		35A6A1E71C3E1AD500B6FDAB /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1E41C3E1AD500B6FDAB /* RDVTabBarItem.m */; };
 		35A6A1EB1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1EA1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m */; };
 		35A6A1EF1C3E1DFE00B6FDAB /* LOLAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A1EE1C3E1DFE00B6FDAB /* LOLAccountViewController.m */; };
 		35B13AFA1C47852A00C7E465 /* WKSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B13AF91C47852A00C7E465 /* WKSectionView.m */; };
+		35B63DFF1C543FA500259A67 /* lol_money@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B63DF91C543FA500259A67 /* lol_money@2x.png */; };
+		35B63E001C543FA500259A67 /* lol_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B63DFA1C543FA500259A67 /* lol_more@2x.png */; };
+		35B63E011C543FA500259A67 /* lol_paiwei@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B63DFB1C543FA500259A67 /* lol_paiwei@2x.png */; };
+		35B63E021C543FA500259A67 /* lol_send@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B63DFC1C543FA500259A67 /* lol_send@2x.png */; };
+		35B63E031C543FA500259A67 /* lol_together@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B63DFD1C543FA500259A67 /* lol_together@2x.png */; };
+		35B63E041C543FA500259A67 /* lol_up_narmal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B63DFE1C543FA500259A67 /* lol_up_narmal@2x.png */; };
 		35B7E0081C460101004FB896 /* LOLDemandHallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B7E0071C460101004FB896 /* LOLDemandHallVC.m */; };
 		35B7E00A1C4601A3004FB896 /* bgbtn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35B7E0091C4601A3004FB896 /* bgbtn.jpg */; };
 		35B7E00E1C4606CE004FB896 /* DemandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B7E00D1C4606CE004FB896 /* DemandCell.m */; };
@@ -120,6 +136,18 @@
 		35CE19B41C40AE49002FA778 /* dropdown_anim__00002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CE19B31C40AE49002FA778 /* dropdown_anim__00002@2x.png */; };
 		35CE19B61C40AEC9002FA778 /* dropdown_anim__00001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CE19B51C40AEC9002FA778 /* dropdown_anim__00001@2x.png */; };
 		35CE19B81C40AEDB002FA778 /* dropdown_anim__00000@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CE19B71C40AEDB002FA778 /* dropdown_anim__00000@2x.png */; };
+		35CF547A1C520D1E00DBDEB0 /* lol_center_narmal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF54721C520D1E00DBDEB0 /* lol_center_narmal@2x.png */; };
+		35CF547B1C520D1E00DBDEB0 /* lol_center_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF54731C520D1E00DBDEB0 /* lol_center_selected@2x.png */; };
+		35CF547C1C520D1E00DBDEB0 /* lol_girlshow_narmal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF54741C520D1E00DBDEB0 /* lol_girlshow_narmal@2x.png */; };
+		35CF547D1C520D1E00DBDEB0 /* lol_girlshow_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF54751C520D1E00DBDEB0 /* lol_girlshow_selected@2x.png */; };
+		35CF547E1C520D1E00DBDEB0 /* lol_home_narmal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF54761C520D1E00DBDEB0 /* lol_home_narmal@2x.png */; };
+		35CF547F1C520D1E00DBDEB0 /* lol_home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF54771C520D1E00DBDEB0 /* lol_home_selected@2x.png */; };
+		35CF54801C520D1E00DBDEB0 /* lol_xqdt_narmal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF54781C520D1E00DBDEB0 /* lol_xqdt_narmal@2x.png */; };
+		35CF54811C520D1E00DBDEB0 /* lol_xqdt_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF54791C520D1E00DBDEB0 /* lol_xqdt_selected@2x.png */; };
+		35CF6F171C51632B007B7256 /* aa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35CF6F161C51632B007B7256 /* aa.jpg */; };
+		35CF6F1A1C518C4A007B7256 /* profile_btn_unlike.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF6F181C518C4A007B7256 /* profile_btn_unlike.png */; };
+		35CF6F1B1C518C4A007B7256 /* profile_btn_unlike@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF6F191C518C4A007B7256 /* profile_btn_unlike@2x.png */; };
+		35CF6F321C51A399007B7256 /* tab bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF6F2D1C51A399007B7256 /* tab bar.png */; };
 		35E651591C4C0EE500F91E5D /* LOLChooseTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E651581C4C0EE500F91E5D /* LOLChooseTitleCell.m */; };
 		35E6515C1C4C513E00F91E5D /* home_topBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E6515A1C4C513E00F91E5D /* home_topBtn.png */; };
 		35E6515D1C4C513F00F91E5D /* home_topBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E6515B1C4C513E00F91E5D /* home_topBtn@2x.png */; };
@@ -127,12 +155,10 @@
 		35ED03F91C432B000088E96B /* h2x_i_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F51C432B000088E96B /* h2x_i_01@2x.png */; };
 		35ED03FA1C432B000088E96B /* h2x_i_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F61C432B000088E96B /* h2x_i_02@2x.png */; };
 		35ED03FB1C432B000088E96B /* h2x_i_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F71C432B000088E96B /* h2x_i_03@2x.png */; };
-		35ED03FC1C432B000088E96B /* h2x_i_04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F81C432B000088E96B /* h2x_i_04@2x.png */; };
+		35ED03FC1C432B000088E96B /* lol_hmenu_i_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03F81C432B000088E96B /* lol_hmenu_i_1@2x.png */; };
 		35ED03FE1C432BB60088E96B /* home_daka@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35ED03FD1C432BB50088E96B /* home_daka@2x.png */; };
 		35F88AFB1C44692B0075EEBE /* LOLAFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F88AFA1C44692B0075EEBE /* LOLAFHTTPClient.m */; };
 		35FE5BC31C482E00003E1A94 /* LoginVCNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BC21C482E00003E1A94 /* LoginVCNew.m */; };
-		35FE5BC61C482E09003E1A94 /* RegisterVCNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BC51C482E09003E1A94 /* RegisterVCNew.m */; };
-		35FE5BC91C482E12003E1A94 /* ForgetPassWordVCNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BC81C482E12003E1A94 /* ForgetPassWordVCNew.m */; };
 		35FE5BCF1C482E2E003E1A94 /* FormValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BCC1C482E2E003E1A94 /* FormValidator.m */; };
 		35FE5BD01C482E2E003E1A94 /* LOLUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BCE1C482E2E003E1A94 /* LOLUserData.m */; };
 		35FE5BDA1C482E8A003E1A94 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5BD31C482E8A003E1A94 /* UIButton+Extension.m */; };
@@ -182,14 +208,18 @@
 		04F75A3E1C4E19EA00BCA267 /* LOLshowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLshowModel.m; sourceTree = "<group>"; };
 		04F75A401C4E227200BCA267 /* LOLGirlsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLGirlsCollectionViewCell.h; sourceTree = "<group>"; };
 		04F75A411C4E227200BCA267 /* LOLGirlsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLGirlsCollectionViewCell.m; sourceTree = "<group>"; };
-		04F75A491C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryGoodsDetailsViewController.h; sourceTree = "<group>"; };
-		04F75A4A1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryGoodsDetailsViewController.m; sourceTree = "<group>"; };
+		04F75A491C4E2DC700BCA267 /* LOLGirlsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLGirlsDetailsViewController.h; sourceTree = "<group>"; };
+		04F75A4A1C4E2DC700BCA267 /* LOLGirlsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLGirlsDetailsViewController.m; sourceTree = "<group>"; };
 		3512EC431C5039F100E839E3 /* pay_btn_grey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_grey@2x.png"; sourceTree = "<group>"; };
 		3512EC441C5039F100E839E3 /* pay_btn_grey@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_grey@3x.png"; sourceTree = "<group>"; };
 		3512EC451C5039F100E839E3 /* pay_btn_orange_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_orange_on@2x.png"; sourceTree = "<group>"; };
 		3512EC461C5039F100E839E3 /* pay_btn_orange_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_orange_on@3x.png"; sourceTree = "<group>"; };
 		3512EC471C5039F100E839E3 /* pay_btn_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_orange@2x.png"; sourceTree = "<group>"; };
 		3512EC481C5039F100E839E3 /* pay_btn_orange@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay_btn_orange@3x.png"; sourceTree = "<group>"; };
+		3512EC551C506AAC00E839E3 /* myctrip_btn_login_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "myctrip_btn_login_pressed@2x.png"; path = "../LOLUiimage/myctrip_btn_login_pressed@2x.png"; sourceTree = "<group>"; };
+		3512EC561C506AAC00E839E3 /* myctrip_btn_login_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "myctrip_btn_login_pressed@3x.png"; path = "../LOLUiimage/myctrip_btn_login_pressed@3x.png"; sourceTree = "<group>"; };
+		3512EC571C506AAC00E839E3 /* myctrip_btn_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "myctrip_btn_login@2x.png"; path = "../LOLUiimage/myctrip_btn_login@2x.png"; sourceTree = "<group>"; };
+		3512EC581C506AAC00E839E3 /* myctrip_btn_login@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "myctrip_btn_login@3x.png"; path = "../LOLUiimage/myctrip_btn_login@3x.png"; sourceTree = "<group>"; };
 		35148D5A1C4B405800139FA2 /* LOLchooseTitleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLchooseTitleVC.h; sourceTree = "<group>"; };
 		35148D5B1C4B405800139FA2 /* LOLchooseTitleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLchooseTitleVC.m; sourceTree = "<group>"; };
 		35148D5D1C4B84A200139FA2 /* LOLPrintNumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLPrintNumVC.h; sourceTree = "<group>"; };
@@ -201,6 +231,14 @@
 		352325A41C3CFD05007A3E1D /* LOLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLBaseViewController.m; sourceTree = "<group>"; };
 		352325A61C3D0131007A3E1D /* LOLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLHomeViewController.h; sourceTree = "<group>"; };
 		352325A71C3D0131007A3E1D /* LOLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLHomeViewController.m; sourceTree = "<group>"; };
+		352372541C5309EA006F40BF /* lol_hmenu_i_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_hmenu_i_4@2x.png"; sourceTree = "<group>"; };
+		3523725E1C530A9B006F40BF /* lol_hmenu_i_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_hmenu_i_2@2x.png"; sourceTree = "<group>"; };
+		352372601C531A96006F40BF /* lol_hmenu_i_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_hmenu_i_1@2x.png"; sourceTree = "<group>"; };
+		352372621C531B60006F40BF /* lol_hmenu_i_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_hmenu_i_3@2x.png"; sourceTree = "<group>"; };
+		352372651C532589006F40BF /* LOLNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLNewsVC.h; sourceTree = "<group>"; };
+		352372661C532589006F40BF /* LOLNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLNewsVC.m; sourceTree = "<group>"; };
+		352372691C533112006F40BF /* LOLPromotionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLPromotionVC.h; sourceTree = "<group>"; };
+		3523726A1C533112006F40BF /* LOLPromotionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLPromotionVC.m; sourceTree = "<group>"; };
 		353596D61C4EAF2B00B982D2 /* LOLRegisterFirVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLRegisterFirVC.h; sourceTree = "<group>"; };
 		353596D71C4EAF2B00B982D2 /* LOLRegisterFirVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLRegisterFirVC.m; sourceTree = "<group>"; };
 		353596ED1C4EC50F00B982D2 /* LOLRegisterSecVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLRegisterSecVC.h; sourceTree = "<group>"; };
@@ -214,7 +252,6 @@
 		3547DB851C45E69300EEF595 /* h2x_i_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_01@2x.png"; sourceTree = "<group>"; };
 		3547DB861C45E69300EEF595 /* h2x_i_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_02@2x.png"; sourceTree = "<group>"; };
 		3547DB871C45E69300EEF595 /* h2x_i_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_03@2x.png"; sourceTree = "<group>"; };
-		3547DB881C45E69300EEF595 /* h2x_i_04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_04@2x.png"; sourceTree = "<group>"; };
 		3547DB891C45E69300EEF595 /* h2x_i_05@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_05@2x.png"; sourceTree = "<group>"; };
 		35758DA61C4479D8005D58EA /* LOLAFNetWorkUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLAFNetWorkUtility.h; sourceTree = "<group>"; };
 		35758DA71C4479D8005D58EA /* LOLAFNetWorkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLAFNetWorkUtility.m; sourceTree = "<group>"; };
@@ -280,6 +317,7 @@
 		359A16FF1C4520D700CDBDCC /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		359A17001C4520D700CDBDCC /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		359A17011C4520D700CDBDCC /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		35A20A001C50A10000645B65 /* mainmenubg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainmenubg.png; sourceTree = "<group>"; };
 		35A6A1DF1C3E1AD500B6FDAB /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
 		35A6A1E01C3E1AD500B6FDAB /* RDVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBar.m; sourceTree = "<group>"; };
 		35A6A1E11C3E1AD500B6FDAB /* RDVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarController.h; sourceTree = "<group>"; };
@@ -292,6 +330,12 @@
 		35A6A1EE1C3E1DFE00B6FDAB /* LOLAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLAccountViewController.m; sourceTree = "<group>"; };
 		35B13AF81C47852A00C7E465 /* WKSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKSectionView.h; sourceTree = "<group>"; };
 		35B13AF91C47852A00C7E465 /* WKSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKSectionView.m; sourceTree = "<group>"; };
+		35B63DF91C543FA500259A67 /* lol_money@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_money@2x.png"; sourceTree = "<group>"; };
+		35B63DFA1C543FA500259A67 /* lol_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_more@2x.png"; sourceTree = "<group>"; };
+		35B63DFB1C543FA500259A67 /* lol_paiwei@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_paiwei@2x.png"; sourceTree = "<group>"; };
+		35B63DFC1C543FA500259A67 /* lol_send@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_send@2x.png"; sourceTree = "<group>"; };
+		35B63DFD1C543FA500259A67 /* lol_together@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_together@2x.png"; sourceTree = "<group>"; };
+		35B63DFE1C543FA500259A67 /* lol_up_narmal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_up_narmal@2x.png"; sourceTree = "<group>"; };
 		35B7E0061C460101004FB896 /* LOLDemandHallVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLDemandHallVC.h; sourceTree = "<group>"; };
 		35B7E0071C460101004FB896 /* LOLDemandHallVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLDemandHallVC.m; sourceTree = "<group>"; };
 		35B7E0091C4601A3004FB896 /* bgbtn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgbtn.jpg; sourceTree = "<group>"; };
@@ -353,6 +397,18 @@
 		35CE19B31C40AE49002FA778 /* dropdown_anim__00002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00002@2x.png"; sourceTree = "<group>"; };
 		35CE19B51C40AEC9002FA778 /* dropdown_anim__00001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00001@2x.png"; sourceTree = "<group>"; };
 		35CE19B71C40AEDB002FA778 /* dropdown_anim__00000@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00000@2x.png"; sourceTree = "<group>"; };
+		35CF54721C520D1E00DBDEB0 /* lol_center_narmal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_center_narmal@2x.png"; sourceTree = "<group>"; };
+		35CF54731C520D1E00DBDEB0 /* lol_center_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_center_selected@2x.png"; sourceTree = "<group>"; };
+		35CF54741C520D1E00DBDEB0 /* lol_girlshow_narmal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_girlshow_narmal@2x.png"; sourceTree = "<group>"; };
+		35CF54751C520D1E00DBDEB0 /* lol_girlshow_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_girlshow_selected@2x.png"; sourceTree = "<group>"; };
+		35CF54761C520D1E00DBDEB0 /* lol_home_narmal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_home_narmal@2x.png"; sourceTree = "<group>"; };
+		35CF54771C520D1E00DBDEB0 /* lol_home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_home_selected@2x.png"; sourceTree = "<group>"; };
+		35CF54781C520D1E00DBDEB0 /* lol_xqdt_narmal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_xqdt_narmal@2x.png"; sourceTree = "<group>"; };
+		35CF54791C520D1E00DBDEB0 /* lol_xqdt_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_xqdt_selected@2x.png"; sourceTree = "<group>"; };
+		35CF6F161C51632B007B7256 /* aa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = aa.jpg; path = ../../aa.jpg; sourceTree = "<group>"; };
+		35CF6F181C518C4A007B7256 /* profile_btn_unlike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_btn_unlike.png; sourceTree = "<group>"; };
+		35CF6F191C518C4A007B7256 /* profile_btn_unlike@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_btn_unlike@2x.png"; sourceTree = "<group>"; };
+		35CF6F2D1C51A399007B7256 /* tab bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab bar.png"; sourceTree = "<group>"; };
 		35E651571C4C0EE500F91E5D /* LOLChooseTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLChooseTitleCell.h; sourceTree = "<group>"; };
 		35E651581C4C0EE500F91E5D /* LOLChooseTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLChooseTitleCell.m; sourceTree = "<group>"; };
 		35E6515A1C4C513E00F91E5D /* home_topBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_topBtn.png; sourceTree = "<group>"; };
@@ -362,16 +418,12 @@
 		35ED03F51C432B000088E96B /* h2x_i_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_01@2x.png"; sourceTree = "<group>"; };
 		35ED03F61C432B000088E96B /* h2x_i_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_02@2x.png"; sourceTree = "<group>"; };
 		35ED03F71C432B000088E96B /* h2x_i_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_03@2x.png"; sourceTree = "<group>"; };
-		35ED03F81C432B000088E96B /* h2x_i_04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h2x_i_04@2x.png"; sourceTree = "<group>"; };
+		35ED03F81C432B000088E96B /* lol_hmenu_i_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lol_hmenu_i_1@2x.png"; sourceTree = "<group>"; };
 		35ED03FD1C432BB50088E96B /* home_daka@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_daka@2x.png"; sourceTree = "<group>"; };
 		35F88AF91C44692B0075EEBE /* LOLAFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLAFHTTPClient.h; sourceTree = "<group>"; };
 		35F88AFA1C44692B0075EEBE /* LOLAFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLAFHTTPClient.m; sourceTree = "<group>"; };
 		35FE5BC11C482E00003E1A94 /* LoginVCNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVCNew.h; sourceTree = "<group>"; };
 		35FE5BC21C482E00003E1A94 /* LoginVCNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVCNew.m; sourceTree = "<group>"; };
-		35FE5BC41C482E09003E1A94 /* RegisterVCNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVCNew.h; sourceTree = "<group>"; };
-		35FE5BC51C482E09003E1A94 /* RegisterVCNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVCNew.m; sourceTree = "<group>"; };
-		35FE5BC71C482E12003E1A94 /* ForgetPassWordVCNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPassWordVCNew.h; sourceTree = "<group>"; };
-		35FE5BC81C482E12003E1A94 /* ForgetPassWordVCNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPassWordVCNew.m; sourceTree = "<group>"; };
 		35FE5BCB1C482E2E003E1A94 /* FormValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormValidator.h; sourceTree = "<group>"; };
 		35FE5BCC1C482E2E003E1A94 /* FormValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormValidator.m; sourceTree = "<group>"; };
 		35FE5BCD1C482E2E003E1A94 /* LOLUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLUserData.h; sourceTree = "<group>"; };
@@ -438,6 +490,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3512EC4F1C505B7D00E839E3 /* LOLShowGirlCell */ = {
+			isa = PBXGroup;
+			children = (
+				04F75A401C4E227200BCA267 /* LOLGirlsCollectionViewCell.h */,
+				04F75A411C4E227200BCA267 /* LOLGirlsCollectionViewCell.m */,
+			);
+			name = LOLShowGirlCell;
+			sourceTree = "<group>";
+		};
 		35148D591C4AD76F00139FA2 /* LOLReleaseCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +545,34 @@
 		3523259B1C3CF423007A3E1D /* LOLImages */ = {
 			isa = PBXGroup;
 			children = (
+				35B63DF91C543FA500259A67 /* lol_money@2x.png */,
+				35B63DFA1C543FA500259A67 /* lol_more@2x.png */,
+				35B7E00B1C460692004FB896 /* DemandCell */,
+				35B63DFB1C543FA500259A67 /* lol_paiwei@2x.png */,
+				35B63DFC1C543FA500259A67 /* lol_send@2x.png */,
+				35B63DFD1C543FA500259A67 /* lol_together@2x.png */,
+				35B63DFE1C543FA500259A67 /* lol_up_narmal@2x.png */,
+				352372621C531B60006F40BF /* lol_hmenu_i_3@2x.png */,
+				352372601C531A96006F40BF /* lol_hmenu_i_1@2x.png */,
+				3523725E1C530A9B006F40BF /* lol_hmenu_i_2@2x.png */,
+				352372541C5309EA006F40BF /* lol_hmenu_i_4@2x.png */,
+				35CF54721C520D1E00DBDEB0 /* lol_center_narmal@2x.png */,
+				35CF54731C520D1E00DBDEB0 /* lol_center_selected@2x.png */,
+				35CF54741C520D1E00DBDEB0 /* lol_girlshow_narmal@2x.png */,
+				35CF54751C520D1E00DBDEB0 /* lol_girlshow_selected@2x.png */,
+				35CF54761C520D1E00DBDEB0 /* lol_home_narmal@2x.png */,
+				35CF54771C520D1E00DBDEB0 /* lol_home_selected@2x.png */,
+				35CF54781C520D1E00DBDEB0 /* lol_xqdt_narmal@2x.png */,
+				35CF54791C520D1E00DBDEB0 /* lol_xqdt_selected@2x.png */,
+				35CF6F2D1C51A399007B7256 /* tab bar.png */,
+				35CF6F181C518C4A007B7256 /* profile_btn_unlike.png */,
+				35CF6F191C518C4A007B7256 /* profile_btn_unlike@2x.png */,
+				35CF6F161C51632B007B7256 /* aa.jpg */,
+				35A20A001C50A10000645B65 /* mainmenubg.png */,
+				3512EC551C506AAC00E839E3 /* myctrip_btn_login_pressed@2x.png */,
+				3512EC561C506AAC00E839E3 /* myctrip_btn_login_pressed@3x.png */,
+				3512EC571C506AAC00E839E3 /* myctrip_btn_login@2x.png */,
+				3512EC581C506AAC00E839E3 /* myctrip_btn_login@3x.png */,
 				3512EC431C5039F100E839E3 /* pay_btn_grey@2x.png */,
 				3512EC441C5039F100E839E3 /* pay_btn_grey@3x.png */,
 				3512EC451C5039F100E839E3 /* pay_btn_orange_on@2x.png */,
@@ -532,7 +621,7 @@
 				35ED03F51C432B000088E96B /* h2x_i_01@2x.png */,
 				35ED03F61C432B000088E96B /* h2x_i_02@2x.png */,
 				35ED03F71C432B000088E96B /* h2x_i_03@2x.png */,
-				35ED03F81C432B000088E96B /* h2x_i_04@2x.png */,
+				35ED03F81C432B000088E96B /* lol_hmenu_i_1@2x.png */,
 				35CE19B71C40AEDB002FA778 /* dropdown_anim__00000@2x.png */,
 				35CE19B51C40AEC9002FA778 /* dropdown_anim__00001@2x.png */,
 				35CE19B31C40AE49002FA778 /* dropdown_anim__00002@2x.png */,
@@ -540,7 +629,6 @@
 				3547DB851C45E69300EEF595 /* h2x_i_01@2x.png */,
 				3547DB861C45E69300EEF595 /* h2x_i_02@2x.png */,
 				3547DB871C45E69300EEF595 /* h2x_i_03@2x.png */,
-				3547DB881C45E69300EEF595 /* h2x_i_04@2x.png */,
 				3547DB891C45E69300EEF595 /* h2x_i_05@2x.png */,
 				35CE19AF1C40AE2A002FA778 /* dropdown_anim__00004@2x.png */,
 				35CE19AD1C40AE1D002FA778 /* dropdown_anim__00005@2x.png */,
@@ -570,8 +658,10 @@
 				35B7E0051C460045004FB896 /* ItemDemandHall(需求大厅) */,
 				35A6A1E81C3E1CFF00B6FDAB /* ItmShowGirls(妹子秀) */,
 				35A6A1EC1C3E1DC000B6FDAB /* ItemAccount(个人中心) */,
+				352372681C5330E4006F40BF /* LOLPromotionVC(我要上分) */,
 				358E458C1C43947600596D50 /* LOLGodcertification(大神认证) */,
 				35FE5BBD1C482CC4003E1A94 /* LOLLoginVc(用户登录) */,
+				352372641C531D53006F40BF /* LOLgameNews(游戏资讯) */,
 			);
 			name = "LOLItems(界面)";
 			sourceTree = "<group>";
@@ -620,6 +710,26 @@
 			);
 			name = "ItemHome(首页)";
 			path = ItemHome;
+			sourceTree = "<group>";
+		};
+		352372641C531D53006F40BF /* LOLgameNews(游戏资讯) */ = {
+			isa = PBXGroup;
+			children = (
+				352372651C532589006F40BF /* LOLNewsVC.h */,
+				352372661C532589006F40BF /* LOLNewsVC.m */,
+			);
+			name = "LOLgameNews(游戏资讯)";
+			path = LOLgameNews;
+			sourceTree = "<group>";
+		};
+		352372681C5330E4006F40BF /* LOLPromotionVC(我要上分) */ = {
+			isa = PBXGroup;
+			children = (
+				352372691C533112006F40BF /* LOLPromotionVC.h */,
+				3523726A1C533112006F40BF /* LOLPromotionVC.m */,
+			);
+			name = "LOLPromotionVC(我要上分)";
+			path = LOLPromotionVC;
 			sourceTree = "<group>";
 		};
 		35865D381C3AE82E0058546B = {
@@ -787,14 +897,13 @@
 		35A6A1E81C3E1CFF00B6FDAB /* ItmShowGirls(妹子秀) */ = {
 			isa = PBXGroup;
 			children = (
-				04F75A491C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.h */,
-				04F75A4A1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m */,
+				3512EC4F1C505B7D00E839E3 /* LOLShowGirlCell */,
+				04F75A491C4E2DC700BCA267 /* LOLGirlsDetailsViewController.h */,
+				04F75A4A1C4E2DC700BCA267 /* LOLGirlsDetailsViewController.m */,
 				35A6A1E91C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.h */,
 				35A6A1EA1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m */,
 				04F75A3D1C4E19EA00BCA267 /* LOLshowModel.h */,
 				04F75A3E1C4E19EA00BCA267 /* LOLshowModel.m */,
-				04F75A401C4E227200BCA267 /* LOLGirlsCollectionViewCell.h */,
-				04F75A411C4E227200BCA267 /* LOLGirlsCollectionViewCell.m */,
 			);
 			name = "ItmShowGirls(妹子秀)";
 			path = ItmShowGirls;
@@ -834,7 +943,6 @@
 				35E6515F1C4C53B300F91E5D /* LOLDemandDetail.m */,
 				35BEB6451C49D779004F9B63 /* LOLReleaseVC(发布信息页面) */,
 				35B7E0131C46213A004FB896 /* LOLDemandModel(需求页模型) */,
-				35B7E00B1C460692004FB896 /* DemandCell */,
 			);
 			name = "ItemDemandHall(需求大厅)";
 			path = ItmShowGirls/ItemAccount/ItemDemandHall;
@@ -847,6 +955,7 @@
 				35B7E00D1C4606CE004FB896 /* DemandCell.m */,
 			);
 			name = DemandCell;
+			path = ../ItmShowGirls/ItemAccount/ItemDemandHall;
 			sourceTree = "<group>";
 		};
 		35B7E00F1C461B50004FB896 /* LOLStringUtility */ = {
@@ -982,8 +1091,6 @@
 		35FE5BBF1C482D8A003E1A94 /* RegisterVC(注册) */ = {
 			isa = PBXGroup;
 			children = (
-				35FE5BC41C482E09003E1A94 /* RegisterVCNew.h */,
-				35FE5BC51C482E09003E1A94 /* RegisterVCNew.m */,
 				353596D61C4EAF2B00B982D2 /* LOLRegisterFirVC.h */,
 				353596D71C4EAF2B00B982D2 /* LOLRegisterFirVC.m */,
 				353596ED1C4EC50F00B982D2 /* LOLRegisterSecVC.h */,
@@ -998,8 +1105,6 @@
 		35FE5BC01C482DD4003E1A94 /* ForgetPassWordVC(忘记密码) */ = {
 			isa = PBXGroup;
 			children = (
-				35FE5BC71C482E12003E1A94 /* ForgetPassWordVCNew.h */,
-				35FE5BC81C482E12003E1A94 /* ForgetPassWordVCNew.m */,
 				353596F31C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.h */,
 				353596F41C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.m */,
 				35C33C971C4F422300736456 /* LOLForgetPasswordSecVC.h */,
@@ -1164,58 +1269,78 @@
 			buildActionMask = 2147483647;
 			files = (
 				35FE5C001C486BFC003E1A94 /* HUD_ERROR@2x.png in Resources */,
+				35CF6F1B1C518C4A007B7256 /* profile_btn_unlike@2x.png in Resources */,
 				35CE19B21C40AE3A002FA778 /* dropdown_anim__00003@2x.png in Resources */,
 				359A16E31C44C0E400CDBDCC /* yw_load5.png in Resources */,
 				3512EC4D1C5039F100E839E3 /* pay_btn_orange@2x.png in Resources */,
 				35865D541C3AE82E0058546B /* LaunchScreen.storyboard in Resources */,
 				35E6515D1C4C513F00F91E5D /* home_topBtn@2x.png in Resources */,
 				35FE5BF81C4833F0003E1A94 /* x.png in Resources */,
+				3512EC5A1C506AAC00E839E3 /* myctrip_btn_login_pressed@3x.png in Resources */,
 				35ED03FB1C432B000088E96B /* h2x_i_03@2x.png in Resources */,
 				359A16EF1C450B2800CDBDCC /* icon_new@2x.png in Resources */,
-				35ED03FC1C432B000088E96B /* h2x_i_04@2x.png in Resources */,
+				35ED03FC1C432B000088E96B /* lol_hmenu_i_1@2x.png in Resources */,
 				359A16E51C44C0E400CDBDCC /* yw_load7.png in Resources */,
+				35B63E001C543FA500259A67 /* lol_more@2x.png in Resources */,
 				35CE19B01C40AE2A002FA778 /* dropdown_anim__00004@2x.png in Resources */,
+				352372631C531B60006F40BF /* lol_hmenu_i_3@2x.png in Resources */,
 				358E45931C439A9200596D50 /* yw_nav_button_arrow@2x.png in Resources */,
 				35FE5BEC1C4833F0003E1A94 /* loginBtn.png in Resources */,
+				35CF54801C520D1E00DBDEB0 /* lol_xqdt_narmal@2x.png in Resources */,
 				35BEB62E1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@2x.png in Resources */,
 				35ED03FA1C432B000088E96B /* h2x_i_02@2x.png in Resources */,
 				35CE19A91C40A3D0002FA778 /* home_dot_n.png in Resources */,
 				35ED03FE1C432BB60088E96B /* home_daka@2x.png in Resources */,
+				3512EC591C506AAC00E839E3 /* myctrip_btn_login_pressed@2x.png in Resources */,
 				35CE19A41C40A2D1002FA778 /* yw_home_default_btn.png in Resources */,
+				35CF547C1C520D1E00DBDEB0 /* lol_girlshow_narmal@2x.png in Resources */,
+				35CF6F1A1C518C4A007B7256 /* profile_btn_unlike.png in Resources */,
 				35C8EEBA1C48D42600A7D85C /* icon_can.png in Resources */,
 				35FE5BF71C4833F0003E1A94 /* touxiang.png in Resources */,
 				35FE5BF91C4833F0003E1A94 /* zuizhongbanquan.png in Resources */,
+				35CF547F1C520D1E00DBDEB0 /* lol_home_selected@2x.png in Resources */,
 				359A16E21C44C0E400CDBDCC /* yw_load4.png in Resources */,
+				35B63E021C543FA500259A67 /* lol_send@2x.png in Resources */,
 				35BEB63C1C49BD2E004F9B63 /* yw_load1.png in Resources */,
 				35C627931C3E319D00D4A6FE /* yw_home_selected_new@3x.png in Resources */,
+				35CF547E1C520D1E00DBDEB0 /* lol_home_narmal@2x.png in Resources */,
 				359A16DF1C44C0E400CDBDCC /* yw_load1.png in Resources */,
 				35865D511C3AE82E0058546B /* Assets.xcassets in Resources */,
 				358E45921C439A9200596D50 /* yw_nav_button_arrow.png in Resources */,
 				35CE19B61C40AEC9002FA778 /* dropdown_anim__00001@2x.png in Resources */,
 				35865D4F1C3AE82E0058546B /* Main.storyboard in Resources */,
+				35A20A011C50A10000645B65 /* mainmenubg.png in Resources */,
 				35BEB6411C49BD66004F9B63 /* party_female_1@2x.png in Resources */,
+				35B63E031C543FA500259A67 /* lol_together@2x.png in Resources */,
 				359A16E61C44C0E400CDBDCC /* yw_load8.png in Resources */,
+				35CF547D1C520D1E00DBDEB0 /* lol_girlshow_selected@2x.png in Resources */,
 				3547DB8C1C45E69300EEF595 /* h2x_i_03@2x.png in Resources */,
 				3547DB8E1C45E69300EEF595 /* h2x_i_05@2x.png in Resources */,
 				35BEB6431C49BD66004F9B63 /* party_male_1@2x.png in Resources */,
 				3512EC4E1C5039F100E839E3 /* pay_btn_orange@3x.png in Resources */,
+				3523725F1C530A9B006F40BF /* lol_hmenu_i_2@2x.png in Resources */,
 				359A16E01C44C0E400CDBDCC /* yw_load2.png in Resources */,
 				35CE19AB1C40A3D0002FA778 /* home_dot_s.png in Resources */,
 				35FE5BF11C4833F0003E1A94 /* login_WhiteFont.png in Resources */,
+				35CF547B1C520D1E00DBDEB0 /* lol_center_selected@2x.png in Resources */,
 				35FE5BF61C4833F0003E1A94 /* registerBtn.png in Resources */,
 				35FE5BF31C4833F0003E1A94 /* register_huoqu.png in Resources */,
+				35B63DFF1C543FA500259A67 /* lol_money@2x.png in Resources */,
+				35CF6F321C51A399007B7256 /* tab bar.png in Resources */,
 				35CE19AC1C40A3D0002FA778 /* home_dot_s@2x.png in Resources */,
 				35BEB6441C49BD66004F9B63 /* party_male_2@2x.png in Resources */,
 				35BEB62F1C499B46004F9B63 /* main_customerservice_ico_arrowgrey@3x.png in Resources */,
 				35C627921C3E319D00D4A6FE /* yw_home_selected_new@2x.png in Resources */,
 				35C6278F1C3E30FB00D4A6FE /* yw_home_normal_new@3x.png in Resources */,
+				35B63E041C543FA500259A67 /* lol_up_narmal@2x.png in Resources */,
 				35FE5BEF1C4833F0003E1A94 /* login_Register_Bord.png in Resources */,
 				35BEB6421C49BD66004F9B63 /* party_female_2@2x.png in Resources */,
+				35CF6F171C51632B007B7256 /* aa.jpg in Resources */,
 				35FE5BED1C4833F0003E1A94 /* 注册.png in Resources */,
-				3547DB8D1C45E69300EEF595 /* h2x_i_04@2x.png in Resources */,
 				35FE5BF21C4833F0003E1A94 /* regist_WhiteFont.png in Resources */,
 				359A16E41C44C0E400CDBDCC /* yw_load6.png in Resources */,
 				35FE5BF01C4833F0003E1A94 /* login_Return_Left.png in Resources */,
+				3512EC5B1C506AAC00E839E3 /* myctrip_btn_login@2x.png in Resources */,
 				359A16E11C44C0E400CDBDCC /* yw_load3.png in Resources */,
 				3512EC4B1C5039F100E839E3 /* pay_btn_orange_on@2x.png in Resources */,
 				3512EC4A1C5039F100E839E3 /* pay_btn_grey@3x.png in Resources */,
@@ -1223,18 +1348,24 @@
 				35CE19AE1C40AE1D002FA778 /* dropdown_anim__00005@2x.png in Resources */,
 				35CE19B41C40AE49002FA778 /* dropdown_anim__00002@2x.png in Resources */,
 				35FE5C011C486BFC003E1A94 /* HUD_ERROR@3x.png in Resources */,
+				352372571C5309EA006F40BF /* lol_hmenu_i_4@2x.png in Resources */,
 				35C8EEBE1C48D43F00A7D85C /* icon_pos.png in Resources */,
 				3547DB8A1C45E69300EEF595 /* h2x_i_01@2x.png in Resources */,
+				35B63E011C543FA500259A67 /* lol_paiwei@2x.png in Resources */,
 				35C8EEBC1C48D43500A7D85C /* icon_img.png in Resources */,
+				352372611C531A96006F40BF /* lol_hmenu_i_1@2x.png in Resources */,
 				35E6515C1C4C513E00F91E5D /* home_topBtn.png in Resources */,
 				3547DB8B1C45E69300EEF595 /* h2x_i_02@2x.png in Resources */,
+				3512EC5C1C506AAC00E839E3 /* myctrip_btn_login@3x.png in Resources */,
 				3512EC491C5039F100E839E3 /* pay_btn_grey@2x.png in Resources */,
 				35ED03F91C432B000088E96B /* h2x_i_01@2x.png in Resources */,
 				35CE19AA1C40A3D0002FA778 /* home_dot_n@2x.png in Resources */,
 				3512EC4C1C5039F100E839E3 /* pay_btn_orange_on@3x.png in Resources */,
+				35CF547A1C520D1E00DBDEB0 /* lol_center_narmal@2x.png in Resources */,
 				35CE19B81C40AEDB002FA778 /* dropdown_anim__00000@2x.png in Resources */,
 				35FE5BFF1C486BFC003E1A94 /* HUD_ERROR.png in Resources */,
 				35FE5BF51C4833F0003E1A94 /* register_yanzheng.png in Resources */,
+				35CF54811C520D1E00DBDEB0 /* lol_xqdt_selected@2x.png in Resources */,
 				35FE5BF41C4833F0003E1A94 /* register_loginBtn.png in Resources */,
 				35FE5BEE1C4833F0003E1A94 /* ditu.png in Resources */,
 				35C6278E1C3E30FB00D4A6FE /* yw_home_normal_new@2x.png in Resources */,
@@ -1351,6 +1482,7 @@
 				35A6A1EB1C3E1D4700B6FDAB /* LOLShowGirlsViewContorller.m in Sources */,
 				35865D461C3AE82E0058546B /* main.m in Sources */,
 				358E458B1C43769D00596D50 /* LOLBigGodListCell.m in Sources */,
+				3523726B1C533112006F40BF /* LOLPromotionVC.m in Sources */,
 				359A16D61C44C04900CDBDCC /* YWSpritesLoadingView.m in Sources */,
 				359A16EA1C44D2C500CDBDCC /* LOLHomeModel.m in Sources */,
 				35B7E0081C460101004FB896 /* LOLDemandHallVC.m in Sources */,
@@ -1359,12 +1491,12 @@
 				35C8EEC21C48F69300A7D85C /* DWBubbleMenuButton.m in Sources */,
 				359A17021C4520D700CDBDCC /* TAAbstractDotView.m in Sources */,
 				35BEB6271C4997BF004F9B63 /* LOLReleaseVC.m in Sources */,
-				04F75A4B1C4E2DC700BCA267 /* CategoryGoodsDetailsViewController.m in Sources */,
+				04F75A4B1C4E2DC700BCA267 /* LOLGirlsDetailsViewController.m in Sources */,
 				04F75A421C4E227200BCA267 /* LOLGirlsCollectionViewCell.m in Sources */,
 				3589EA161C3F89F300C972D2 /* LOLRootNavVC.m in Sources */,
+				352372671C532589006F40BF /* LOLNewsVC.m in Sources */,
 				35FE5BDD1C482E8A003E1A94 /* UITextField+Extension.m in Sources */,
 				352325A51C3CFD05007A3E1D /* LOLBaseViewController.m in Sources */,
-				35FE5BC61C482E09003E1A94 /* RegisterVCNew.m in Sources */,
 				04F75A3F1C4E19EA00BCA267 /* LOLshowModel.m in Sources */,
 				353C15701C49E859002A0BCC /* LOLChangeMesVC.m in Sources */,
 				358F5C3D1C40804F00CCFD1E /* LOLHomeMenuCell.m in Sources */,
@@ -1377,7 +1509,6 @@
 				358F5C431C40812600CCFD1E /* LOLBigGogCell.m in Sources */,
 				353596EF1C4EC50F00B982D2 /* LOLRegisterSecVC.m in Sources */,
 				353596F51C4F2AFC00B982D2 /* LOLForgetPasswordFirVC.m in Sources */,
-				35FE5BC91C482E12003E1A94 /* ForgetPassWordVCNew.m in Sources */,
 				352325A81C3D0131007A3E1D /* LOLHomeViewController.m in Sources */,
 				35F88AFB1C44692B0075EEBE /* LOLAFHTTPClient.m in Sources */,
 			);

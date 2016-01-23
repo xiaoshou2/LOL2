@@ -47,15 +47,16 @@
     UIImage *finishedImage =  KAPPIMAGE ;//[self buttonImageFromColor:KDEFAULT_COLOR];
     UIImage *unfinishedImage =  KAPPIMAGE;//[self buttonImageFromColor:KDEFAULT_COLOR];
   
-    NSArray *tabBarItemSelectedImages = @[@"yw_home_selected_new",
-                                          @"dropdown_anim__00000", @"yw_cart_selected_new",
-                                          @"yw_account_selected_new"];
+    NSArray *tabBarItemImages = @[@"lol_home_narmal",
+                                          @"lol_xqdt_narmal", @"lol_girlshow_narmal",
+                                          @"lol_center_narmal"];
     
-    NSArray *tabBarItemImages = @[@"yw_home_normal_new",
-                                  @"dropdown_anim__00003", @"yw_cart_normal_new",
-                                  @"yw_account_normal_new"];
     
-    NSArray *tabBarItemTitles = @[@"",@"", @"showGirl", @"个人中心"];
+    NSArray *tabBarItemSelectedImages = @[@"lol_home_selected",
+                                  @"lol_xqdt_selected", @"lol_girlshow_selected",
+                                  @"lol_center_selected"];
+    
+    NSArray *tabBarItemTitles = @[@"",@"", @"", @""];
     
     NSInteger index = 0;
     for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LOLBigGodModel.h"
 #import "LOLDemandModel.h"
+#import "LOLshowModel.h"
 typedef void(^LOLRegisterBlock)(NSDictionary *resultDict);
 typedef void(^LOLLoginBlock)(NSDictionary *resultDict);
 
@@ -23,6 +24,7 @@ typedef void(^LOLDemandSuccessBlock)(NSArray *resultArray);
 typedef void(^LOLPhoneNumBlock)(NSArray *resultArray);
 
 typedef void (^LOLResetPassWordBlock)(NSDictionary *resultDict);
+typedef void (^LOLshowGirlBlock)(NSMutableArray *resultArr);
 
 @interface LOLAFNetWorkUtility : NSObject
 /**
@@ -69,7 +71,7 @@ typedef void (^LOLResetPassWordBlock)(NSDictionary *resultDict);
  *  注册接口调用
  *
  *  @param params       参数
- *  @param LOLDemandSuccessBlock 成功回调
+ *  @param LOLRegisterBlock 成功回调
  *  @param failedBlock  失败回调
  */
 
@@ -82,7 +84,7 @@ typedef void (^LOLResetPassWordBlock)(NSDictionary *resultDict);
  *  登录接口调用
  *
  *  @param params       参数
- *  @param LOLDemandSuccessBlock 成功回调
+ *  @param LOLLoginBlock 成功回调
  *  @param failedBlock  失败回调
  */
 
@@ -94,11 +96,22 @@ typedef void (^LOLResetPassWordBlock)(NSDictionary *resultDict);
  *  重置密码接口调用
  *
  *  @param params       参数
- *  @param LOLDemandSuccessBlock 成功回调
+ *  @param LOLResetPassWordBlock 成功回调
  *  @param failedBlock  失败回调
  */
 + (void)resetPassWordRequestWithParms:(NSDictionary *)params
                          successBlock:(LOLResetPassWordBlock)successBlock
+                          failedBlock:(LOLAFFailedBlock)failedBlock;
+
+/**
+ *  妹子秀接口调用
+ *
+ *  @param params       参数
+ *  @param LOLDemandSuccessBlock 成功回调
+ *  @param failedBlock  失败回调
+ */
++ (void)showGirlBlockRequestWithParms:(NSDictionary *)params
+                         successBlock:(LOLshowGirlBlock)successBlock
                           failedBlock:(LOLAFFailedBlock)failedBlock;
 @end
 

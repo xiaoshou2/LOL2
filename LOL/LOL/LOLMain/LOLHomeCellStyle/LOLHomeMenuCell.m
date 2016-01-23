@@ -18,7 +18,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        NSArray *titleArray = @[@"我要上分",@"大神认证",@"热门推荐",@"发布需求"];
+        NSArray *titleArray = @[@"我要上分",@"大神认证",@"发布需求",@"赛事资讯"];
     
         
         for (int i = 0; i<4; i++) {
@@ -31,14 +31,14 @@
             [self.bottomView addTarget:self action:@selector(itemTouchedDown:) forControlEvents:UIControlEventTouchDown];
             
             self.menuImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.bottomView.width/2-25,10,50,50)];
-            self.menuImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"h2x_i_0%d",i+1]];
+            self.menuImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"lol_hmenu_i_%d",i+1]];
             self.menuTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.bottomView.width/2-25,61,50,20)];
             
             
             if (i == 0) {
-                self.bottomView.backgroundColor = [UIColor blueColor];
-                self.menuImageView.backgroundColor = [UIColor redColor];
-                self.menuTitleLabel.backgroundColor = [UIColor yellowColor];
+//                self.bottomView.backgroundColor = [UIColor blueColor];
+//                self.menuImageView.backgroundColor = [UIColor redColor];
+//                self.menuTitleLabel.backgroundColor = [UIColor yellowColor];
                 
             }else if(i ==1)
             {

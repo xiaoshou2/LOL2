@@ -9,23 +9,53 @@
 #import "LOLShowGirlsViewContorller.h"
 #import "LOLGirlsCollectionViewCell.h"
 #import "MJRefresh.h"
-#import "CategoryGoodsDetailsViewController.h"
+#import "LOLGirlsDetailsViewController.h"
+
 @interface LOLShowGirlsViewContorller ()
 
 @end
-
+CGFloat  girlNormalHeight = 50.0f;
 @implementation LOLShowGirlsViewContorller
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"ShowGirls";
+    self.title = @"妹子秀";
     self.backButton.hidden = YES;
-    
+    self.tableViewDataSource = [NSMutableArray new];
+    [self requestData];
     [self control];
     
 }
 
+-(void)requestData
+{
+    [self showHUD];
+    //请求数据
+    [LOLAFNetWorkUtility  showGirlBlockRequestWithParms:@{} successBlock:^(id responseObject) {
+        //NSLog(@"--- LOL首页请求成功 --%@--",responseObject);
+        [self hideHUD];
+        //请求完加载数据
+       
+        self.tableViewDataSource = responseObject;
+        
+        NSLog(@"--数组--  %@ ---,",self.tableViewDataSource);
+        [self.mainCollectionView reloadData];
+      
+        //_isLoadFinish = YES;
+       // NSLog(@"图片 ---  %@",self.bannerArray);
+       
+        
+        
+    } failedBlock:^(NSError *error) {
+        //        [self.commmentView.header endRefreshing  ];
+        [self hideHUD];
+        NSLog(@"---  LOL请求失败 ----");
+        [self showErrorHUDWithMessage:@"当前网络没有链接"];
+        
+    } ];
 
+
+}
 - (void)control
 {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -34,16 +64,17 @@
     layout.minimumInteritemSpacing = 10;
     layout.minimumLineSpacing = 10;
     
-    self.mainCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, (IsIOS7 ? 64 : 44), ScreenWidth, ScreenHeight - (IsIOS7 ? 64 : 44)-49)collectionViewLayout:layout];
+    self.mainCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,64, ScreenWidth, ScreenHeight - (64+44))collectionViewLayout:layout];
     ///////----------背景颜色
-    self.mainCollectionView.backgroundColor = [UIColor orangeColor];
+   // self.mainCollectionView.backgroundColor = [UIColor orangeColor];
 
     //self.mainCollectionView.de
+     self.mainCollectionView.backgroundColor = [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1.00];
     self.mainCollectionView.alwaysBounceVertical = YES;
     self.mainCollectionView.delegate=self;
     self.mainCollectionView.dataSource =self;
-    [self.mainCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"GradientCell"];
     [self.view addSubview:self.mainCollectionView];
+    [self.mainCollectionView registerClass:[LOLGirlsCollectionViewCell class] forCellWithReuseIdentifier:@"GradientCell"];
     
     // 2.集成刷新控件
     [self addHeader];
@@ -54,7 +85,7 @@
 //定义展示的UICollectionViewCell的个数
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return self.tableViewDataSource.count;
 }
 //定义展示的Section的个数
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -65,67 +96,11 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    LOLGirlsCollectionViewCell * cell = [LOLGirlsCollectionViewCell cellWithTableView:collectionView a:indexPath];
+    static NSString * CellIdentifier = @"GradientCell";
+    LOLGirlsCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    [cell setDataModel:self.tableViewDataSource[indexPath.row]];
     
-    
-    if (cell) {
-        
-        while ([cell.contentView.subviews lastObject]!=nil) {
-            [(UIView *)[cell.contentView.subviews lastObject]removeFromSuperview];
-        }
-        /*
-         图片
-         */
-        
-//        LOLshowModel * model = [_dataArray objectAtIndex:indexPath.row];
-        UIImageView * imageview = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5,(ScreenWidth-20)/2-10,(ScreenWidth-20)/2+20)];
-        imageview.backgroundColor= [UIColor whiteColor];
-        imageview.image = [UIImage imageNamed:@"占"];
-
-//        imageview.layer.borderColor=[UIColor lightGrayColor].CGColor;
-//        imageview.layer.borderWidth=0.5;
-//        [imageview setImageWithURL:[NSURL URLWithString:model.default_image] placeholderImage:[UIImage imageNamed:@"占位图"]];
-        [cell.contentView addSubview:imageview];
-        
-        UILabel * textlabel = [[UILabel alloc]initWithFrame:CGRectMake(5, CGRectGetMaxY(imageview.frame)+5, (ScreenWidth-20)/2,20)];
-        textlabel.numberOfLines = 2;
-        textlabel.text = @"服务器：比尔吉沃特";
-        textlabel.font = [UIFont systemFontOfSize:12];
-        textlabel.textColor = RGBACOLOR(114, 114, 114, 1);
-        textlabel.textAlignment = NSTextAlignmentLeft;
-        [cell.contentView addSubview:textlabel];
-
-        UILabel * pircelabel = [[UILabel alloc]initWithFrame:CGRectMake(5, CGRectGetMaxY(textlabel.frame), (ScreenWidth-20)/4,20)];
-        
-        pircelabel.text = [NSString stringWithFormat:@"ID:皮小秀"];
-        pircelabel.font = [UIFont systemFontOfSize:15];
-        pircelabel.textColor = RGBACOLOR(228 ,155,58, 1);
-        pircelabel.textAlignment = NSTextAlignmentLeft;
-        [cell.contentView addSubview:pircelabel];
-        cell.backgroundColor= [UIColor whiteColor];
-        
-        UILabel *  gradelabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(pircelabel.frame)+5, CGRectGetMaxY(textlabel.frame), (ScreenWidth-20)/4,20)];
-        
-        gradelabel.text = [NSString stringWithFormat:@"超凡大师"];
-        gradelabel.font = [UIFont systemFontOfSize:10];
-        gradelabel.textColor = [UIColor lightGrayColor];
-        gradelabel.textAlignment = NSTextAlignmentLeft;
-        [cell.contentView addSubview:gradelabel];
-        cell.backgroundColor= [UIColor whiteColor];
-        
-        
-
-        UILabel * address = [[UILabel alloc]initWithFrame:CGRectMake(5, CGRectGetMaxY(pircelabel.frame) ,(ScreenWidth-20)/2, 20)];
-        
-        address.text = @"简介：我的双手成就你的梦想";
-        
-        address.textColor = [UIColor lightGrayColor];
-        address.font = [UIFont systemFontOfSize:10];
-        [cell.contentView addSubview:address];
-        
-        
-    }
-    cell.layer.borderWidth = 0.5;
+   // cell.layer.borderWidth = 0.5;
     cell.layer.borderColor = [UIColor lightGrayColor].CGColor;
     return cell;
 }
@@ -141,23 +116,12 @@
     return UIEdgeInsetsMake(5,5,10,5);
 }
 #pragma mark --UICollectionViewDelegate
-//UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"点击了 --- %ld  ---",(long)indexPath.row);
     
-    
-    
-    ///暂定界面
-    
-    
-//    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    
-    
-//    CategoryGoodsDetailsViewController  * DetailVC = [[CategoryGoodsDetailsViewController alloc]init];
-//    [self.navigationController pushViewController:DetailVC animated:YES];
-    
-    
-    
+    LOLGirlsDetailsViewController  * DetailVC = [[LOLGirlsDetailsViewController alloc]init];
+    [[SharedDelegate getRootNav] pushViewController:DetailVC animated:YES];
     
 }
 //返回这个UICollectionView是否可以被选择
@@ -208,20 +172,94 @@
 }
 
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (scrollView.dragging) {
+        
+        if((scrollView.contentOffset.y - _beginOffsetY)>10.0f) {    //向上拖拽
+            if (!_hideTopView) {
+                [self hideTopView];
+                //向下
+                //CATransition *animation = [CATransition animation];
+                
+                //animation.type = kCATransitionMoveIn;
+                // animation.duration = 1.0f;
+                //  [self.upMenuView.layer addAnimation:animation forKey:nil];
+                //  self.upMenuView.hidden = YES;
+                
+            }
+            
+        } else if ((scrollView.contentOffset.y - _beginOffsetY)<-10.0f) {     //向下拖拽
+            if (_hideTopView) {
+                [self showTopView];
+                
+            }
+        }
+    }
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark  <隐藏头部View>
+
+- (void)hideTopView{
+    if (_hideOrShowTopViewProgress) {
+        return;
+    }
+    _hideOrShowTopViewProgress = YES;
+    //    if (ISIOS7) {
+    //        [[UIApplication sharedApplication]setStatusBarHidden:YES];
+    //    }
+    
+    CGFloat translationHeight = topHeight+girlNormalHeight;
+    [UIView animateWithDuration:0.2 animations:^{
+        [self.titleView setTransform:CGAffineTransformMakeTranslation(0,-translationHeight)];
+        [self.mainCollectionView setTransform:CGAffineTransformMakeTranslation(0, -translationHeight)];
+        CGRect frame = self.mainCollectionView.frame;
+        frame.origin.y = 0;
+        frame.size.height += translationHeight;
+        self.mainCollectionView.frame = frame;
+        
+    } completion:^(BOOL finished) {
+        _hideOrShowTopViewProgress = NO;
+        _hideTopView = YES;
+        NSLog(@"  ---  隐藏 --");
+    }];
 }
-*/
+
+#pragma mark  <显示头部View>
+
+- (void)showTopView{
+    if (_hideOrShowTopViewProgress)  return;
+    
+    _hideOrShowTopViewProgress = YES;
+        if (ISIOS7) {
+            [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+        }
+    
+    CGFloat translationHeight = topHeight+girlNormalHeight;
+    [UIView animateWithDuration:0.2 animations:^{
+        [self.titleView setTransform:CGAffineTransformIdentity];
+        [self.mainCollectionView setTransform:CGAffineTransformIdentity];
+        CGRect frame = self.mainCollectionView.frame;
+        frame.origin.y = translationHeight;
+        frame.size.height -= translationHeight;
+        self.mainCollectionView.frame = frame;
+        
+    } completion:^(BOOL finished) {
+        _hideOrShowTopViewProgress = NO;
+        _hideTopView = NO;
+    }];
+    
+}
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    _beginOffsetY = scrollView.contentOffset.y;
+}
+
 
 @end

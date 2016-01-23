@@ -14,7 +14,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"发布信息";
+    self.title = @"发布需求";
     [self setupMainView];
     
     ////创建通知

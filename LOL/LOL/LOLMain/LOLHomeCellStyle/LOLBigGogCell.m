@@ -44,13 +44,16 @@
             self.userMessageLb.backgroundColor = [UIColor clearColor];
             self.userMessageLb.tag = 5000+i;
             
+   
+            
+            
             self.userMessageSecLb = [[UILabel alloc] init];
             self.userMessageSecLb.tag = 6000 +i;
-            self.userMessageSecLb.backgroundColor = [UIColor redColor];
+            self.userMessageSecLb.backgroundColor = [UIColor clearColor];
             self.userMessageSecLb.font = SYSTEMFONT(10);
 //            self.userMessageSecLb.layer.cornerRadius = 10;
-            UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgbtn.jpg"]];
-            [self.userMessageSecLb setBackgroundColor:color];
+//            UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgbtn.jpg"]];
+//            [self.userMessageSecLb setBackgroundColor:color];
             self.userMessageSecLb.layer.cornerRadius = 5.0f;
             self.userMessageSecLb.textColor = [UIColor whiteColor];
             self.userMessageSecLb.textAlignment = NSTextAlignmentCenter;
@@ -69,16 +72,19 @@
             self.headImageView.layer.masksToBounds =YES;
             self.headImageView.layer.cornerRadius =35/2;
         [self.userNameLb setFrame:CGRectMake(self.headImageView.frame.origin.x-5,self.headImageView.frame.origin.y+40,45,17)];
-        [self.userMessageLb setFrame:CGRectMake(self.headImageView.frame.origin.x-5,self.headImageView.frame.origin.y+57,45,17)];
-        [self.userMessageSecLb setFrame:CGRectMake(self.headImageView.frame.origin.x-5,self.headImageView.frame.origin.y+74,45,17)];
+        [self.userMessageLb setFrame:CGRectMake(self.headImageView.frame.origin.x-5,self.headImageView.frame.origin.y+57,45,16)];
+        
+        self.bottomImg = [[UIImageView alloc] initWithFrame:CGRectMake(self.headImageView.frame.origin.x-6,self.headImageView.frame.origin.y+71,50,17)];
+            self.bottomImg.image = [UIImage imageNamed:@"bgbtn.jpg"];
+            [self.userMessageSecLb setFrame:CGRectMake(2,0,45,17)];
     
        if (i == 0) {
-                self.bottmoView.backgroundColor = [UIColor yellowColor];
-                self.headImageView.backgroundColor = [UIColor redColor];
-                self.userNameLb.backgroundColor = [UIColor blueColor];
-                self.userMessageLb.backgroundColor = [UIColor blackColor];
-                self.userMessageSecLb.backgroundColor = [UIColor purpleColor];
-                
+//                self.bottmoView.backgroundColor = [UIColor yellowColor];
+//                self.headImageView.backgroundColor = [UIColor redColor];
+//                self.userNameLb.backgroundColor = [UIColor blueColor];
+//                self.userMessageLb.backgroundColor = [UIColor blackColor];
+//                self.userMessageSecLb.backgroundColor = [UIColor purpleColor];
+           
                 
             }else if(i ==1)
             {
@@ -152,8 +158,9 @@
             [self.bottmoView addSubview:self.headImageView];
             [self.bottmoView addSubview:self.userNameLb];
             [self.bottmoView addSubview:self.userMessageLb];
-            [self.bottmoView addSubview:self.userMessageSecLb];
-
+            [self.bottmoView addSubview:self.bottomImg];
+            [self.bottomImg addSubview:self.userMessageSecLb];
+         
      
         }
         

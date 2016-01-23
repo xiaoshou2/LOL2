@@ -217,4 +217,41 @@
     }];
 }
 
+#pragma mark --- 妹子秀接口 ----
++ (void)showGirlBlockRequestWithParms:(NSDictionary *)params
+                         successBlock:(LOLshowGirlBlock)successBlock
+                          failedBlock:(LOLAFFailedBlock)failedBlock
+{
+    
+    NSString *str = @"http://127.0.0.1/temp4.json";
+    [LOLAFHTTPClient getRequestWithMethod:str params:params successBlock:^(LOLAFHTTPClient *request, id responseObject) {
+        
+        NSMutableArray *dataArr = [responseObject objectForKey:@"data"];
+        NSMutableArray *resultArr = [NSMutableArray array];
+        
+        for (int i = 0; i<dataArr.count; i++) {
+            LOLshowModel *showModel = [[LOLshowModel alloc] initWithDic:dataArr[i]];
+            [resultArr addObject:showModel];
+        }
+        
+        if (successBlock) {
+            successBlock(resultArr);
+            
+        }
+        //        if ([dataDict[@"result"] integerValue] == 0) {
+        //            if (successBlock) {
+        //                successBlock(dataArray);
+        //
+        //            }
+        //        }
+        
+    } failedBlock:^(LOLAFHTTPClient *request, NSError *error) {
+        if (failedBlock) {
+            failedBlock(error);
+        }
+        
+    }];
+
+}
+
 @end

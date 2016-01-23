@@ -13,8 +13,8 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.titleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/2-25,3,50,35)];
-        self.titleImageView.image = [UIImage imageNamed:@"home_daka.png"];
+        self.titleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/2-25,3,52,37)];
+        self.titleImageView.image = [UIImage imageNamed:@"mainmenubg.png"];
         [self addSubview:self.titleImageView];
         self.leftLineView = [[UIView alloc] initWithFrame:CGRectMake(10,self.height/2,ScreenWidth/2-40, 1)];
         self.leftLineView.backgroundColor = [UIColor colorWithRed:236/255.0 green:235/255.0 blue:232/255.0 alpha:1];

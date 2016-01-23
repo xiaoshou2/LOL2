@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface LOLshowModel : NSObject
-@property (nonatomic,strong)NSString *demandID;
-@property (nonatomic,strong)NSString *mhearAdress;
-@property (nonatomic,strong)NSString *muserName;
-@property (nonatomic,strong)NSString *mreleaseTime;
-@property (nonatomic,strong)NSString *mcontent;
-@property (nonatomic,strong)NSString *mprice;
-@property (nonatomic,strong)NSString *mendtime;
+@property (nonatomic,strong)NSString *teamID;
+@property (nonatomic,strong)NSString *gameSever;
+@property (nonatomic,strong)NSString *gameID;
+@property (nonatomic,strong)NSString *imgStr;
+@property (nonatomic,strong)NSString *gameDan;
+@property (nonatomic,strong)NSString *sign;
+@property (nonatomic,strong)NSString *zanNum;
 - (id)initWithDic:(NSDictionary*)reponseDic;
 @end

@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "LOLshowModel.h"
 @interface LOLGirlsCollectionViewCell : UICollectionViewCell
-+(instancetype)cellWithTableView:(UICollectionView *)tableView a:(NSIndexPath*)indexPath;
--(void)setGoods:(LOLshowModel *)model;
+@property (nonatomic,strong)UIImageView *headImage;
+@property (nonatomic,strong)UILabel *severLb;
+@property (nonatomic,strong)UILabel *nameLb;
+@property (nonatomic,strong)UILabel *gradelabel;
+@property (nonatomic,strong)UILabel *signLb;
+@property (nonatomic,strong)LOLshowModel *dataModel;
+
+-(void)setDataModel:(LOLshowModel *)model;
 @end
